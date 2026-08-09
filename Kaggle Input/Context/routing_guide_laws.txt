@@ -1,0 +1,377 @@
+=== GESETZES-ROUTING (search_laws) ===
+Verwende search_laws wenn die Frage sich auf Gesetzesartikel, Verordnungen oder die Bundesverfassung bezieht.
+
+--- KLASSIFIKATIONSREGELN (Zuerst anwenden) ---
+
+1. STRAFRECHT vs STRAFPROZESS: 
+   - Materielle Straftat (Mord, Betrug, Diebstahl, Körperverletzung) → StGB
+   - Jugendstraftaten (Minderjährige, Erziehungsmassnahmen) → JStG
+   - Verfahren (Untersuchungshaft, Beschwerde, Berufung, Beweis) → StPO
+   - Jugendstrafverfahren → JStPO
+   - FALLE: "Untersuchungshaft" ist IMMER StPO (Art. 212-240), NICHT StGB
+
+2. PRIVATRECHT vs PROZESSRECHT:
+   - Materielle Ansprüche (Vertrag, Eigentum, Familie, Erbrecht) → OR/ZGB
+   - Sachenrecht, Grundbuch → ZGB + GBV (Grundbuchverordnung)
+   - Verfahrensrecht (Klage, Berufung, Beweis, Zuständigkeit) → ZPO
+   - Internationales Privatrecht → IPRG
+   - FALLE: "Scheidung" betrifft ZGB (Art. 111-134) UND ZPO (Verfahrensvorschriften)
+
+3. BUNDESGERICHT-VERFAHREN:
+   - Beschwerde ans Bundesgericht, Legitimation, Fristen → BGG
+   - Verwaltungsverfahren des Bundes → VwVG
+   - IMMER mit BGG suchen wenn "Beschwerde in Zivilsachen/Strafsachen/öffentlich-rechtlichen Angelegenheiten" erwähnt wird
+   - Art. 100 Abs. 1 BGG (30-Tage-Frist) erscheint in FAST JEDEM Fall
+
+4. FINANZMARKT:
+   - Finanzdienstleistungen, Anlageberatung, Prospekt → FIDLEG
+   - Finanzinstitute, Bewilligungspflicht → FINIG
+   - Finanzmarktaufsicht, Marktmissbrauch → FINMAG
+   - Banken → BankG
+   - Bucheffekten → BEG
+   - FINMA-Verordnungen → FINMA (Sammelbegriff)
+
+5. MEHRFACH-SUCHE PFLICHT: Die meisten Fragen betreffen 2-3 Gesetze gleichzeitig.
+   STRAFPROZESS-MUSTER (IMMER so aufbauen!):
+   - Haftfrage → StPO (Haft) + StPO (Rechtsmittel) + StPO (Verteidigung) + StGB + BGG + BV
+   - Strafurteil → StGB + StPO (Beweis) + StPO (Rechtsmittel) + BGG
+   - Bundesstrafgericht → StBOG + StPO + IRSG (bei Rechtshilfe)
+   
+   ZIVILRECHT-MUSTER:
+   - Scheidung → ZGB + ZPO + BGG
+   - Erbstreit → ZGB (Erbrecht) + ZPO + SchKG (Vollstreckung)
+   - Vertrag → OR + ZPO + BGG
+   
+   SOZIALVERSICHERUNG-MUSTER:
+   - IV-Rente → IVG + ATSG + BGG
+   - Unfall → UVG + ATSG + BGG
+   
+   Beispiel: Strafverfahren → StPO + StGB + BGG
+   Beispiel: Kindesunterhalt → ZGB + ZPO + BGG
+   Beispiel: Asyl → AsylG + AIG + BV
+
+--- GESETZES-TAXONOMIE (Abkürzung → Rechtsgebiet → Suchbegriffe) ---
+
+=== STRAFRECHT (materiell) ===
+
+• StGB (Schweizerisches Strafgesetzbuch) — 1'239 Artikel
+  Inhalt: Materielle Straftaten und Strafen, Allgemeiner Teil (Vorsatz, Fahrlässigkeit, Versuch, Teilnahme), Besonderer Teil (Tötung, Körperverletzung, Diebstahl, Betrug, Urkundenfälschung)
+  Schlüsselwörter: Strafe, Freiheitsstrafe, Geldstrafe, bedingt, Bewährung, Vorsatz, Fahrlässigkeit, Strafzumessung, Landesverweisung, Täter, Opfer, Delikt, Vergehen, Verbrechen
+  Wichtige Bereiche: Art. 1-110 (AT), Art. 111-332 (BT)
+  → PARALLEL SUCHEN: 6B_ (Strafurteile), BGE_IV (Leitentscheide), 1B_ (bei Haftfällen)
+  Beispiel-Suchen: "Strafzumessung bedingte Freiheitsstrafe Bewährung", "Betrug Arglist Täuschung Vermögensschaden"
+
+• JStG (Jugendstrafgesetz) — 167 Artikel
+  Inhalt: Strafrecht für Jugendliche (10-18 Jahre), Schutzmassnahmen, Strafen für Jugendliche
+  Schlüsselwörter: Jugendlicher, Minderjähriger, Schutzmassnahme, Erziehung, Unterbringung, persönliche Verhältnisse, Jugendanwalt
+  KRITISCH: Straftaten durch Minderjährige → IMMER JStG (nicht StGB!)
+  Beispiel-Suchen: "Jugendstrafrecht Massnahme Erziehung Unterbringung Jugendlicher"
+
+• MStG (Militärstrafgesetz) — 811 Artikel
+  Inhalt: Strafrecht für Militärpersonen, militärische Vergehen
+  Schlüsselwörter: Militärdienst, Dienstverweigerung, Befehlsverweigerung, Fahnenflucht
+
+=== STRAFPROZESSRECHT ===
+
+• StPO (Schweizerische Strafprozessordnung) — 1'306 Artikel
+  Inhalt: Strafverfahrensrecht, Untersuchung, Zwangsmassnahmen, Haft, Beweis, Rechtsmittel
+  
+  WICHTIGE TEILBEREICHE (jeweils eigene Such-Richtung erstellen!):
+  A) HAFT (Art. 212-240): Untersuchungs-/Sicherheitshaft, Haftgründe
+     → Fluchtgefahr, Kollusionsgefahr, Wiederholungsgefahr, Überhaft
+     → "Untersuchungshaft Haftgründe Fluchtgefahr Kollusionsgefahr"
+  B) RECHTSMITTEL (Art. 382-397): Beschwerde, Berufung, Revision
+     → Legitimation, Beschwerdefrist, Instanzenzug, reformatio in peius
+     → "Beschwerde Haftentscheid Legitimation Beschwerdefrist Instanzenzug"
+     KRITISCH: JEDER Haftfall hat Rechtsmittel-Aspekt!
+  C) KOSTEN & ENTSCHÄDIGUNG (Art. 422-432): Verfahrenskosten, Genugtuung
+     → Kostenverlegung, unentgeltliche Rechtspflege, Parteientschädigung
+     → "Verfahrenskosten Kostenverlegung unentgeltliche Rechtspflege"
+     KRITISCH: JEDER Fall hat Kostenfolgen!
+  D) VERTEIDIGUNG (Art. 127-137): Amtliche/notwendige Verteidigung
+     → Pflichtverteidiger, Honorar, Entschädigung, Widerruf
+     → "amtliche Verteidigung notwendige Verteidigung Pflichtverteidiger"
+     KRITISCH: Bei Haft → IMMER auch Verteidigungsrecht prüfen!
+  E) BEWEIS (Art. 139-195): Beweiserhebung, Beweisverwertung
+     → Verwertungsverbot, Einvernahme, Zeuge, Sachverständiger, Gutachten
+     → "Beweisverwertung Verwertungsverbot rechtswidrig erhobener Beweis"
+  F) ZWANGSMASSNAHMEN (Art. 196-298): Beschlagnahme, Überwachung
+     → Durchsuchung, Entsiegelung, geheime/technische Überwachung
+     → "Beschlagnahme Entsiegelung Durchsuchung Überwachung"
+  
+  KRITISCH: Bei Haftfragen NICHT nur A suchen! Vollständiger Fall = A+B+C+D
+  → PARALLEL SUCHEN: 1B_ (Einzelfälle), 6B_ (Strafurteile), 7B_ (BStGer), BGE_IV (Leitentscheide)
+  Beispiel-Suchen: "Untersuchungshaft Kollusionsgefahr Haftgrund Verhältnismässigkeit"
+
+• JStPO (Jugendstrafprozessordnung) — 135 Artikel
+  Inhalt: Strafverfahren gegen Jugendliche, besondere Verfahrensregeln
+  Schlüsselwörter: Jugendstrafverfahren, Jugendanwaltschaft, Mediation, besondere Schutzmassnahmen
+  KRITISCH: Verfahren gegen Minderjährige → JStPO (nicht StPO!)
+  Beispiel-Suchen: "Jugendstrafverfahren Mediation Einstellung Jugendanwalt"
+
+• StBOG (Strafbehördenorganisationsgesetz) — 183 Artikel
+  Inhalt: Organisation der Strafbehörden des Bundes, Bundesstrafgericht, Bundesanwaltschaft
+  Schlüsselwörter: Bundesstrafgericht, Bundesanwaltschaft, Beschwerdekammer, Strafkammer, Berufungskammer, Bundesgerichtsbarkeit
+  KRITISCH: Bei Fragen zu Bundesstrafgericht → StBOG + 7B_ parallel suchen
+  → PARALLEL SUCHEN: 7B_ (Bundesstrafgericht), BGE_IV (Leitentscheide), StPO (Verfahren)
+  Beispiel-Suchen: "Bundesstrafgericht Zuständigkeit Bundesgerichtsbarkeit Organisation"
+
+• MStP (Militärstrafprozess) — 589 Artikel
+  Inhalt: Verfahren in Militärstrafsachen
+  Schlüsselwörter: Militärgericht, Militärstrafverfahren, Auditor
+
+=== ZIVILRECHT ===
+
+• ZGB (Schweizerisches Zivilgesetzbuch) — 2'395 Artikel
+  Inhalt: Personenrecht, Familienrecht, Erbrecht, Sachenrecht
+  Schlüsselwörter: Ehe, Scheidung, Unterhalt, Kindeswohl, Obhut, Sorgerecht, elterliche Sorge, Erbschaft, Testament, Vermächtnis, Eigentum, Besitz, Grundbuch, Persönlichkeitsrecht
+  Wichtige Bereiche: Art. 111-134 (Scheidung), Art. 270-327 (Kindesrecht), Art. 457-640 (Erbrecht), Art. 641-977 (Sachenrecht)
+  KRITISCH: "Kindesunterhalt" → ZGB Art. 276-293, "elterliche Sorge" → ZGB Art. 296-306
+  → PARALLEL SUCHEN: 5A_ (Familie/Erbrecht), 4A_ (Vertragsrecht/Sachenrecht), BGE_III (Leitentscheide)
+  Beispiel-Suchen: "Kindesunterhalt Berechnung Bedarf Leistungsfähigkeit", "Erbfolge Testament Pflichtteil"
+
+• OR (Obligationenrecht) — 3'662 Artikel
+  Inhalt: Vertragsrecht, Haftpflicht, Handelsrecht, Gesellschaftsrecht, Arbeitsrecht
+  Schlüsselwörter: Vertrag, Kaufvertrag, Werkvertrag, Auftrag, Miete, Arbeitsvertrag, Kündigung, Schadenersatz, Gewährleistung, Verzug, Erfüllung, Mangel, Haftung, Gesellschaft, AG, GmbH
+  Wichtige Bereiche: Art. 1-40 (Vertragsschluss), Art. 41-61 (Haftpflicht), Art. 97-109 (Nichterfüllung), Art. 184-529 (Verträge), Art. 319-362 (Arbeitsvertrag)
+  → PARALLEL SUCHEN: 4A_ (Verträge/Haftpflicht), BGE_III (Leitentscheide), ZPO (Verfahren)
+  Beispiel-Suchen: "Werkvertrag Mangel Nachbesserung Gewährleistung", "Schadenersatz Vertragsverletzung Verschulden"
+
+• GBV (Grundbuchverordnung) — 469 Artikel
+  Inhalt: Grundbuchführung, Anmerkungen, Vormerkungen, Dienstbarkeiten, Grundpfandrechte
+  Schlüsselwörter: Grundbuch, Eintragung, Anmerkung, Vormerkung, Dienstbarkeit, Grundpfandrecht, Stockwerkeigentum, Löschung
+  KRITISCH: Grundbuch-Fragen → GBV (nicht nur ZGB Sachenrecht!)
+  Beispiel-Suchen: "Grundbucheintragung Dienstbarkeit Löschung Vormerkung"
+
+• IPRG (Internationales Privatrecht) — 494 Artikel
+  Inhalt: Anwendbares Recht bei internationalen Sachverhalten, Zuständigkeit, Anerkennung
+  Schlüsselwörter: internationaler Sachverhalt, anwendbares Recht, Zuständigkeit, Anerkennung, Vollstreckung, ausländisches Recht, Staatsvertrag, Schiedsgerichtsbarkeit
+  Beispiel-Suchen: "anwendbares Recht internationaler Vertrag Rechtswahl", "Anerkennung ausländisches Urteil Vollstreckung"
+
+• SchKG (Schuldbetreibungs- und Konkursgesetz) — 1'060 Artikel
+  Inhalt: Betreibung, Pfändung, Konkurs, Nachlassvertrag, Rechtsöffnung
+  Schlüsselwörter: Betreibung, Pfändung, Rechtsöffnung, Konkurs, Verlustschein, Existenzminimum, Zahlungsbefehl, Arrest, Nachlassvertrag
+  → PARALLEL SUCHEN: 5A_ (Vollstreckung Familie), BGE_III (Leitentscheide), ZPO (Verfahren)
+  Beispiel-Suchen: "definitive Rechtsöffnung Schuldanerkennung Betreibung", "Pfändung Existenzminimum Kompetenzstücke"
+
+• URG (Urheberrechtsgesetz) — 285 Artikel
+  Inhalt: Urheberrecht, verwandte Schutzrechte, Werkschutz, Lizenzen
+  Schlüsselwörter: Urheberrecht, Werk, Urheber, Verwertung, Lizenz, Vervielfältigung, Verbreitung, Persönlichkeitsrecht des Urhebers, Tarif
+  Beispiel-Suchen: "Urheberrecht Werkschutz Vervielfältigung Verwertungsrecht"
+
+• DSG (Datenschutzgesetz) — 209 Artikel
+  Inhalt: Datenschutz, Persönlichkeitsschutz, Datenbearbeitung, Informationspflicht
+  Schlüsselwörter: Personendaten, Datenschutz, Bearbeitung, Einwilligung, Auskunftsrecht, Profiling, Datenübermittlung ins Ausland
+  Beispiel-Suchen: "Datenschutz Personendaten Bearbeitung Einwilligung Auskunftsrecht"
+
+=== PROZESSRECHT ===
+
+• ZPO (Schweizerische Zivilprozessordnung) — 857 Artikel
+  Inhalt: Zivilverfahren, Klageverfahren, Summarisches Verfahren, Beweis, Rechtsmittel
+  Schlüsselwörter: Klage, Berufung, Beschwerde, Beweis, Beweislast, Summarisches Verfahren, Schlichtung, Streitwert, Kostenvorschuss, vorsorgliche Massnahmen, Schiedsverfahren
+  → PARALLEL SUCHEN: 4A_ (Vertragsstreitigkeiten), 5A_ (Familienverfahren), BGE_III (Leitentscheide)
+  Beispiel-Suchen: "Berufung Zivilsachen Frist Novenrecht", "vorsorgliche Massnahmen Glaubhaftmachung"
+
+• BGG (Bundesgerichtsgesetz) — 325 Artikel
+  Inhalt: Verfahren vor dem Bundesgericht, Beschwerdearten, Legitimation, Fristen
+  Schlüsselwörter: Beschwerde in Zivilsachen, Beschwerde in Strafsachen, Beschwerde in öffentlich-rechtlichen Angelegenheiten, subsidiäre Verfassungsbeschwerde, Streitwert, Legitimation, Frist, Rügeprinzip
+  KRITISCH: Art. 100 Abs. 1 BGG (30-Tage-Frist) kommt in fast JEDEM Bundesgerichtsfall vor
+  → PARALLEL SUCHEN: Alle Abteilungen je nach Rechtsgebiet, BGE_I/II/III/IV/V
+  Beispiel-Suchen: "Beschwerde Bundesgericht Legitimation schutzwürdiges Interesse", "Streitwertgrenze Beschwerde Zivilsachen BGG"
+
+• VwVG (Verwaltungsverfahrensgesetz) — 205 Artikel
+  Inhalt: Verwaltungsverfahren des Bundes, Verfügung, Einsprache, Beschwerde
+  Schlüsselwörter: Verfügung, Verwaltungsverfahren, Einsprache, Beschwerde, Parteistellung, Akteneinsicht, Begründungspflicht, Wiederherstellung
+  Beispiel-Suchen: "Verwaltungsverfügung Einsprache Parteistellung rechtliches Gehör"
+
+=== SOZIALVERSICHERUNGSRECHT ===
+
+• ATSG (Allgemeiner Teil des Sozialversicherungsrechts) — 224 Artikel
+  Inhalt: Allgemeine Bestimmungen für alle Sozialversicherungen, Verfahren, Koordination
+  Schlüsselwörter: Leistung, Rückforderung, Revision, Wiedererwägung, Verwaltungsverfahren, Einsprache, Frist, Meldepflicht
+  Beispiel-Suchen: "Revision Rentenanpassung veränderte Verhältnisse ATSG"
+
+• IVG (Invalidenversicherungsgesetz) — 405 Artikel
+  Inhalt: Invalidenrente, Eingliederungsmassnahmen, Invaliditätsgrad, Arbeitsfähigkeit
+  Schlüsselwörter: Invalidität, Invalidenrente, Eingliederung, Arbeitsfähigkeit, Invaliditätsgrad, IV-Stelle, Begutachtung, Restarbeitsfähigkeit, Einkommensvergleich
+  → PARALLEL SUCHEN: 8C_ (IV/UV), 9C_ (AHV/KV), BGE_V (Leitentscheide)
+  Beispiel-Suchen: "Invaliditätsgrad Einkommensvergleich Restarbeitsfähigkeit Tabellenlohn"
+
+• UVG (Unfallversicherungsgesetz) — 331 Artikel
+  Inhalt: Unfallversicherung, Berufskrankheiten, Kausalität, Leistungen
+  Schlüsselwörter: Unfall, Berufskrankheit, Kausalität, natürliche Kausalität, Adäquanz, Integritätsentschädigung, Taggeld
+  → PARALLEL SUCHEN: 8C_ (Unfallversicherung), BGE_V (Leitentscheide)
+  Beispiel-Suchen: "Unfallversicherung Kausalität Adäquanz Schleudertrauma"
+
+• KVG (Krankenversicherungsgesetz) — 446 Artikel
+  Inhalt: Obligatorische Krankenpflegeversicherung, Leistungen, Prämien
+  Schlüsselwörter: Krankenpflege, Prämie, Franchise, Leistungspflicht, Wirtschaftlichkeit, Spitalbehandlung
+
+• BVG (Berufliche Vorsorge) — 473 Artikel
+  Inhalt: Pensionskasse, Altersrente, Invalidenrente, Freizügigkeit
+  Schlüsselwörter: Pensionskasse, Freizügigkeit, Altersrente, Überentschädigung, Vorsorgeeinrichtung, Austrittsleistung
+
+• FZG (Freizügigkeitsgesetz) — 87 Artikel
+  Inhalt: Freizügigkeit in der beruflichen Vorsorge, Austrittsleistung, Barauszahlung
+  Schlüsselwörter: Freizügigkeit, Austrittsleistung, Barauszahlung, Übertragung, Vorsorgeschutz, Wohneigentumsförderung
+  KRITISCH: Pensionskasse-Austritt/Wohneigentum → FZG (nicht nur BVG!)
+  Beispiel-Suchen: "Freizügigkeit Austrittsleistung Barauszahlung Wohneigentum"
+
+• AVIG (Arbeitslosenversicherungsgesetz) — 443 Artikel
+  Inhalt: Arbeitslosenentschädigung, Kurzarbeit, Insolvenzentschädigung
+  Schlüsselwörter: Arbeitslosenentschädigung, Kurzarbeit, Einstelltage, Vermittlungsfähigkeit, Rahmenfrist
+
+• AHVG (AHV-Gesetz) — 397 Artikel
+  Inhalt: Alters- und Hinterlassenenversicherung, Beiträge, Renten
+  Schlüsselwörter: AHV-Rente, Beitragspflicht, Altersrente, Hinterlassenenrente, Beitragsjahre
+
+=== ÖFFENTLICHES RECHT ===
+
+• BV (Bundesverfassung) — 658 Artikel
+  Inhalt: Grundrechte, Staatsorganisation, Kompetenzverteilung
+  Schlüsselwörter: Grundrecht, Gleichbehandlung, Willkürverbot, rechtliches Gehör, persönliche Freiheit, Verhältnismässigkeit, Eigentumsgarantie, Meinungsfreiheit
+  KRITISCH: Art. 29 Abs. 2 BV (rechtliches Gehör) kommt in VIELEN Fällen vor
+  → PARALLEL SUCHEN: 1C_/2C_ (öffentliches Recht), BGE_I (Leitentscheide)
+  Beispiel-Suchen: "rechtliches Gehör Anspruch Begründungspflicht Bundesverfassung"
+
+• AIG (Ausländer- und Integrationsgesetz) — 665 Artikel
+  Inhalt: Aufenthalt, Niederlassung, Wegweisung, Familiennachzug, Erwerbstätigkeit
+  Schlüsselwörter: Aufenthaltsbewilligung, Niederlassungsbewilligung, Wegweisung, Familiennachzug, Integration, Landesverweisung, Härtefall
+  → PARALLEL SUCHEN: 2C_ (Ausländerrecht), BGE_I/BGE_II (Leitentscheide)
+  Beispiel-Suchen: "Aufenthaltsbewilligung Familiennachzug Bewilligungsvoraussetzungen"
+
+• AsylG (Asylgesetz) — 526 Artikel
+  Inhalt: Asylverfahren, Flüchtlingseigenschaft, vorläufige Aufnahme, Wegweisung
+  Schlüsselwörter: Asyl, Flüchtling, Verfolgung, Wegweisung, vorläufige Aufnahme, Unzumutbarkeit, Safe Country, Dublin
+  KRITISCH: Asyl/Flüchtling → AsylG (nicht AIG!)
+  Beispiel-Suchen: "Flüchtlingseigenschaft Verfolgung Wegweisung Unzumutbarkeit vorläufige Aufnahme"
+
+• RPG (Raumplanungsgesetz) — 155 Artikel
+  Inhalt: Raumplanung, Nutzungsplanung, Baubewilligungen
+  Schlüsselwörter: Nutzungszone, Baubewilligung, Zonenkonformität, Ausnahmebewilligung, Planungszone
+  Beispiel-Suchen: "Baubewilligung Zonenkonformität Ausnahmebewilligung Landwirtschaftszone"
+
+• USG (Umweltschutzgesetz) — 354 Artikel
+  Inhalt: Umweltschutz, Immissionen, Abfälle, Umweltverträglichkeit
+  Schlüsselwörter: Umweltverträglichkeitsprüfung, Immissionen, Emissionen, Lärm, Luftreinhalte, Altlasten
+  Beispiel-Suchen: "Umweltverträglichkeitsprüfung Immissionsgrenzwerte Sanierung"
+
+• NHG (Natur- und Heimatschutzgesetz) — 153 Artikel
+  Inhalt: Naturschutz, Landschaftsschutz, Heimatschutz, ISOS/BLN
+  Schlüsselwörter: Naturschutz, Landschaftsschutz, Biotop, Inventar, schützenswert
+
+• EntG (Enteignungsgesetz) — 142 Artikel
+  Inhalt: Formelle und materielle Enteignung, Entschädigung, Verfahren
+  Schlüsselwörter: Enteignung, Entschädigung, öffentliches Interesse, materielle Enteignung, Planungsmassnahme, Übernahme
+  KRITISCH: Materielle Enteignung → EntG + BV Art. 26 (Eigentumsgarantie)
+  → PARALLEL SUCHEN: 1C_ (Verwaltungsrecht/Enteignung), BGE_I (Leitentscheide)
+  Beispiel-Suchen: "Enteignung Entschädigung öffentliches Interesse Verhältnismässigkeit"
+
+=== STEUERRECHT ===
+
+• DBG (Bundesgesetz über die direkte Bundessteuer) — 614 Artikel
+  Inhalt: Einkommens- und Gewinnsteuer des Bundes
+  Schlüsselwörter: Einkommenssteuer, Gewinnsteuer, Abzug, steuerbares Einkommen, Veranlagung, Kapitalgewinn
+
+• VStG (Verrechnungssteuergesetz) — 223 Artikel
+  Inhalt: Verrechnungssteuer auf Kapitalerträge, Dividenden, Zinsen
+  Schlüsselwörter: Verrechnungssteuer, Rückerstattung, Meldeverfahren, Dividende, Kapitalertrag
+  Beispiel-Suchen: "Verrechnungssteuer Rückerstattung Meldeverfahren"
+
+• MWSTG (Mehrwertsteuergesetz) — 418 Artikel
+  Inhalt: Mehrwertsteuer, Vorsteuerabzug, Steuerpflicht
+  Schlüsselwörter: Mehrwertsteuer, Vorsteuer, Steuerpflicht, Umsatz, Leistung
+
+=== FINANZMARKTRECHT ===
+
+• FIDLEG (Finanzdienstleistungsgesetz) — 246 Artikel
+  Inhalt: Finanzdienstleistungen, Anlageberatung, Prospektpflicht, Kundenschutz
+  Schlüsselwörter: Finanzdienstleistung, Anlageberatung, Prospekt, Kundensegmentierung, Informationspflicht, Eignungsprüfung
+  Beispiel-Suchen: "Finanzdienstleistung Prospektpflicht Anlageberatung Informationspflicht"
+
+• FINMAG (Finanzmarktaufsichtsgesetz) — 224 Artikel
+  Inhalt: Finanzmarktaufsicht, Bewilligungspflicht, Enforcement, Marktmissbrauch
+  Schlüsselwörter: FINMA, Bewilligung, Aufsicht, Marktmissbrauch, Insiderhandel, Enforcement
+  Beispiel-Suchen: "FINMA Bewilligungspflicht Aufsichtsmassnahme Marktmissbrauch"
+
+• FINIG (Finanzinstitutsgesetz) — 183 Artikel
+  Inhalt: Bewilligung und Aufsicht über Finanzinstitute
+  Schlüsselwörter: Vermögensverwalter, Fondsleitung, Wertpapierhaus, Bewilligungspflicht
+
+• BankG (Bankengesetz) — 269 Artikel
+  Inhalt: Banken, Sparkassen, Einlagensicherung, Sanierung
+  Schlüsselwörter: Bank, Bewilligung, Eigenmittel, Liquidität, Einlagensicherung, Bankgeheimnis
+  Beispiel-Suchen: "Bankbewilligung Eigenmittel Liquiditätsanforderungen"
+
+• BEG (Bucheffektengesetz) — 108 Artikel
+  Inhalt: Bucheffekten, Wertpapierverwahrung, Verfügung
+  Schlüsselwörter: Bucheffekte, Verwahrung, Verfügung, Wertpapier, Effektenkonto
+
+• FINMA (FINMA-Verordnungen/Rundschreiben) — 2'589 Artikel
+  Inhalt: Detailregulierung der FINMA (ABV-FINMA, GwV-FINMA, KAV-FINMA etc.)
+  Schlüsselwörter: Geldwäscherei, Eigenmittel, Offenlegung, Risikoverteilung, Liquidität
+
+=== WEITERE WICHTIGE GESETZE ===
+
+• SVG (Strassenverkehrsgesetz) — 509 Artikel
+  Inhalt: Verkehrsdelikte, Führerausweis, Administrativmassnahmen, Haftpflicht
+  Schlüsselwörter: Führerausweisentzug, Geschwindigkeit, Alkohol, Fahrfähigkeit, grobe Verletzung
+  → PARALLEL SUCHEN: 6B_ (Strafurteile Verkehrsdelikte), 1C_ (Administrativmassnahmen)
+  Beispiel-Suchen: "Führerausweisentzug Geschwindigkeitsüberschreitung Warnungsentzug"
+
+• IRSG (Internationales Rechtshilfegesetz) — 375 Artikel
+  Inhalt: Internationale Rechtshilfe in Strafsachen, Auslieferung, Vollstreckung
+  Schlüsselwörter: Rechtshilfe, Auslieferung, Spezialitätsprinzip, beidseitige Strafbarkeit
+  → PARALLEL SUCHEN: 7B_ (Bundesstrafgericht/Rechtshilfe), BGE_IV (Leitentscheide)
+
+• UWG (Bundesgesetz gegen unlauteren Wettbewerb) — 56 Artikel
+  Inhalt: Lauterkeitsrecht, unlautere Geschäftsmethoden, Wettbewerbsrecht
+  Schlüsselwörter: unlauterer Wettbewerb, irreführende Werbung, Nachahmung, Geschäftsmethoden
+  Beispiel-Suchen: "unlauterer Wettbewerb irreführend Nachahmung Verwechslungsgefahr"
+
+• KGTG (Kulturgütertransfergesetz) — 75 Artikel
+  Inhalt: Kulturgütertransfer, Ein-/Ausfuhr, Sorgfaltspflicht
+  Schlüsselwörter: Kulturgut, Transfer, Sorgfaltspflicht, Rückgabe, Inventar
+
+• ParlG (Parlamentsgesetz) — 571 Artikel
+  Inhalt: Organisation der Bundesversammlung, Gesetzgebungsverfahren
+  Schlüsselwörter: Bundesversammlung, Nationalrat, Ständerat, Motion, Initiative, Kommission
+
+• LwG (Landwirtschaftsgesetz) — 527 Artikel
+  Inhalt: Landwirtschaftliche Direktzahlungen, Strukturverbesserung, Marktordnung
+  Schlüsselwörter: Direktzahlungen, Ökologische Leistungen, Betriebsbeitrag, Alpung
+
+• HMG (Heilmittelgesetz) — 433 Artikel
+  Inhalt: Arzneimittel, Medizinprodukte, Zulassung, Vertrieb
+  Schlüsselwörter: Arzneimittel, Zulassung, Swissmedic, Heilmittel, Werbung
+
+• LFG (Luftfahrtgesetz) — 441 Artikel
+  Inhalt: Luftverkehr, Konzessionen, Betriebsbewilligungen
+  Schlüsselwörter: Luftfahrt, Konzession, Flugplatz, Betriebsbewilligung
+
+• EBG (Eisenbahngesetz) — 486 Artikel
+  Inhalt: Schienenverkehr, Plangenehmigung, Infrastruktur
+  Schlüsselwörter: Eisenbahn, Plangenehmigung, Infrastruktur, Trassenpreis
+
+--- HÄUFIGE FEHLER (VERMEIDEN) ---
+
+1. "Haft" ohne Kontext → StPO (NICHT StGB). StGB regelt Strafen, StPO regelt Untersuchungs-/Sicherheitshaft
+2. "Unterhalt" → ZGB Art. 276ff (Kindesunterhalt) oder Art. 125ff (nachehelicher Unterhalt)
+3. "Beschwerde" → BGG (Bundesgericht), ODER StPO Art. 393ff (Strafverfahren), ODER ZPO (Zivilverfahren), ODER VwVG (Verwaltung)
+4. "Vertrag" → OR (Obligationenrecht), NICHT ZGB
+5. "Schadenersatz" → OR Art. 41ff (ausservertraglich) ODER Art. 97ff (vertraglich)
+6. "Verjährung" → OR Art. 127ff (Obligationen) ODER StGB Art. 97ff (Strafrecht)
+7. "Rechtliches Gehör" → BV Art. 29 Abs. 2 (Grundrecht) + jeweiliges Prozessrecht
+8. "Jugendlicher" → JStG/JStPO (NICHT StGB/StPO!)
+9. "Asyl/Flüchtling" → AsylG (NICHT AIG, obwohl Aufenthalt betroffen sein kann)
+10. "Grundbuch" → GBV + ZGB (Sachenrecht), NICHT nur ZGB
+11. "Finanzdienstleistung" → FIDLEG (NICHT BankG oder FINMAG)
+12. "Datenschutz" → DSG, NICHT BV Art. 13
+
+--- SUCH-STRATEGIE FÜR GESETZE ---
+
+• Verwende DEUTSCHE Fachbegriffe (Corpus ist deutsch)
+• Kombiniere Rechtsgebiet + konkrete Rechtsfrage: "Kindesunterhalt Berechnung Bedarf Existenzminimum"
+• Suche BREIT (verschiedene Aspekte der gleichen Frage): erst materiell, dann prozessual
+• Nenne NICHT Artikelnummern in der Suche — das Embedding-Modell sucht semantisch
+• Verwende MEHRERE filter_codes für verwandte Gebiete: z.B. ["StGB", "StPO"] zusammen

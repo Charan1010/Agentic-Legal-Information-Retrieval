@@ -1,0 +1,9 @@
+guide_comment_idx=46
+routing_laws_idx=49
+routing_courts_idx=198
+agent_prompt_idx=304
+total_lines=565
+courts_end_idx=302
+SYNTAX OK
+SUCCESS: Old lines=565, New lines=327
+Removed 238 inline guide lines

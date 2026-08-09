@@ -1,0 +1,163 @@
+=== ENGLISCH → DEUTSCH/SCHWEIZERISCH: RECHTSBEGRIFF-BRÜCKE ===
+
+Zweck: Übersetzung englischer Rechtsbegriffe in die KORREKTEN schweizerischen
+Fachausdrücke für die Suche. NICHT 1:1-Übersetzung, sondern KONZEPT-Mapping.
+
+KRITISCH: Englische Begriffe haben oft 2-5 verschiedene deutsche Entsprechungen
+je nach Kontext. Der Agent MUSS den Kontext berücksichtigen.
+
+--- STRAFRECHT (Criminal Law) ---
+
+murder → Tötung (Art. 111 StGB), Mord (Art. 112 StGB), vorsätzliche Tötung, Totschlag
+manslaughter → fahrlässige Tötung (Art. 117 StGB), Totschlag (Art. 113 StGB)
+assault → Körperverletzung (schwere Art. 122, einfache Art. 123, fahrlässige Art. 125)
+theft → Diebstahl (Art. 139 StGB)
+robbery → Raub (Art. 140 StGB)
+fraud → Betrug (Art. 146 StGB), Arglist, Täuschung, Vermögensschaden
+embezzlement → Veruntreuung (Art. 138 StGB)
+forgery → Urkundenfälschung (Art. 251 StGB)
+arson → Brandstiftung (Art. 221 StGB)
+
+criminal intent → Vorsatz (direkter + Eventualvorsatz)
+negligence (criminal) → Fahrlässigkeit (bewusst + unbewusst)
+attempt → Versuch (Art. 22 StGB)
+complicity → Teilnahme, Gehilfenschaft (Art. 25 StGB), Anstiftung (Art. 24 StGB)
+self-defense → Notwehr (Art. 15 StGB), Notstand (Art. 17-18 StGB)
+sentence/sentencing → Strafzumessung (Art. 47 StGB), Strafe, Strafmass
+probation → bedingte Strafe (Art. 42 StGB), Bewährung, Probezeit
+recidivism → Rückfall, Vorstrafen, einschlägig vorbestraft
+
+--- STRAFPROZESS (Criminal Procedure) ---
+
+pre-trial detention → Untersuchungshaft (Art. 220-228 StPO)
+custody → Untersuchungshaft (NICHT Sorgerecht!)
+detention → Haft, Sicherheitshaft (Art. 229-233 StPO)
+flight risk → Fluchtgefahr (Art. 221 Abs. 1 lit. a StPO)
+collusion risk → Kollusionsgefahr (Art. 221 Abs. 1 lit. b StPO), Verdunkelungsgefahr
+risk of reoffending → Wiederholungsgefahr (Art. 221 Abs. 1 lit. c StPO)
+proportionality → Verhältnismässigkeit (Art. 197 StPO), Überhaft
+bail → Kaution, Sicherheitsleistung (Art. 238-239 StPO) — SELTEN in CH!
+prosecution → Staatsanwaltschaft, Strafverfolgung, Anklage
+evidence → Beweis, Beweismittel, Beweisverwertung (Art. 139-141 StPO)
+right to be heard → rechtliches Gehör (Art. 29 Abs. 2 BV, Art. 107 StPO)
+appeal → Berufung (Art. 398 StPO), Beschwerde (Art. 393 StPO)
+
+--- ZIVILRECHT (Civil Law) ---
+
+contract → Vertrag, Obligationenverhältnis
+breach of contract → Vertragsverletzung, Nichterfüllung (Art. 97 OR), Schlechterfüllung, Verzug (Art. 102 OR)
+formation of contract → Vertragsschluss, Vertragsabschluss (Art. 1 OR), Konsens
+offer → Antrag, Offerte (Art. 3 OR)
+acceptance → Annahme (Art. 3 OR), Zustimmung
+consideration → Gegenleistung (ACHTUNG: CH-Recht kennt KEINE "consideration" wie Common Law!)
+void contract → nichtiger Vertrag (Art. 20 OR), Nichtigkeit
+voidable → anfechtbar, Anfechtbarkeit
+damages → Schadenersatz (vertraglich Art. 97 OR, ausservertraglich Art. 41 OR)
+  compensatory damages → Schadenersatz
+  moral damages → Genugtuung (Art. 47/49 OR)
+  punitive damages → NICHT EXISTENT in CH-Recht!
+liability → Haftung, Haftpflicht
+  contractual liability → vertragliche Haftung (Art. 97 OR)
+  tortious liability → ausservertragliche Haftung (Art. 41 OR), Deliktsrecht
+  strict liability → Kausalhaftung, Gefährdungshaftung
+negligence (civil) → Verschulden, mangelnde Sorgfalt, Sorgfaltspflichtverletzung
+causation → Kausalzusammenhang (natürlicher + adäquater)
+
+--- FAMILIENRECHT (Family Law) ---
+
+marriage → Ehe (Art. 90 ff. ZGB)
+divorce → Scheidung (Art. 111-134 ZGB), Ehescheidung
+separation → Trennung, Getrenntleben (Art. 117 ZGB)
+alimony/maintenance → Unterhalt, Unterhaltsbeitrag
+  spousal maintenance → nachehelicher Unterhalt (Art. 125 ZGB)
+  child support → Kindesunterhalt (Art. 276-293 ZGB), Unterhaltsbeitrag
+custody (children) → elterliche Sorge (Art. 296 ZGB), Obhut
+  sole custody → alleinige elterliche Sorge
+  joint custody → gemeinsame elterliche Sorge (REGEL seit 2014)
+  physical custody → Obhut (alternierend = abwechselnd)
+visitation → Besuchsrecht, persönlicher Verkehr (Art. 273 ZGB)
+best interests of child → Kindeswohl (Art. 296 Abs. 1, Art. 307 ZGB)
+adoption → Adoption, Kindesannahme (Art. 264 ff. ZGB)
+prenuptial agreement → Ehevertrag (Art. 182 ff. ZGB)
+matrimonial property → Güterrecht (Art. 181-251 ZGB), Errungenschaftsbeteiligung
+
+--- ERBRECHT (Succession Law) ---
+
+will → Testament (Art. 498 ff. ZGB), letztwillige Verfügung
+holographic will → eigenhändiges Testament (Art. 505 ZGB)
+testamentary capacity → Urteilsfähigkeit, Testierfähigkeit (Art. 467 ZGB)
+inheritance → Erbschaft, Erbfolge, Nachlass
+heir → Erbe (gesetzlicher/eingesetzter)
+forced heirship → Pflichtteil (Art. 470-476 ZGB), Pflichtteile
+disinheritance → Enterbung (Art. 477-480 ZGB)
+estate → Nachlass, Erbschaft, Erbmasse
+bequest/legacy → Vermächtnis, Legat (Art. 484 ZGB)
+inter vivos gift → Schenkung unter Lebenden (Art. 239 OR + Art. 527 ZGB Herabsetzung)
+probate → Eröffnung des Testaments, Erbschein, Erbgang
+
+--- SACHENRECHT (Property Law) ---
+
+property/ownership → Eigentum (Art. 641 ff. ZGB)
+possession → Besitz (Art. 919 ff. ZGB)
+good faith acquisition → gutgläubiger Erwerb (Art. 714 Abs. 2 ZGB, Art. 933 ZGB)
+mortgage → Hypothek (Art. 793 ff. ZGB), Grundpfand
+easement → Dienstbarkeit (Art. 730 ff. ZGB)
+land register → Grundbuch (Art. 942 ff. ZGB)
+
+--- SOZIALVERSICHERUNG (Social Insurance) ---
+
+disability → Invalidität (Art. 4 IVG, Art. 7-8 ATSG)
+disability pension → Invalidenrente (Art. 28-31 IVG)
+degree of disability → Invaliditätsgrad (Art. 16 ATSG), Einkommensvergleich
+rehabilitation → Eingliederung, Eingliederungsmassnahmen (Art. 8 ff. IVG)
+work capacity → Arbeitsfähigkeit, Restarbeitsfähigkeit
+medical assessment → Begutachtung, medizinisches Gutachten (Art. 44 ATSG)
+unemployment → Arbeitslosigkeit, Arbeitslosenentschädigung (AVIG)
+health insurance → Krankenversicherung (KVG), obligatorische Krankenpflegeversicherung
+pension → Altersrente (AHV), Pensionskasse (BVG), berufliche Vorsorge
+accident → Unfall (UVG), Unfallversicherung, Kausalität
+
+--- VERFAHRENSRECHT (Procedural Law) ---
+
+appeal → Beschwerde (BGG), Berufung (ZPO/StPO), Rekurs
+jurisdiction → Zuständigkeit (sachlich, örtlich, funktionell)
+statute of limitations → Verjährung (Art. 127-142 OR, Art. 97-101 StGB)
+burden of proof → Beweislast (Art. 8 ZGB), Beweisführungslast
+standard of proof → Beweismass (überwiegende Wahrscheinlichkeit, Regelbeweismass)
+injunction → vorsorgliche Massnahme (Art. 261 ff. ZPO), superprovisorisch
+res judicata → materielle Rechtskraft, Rechtskraft
+arbitration → Schiedsgerichtsbarkeit (Art. 353 ff. ZPO)
+
+--- ÖFFENTLICHES RECHT (Public Law) ---
+
+constitutional right → Grundrecht (Art. 7-36 BV)
+equal treatment → Rechtsgleichheit (Art. 8 BV), Gleichbehandlung
+prohibition of arbitrariness → Willkürverbot (Art. 9 BV)
+right to be heard → Anspruch auf rechtliches Gehör (Art. 29 Abs. 2 BV)
+personal freedom → persönliche Freiheit (Art. 10 Abs. 2 BV)
+proportionality → Verhältnismässigkeit (Art. 36 Abs. 3 BV)
+freedom of expression → Meinungsfreiheit (Art. 16 BV)
+residence permit → Aufenthaltsbewilligung (Art. 33 AIG)
+deportation/expulsion → Wegweisung (Art. 64 AIG), Landesverweisung (Art. 66a StGB — strafrechtlich!)
+
+--- ANWENDUNGSREGELN ---
+
+1. IMMER den Kontext prüfen bevor übersetzt wird:
+   - "custody" in Strafrecht = Untersuchungshaft
+   - "custody" in Familienrecht = elterliche Sorge / Obhut
+   
+2. MEHRERE Suchbegriffe generieren:
+   - "breach of contract" → mindestens 3 Suchen:
+     (a) "Nichterfüllung Vertrag Art. 97 OR"
+     (b) "Schlechterfüllung Mangel Gewährleistung"
+     (c) "Verzug Mahnung Schadenersatz"
+
+3. IMMER deutsche Fachbegriffe verwenden, NICHT wörtliche Übersetzung:
+   - FALSCH: "Vorvertragliche Haft" (wörtlich für "pre-trial detention")
+   - RICHTIG: "Untersuchungshaft" (Fachbegriff)
+
+4. Schweizerische Besonderheiten beachten:
+   - CH hat KEINE "punitive damages" (Strafschadenersatz)
+   - CH hat KEINE "consideration" (Gegenleistung als Vertragsvoraussetzung)
+   - CH hat KEIN "common law" Präjudizsystem (aber BGE sind de facto bindend)
+   - "Kaution" (bail) ist in CH selten — Haftentlassung hat andere Voraussetzungen

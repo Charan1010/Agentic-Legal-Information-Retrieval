@@ -1,0 +1,113 @@
+=== PROCEDURAL STANDARD CITATIONS (Procedural Defaults) ===
+
+This document lists provisions that are cited in almost EVERY Federal Court case,
+REGARDLESS of the substantive legal area. A purely semantic approach will NOT find these,
+because they have no substantive connection to the specific legal question — but they are
+ALWAYS part of the Gold Citations.
+
+--- STRATEGY ---
+
+After completing all thematic search directions:
+1. Determine the case type (criminal, civil, etc.)
+2. Add the standard citations for that case type
+3. Verify that the citations exist in the corpus (exact string match!)
+
+--- UNIVERSAL (in EVERY Federal Court case) ---
+
+Provision                      | Content                               | Frequency
+Art. 42 Abs. 2 BGG            | Reasoning requirements                | ~80%
+Art. 95 BGG                   | Permissible grounds for complaint     | ~70%
+Art. 97 Abs. 1 BGG            | Challenge to factual findings         | ~60%
+Art. 100 Abs. 1 BGG           | Appeal deadline (30 days)             | ~90%
+Art. 105 Abs. 1 BGG           | Facts are binding                     | ~60%
+Art. 106 Abs. 2 BGG           | Principle of specific pleading (fundamental rights) | ~50%
+Art. 29 Abs. 2 BV             | Right to be heard                     | ~70%
+
+--- APPEAL IN CRIMINAL MATTERS (Art. 78-81 BGG) ---
+
+In addition to the universal ones:
+Art. 78 Abs. 1 BGG            | Admissibility of criminal appeal      | ~80%
+Art. 80 Abs. 1 BGG            | Last-instance requirement             | ~60%
+Art. 81 Abs. 1 BGG            | Standing in criminal matters          | ~70%
+
+When DETENTION is involved (1B_ cases):
+Art. 212 StPO                  | Ordering detention general            | ~60%
+Art. 221 Abs. 1 StPO          | Grounds for detention (flight/collusion/reoffending) | ~90%
+Art. 222 StPO                  | Rights of the detained person         | ~40%
+Art. 226 StPO                  | Detention order by coercive measures court | ~50%
+Art. 227 StPO                  | Extension of detention                | ~50%
+Art. 5 Ziff. 3 EMRK           | Right to judicial review of detention | ~40%
+Art. 31 Abs. 3 BV             | Right to a detention judge            | ~40%
+Art. 10 Abs. 2 BV             | Personal freedom                      | ~30%
+
+When SENTENCING (6B_ cases):
+Art. 47 StGB                   | Sentencing principles                 | ~80%
+Art. 50 StGB                   | Duty to state reasons for sentence    | ~50%
+Art. 42 StGB                   | Suspended sentence                    | ~40%
+Art. 43 StGB                   | Partially suspended sentence          | ~30%
+
+--- APPEAL IN CIVIL MATTERS (Art. 72-77 BGG) ---
+
+In addition to the universal ones:
+Art. 72 Abs. 1 BGG            | Admissibility of civil appeal         | ~70%
+Art. 74 Abs. 1 BGG            | Amount in dispute CHF 30,000          | ~60%
+Art. 75 BGG                   | Last-instance requirement             | ~60%
+Art. 76 Abs. 1 BGG            | Standing in civil matters             | ~60%
+
+When FAMILY LAW (5A_ cases):
+Art. 98 BGG                    | Limited cognition (arbitrariness only) | ~70%
+Art. 9 BV                      | Prohibition of arbitrariness          | ~60%
+Art. 2 ZGB                     | Good faith                            | ~30%
+Art. 4 ZGB                     | Judicial discretion                   | ~30%
+
+When CONTRACT LAW (4A_ cases):
+Art. 8 ZGB                     | Burden of proof                       | ~40%
+Art. 18 Abs. 1 OR              | Contract interpretation               | ~40%
+
+--- APPEAL IN PUBLIC LAW MATTERS (Art. 82-89 BGG) ---
+
+Art. 82 BGG                    | Admissibility                         | ~70%
+Art. 83 BGG                    | Exceptions (exclusions)               | ~40%
+Art. 86 Abs. 1 BGG            | Lower courts                          | ~50%
+Art. 89 Abs. 1 BGG            | Standing in public law                | ~70%
+
+When IMMIGRATION LAW (2C_ cases):
+Art. 83 lit. c Ziff. 2 BGG    | Exclusion re: entitlement to permit   | ~50%
+Art. 13 Abs. 1 BV             | Private and family life               | ~50%
+Art. 8 EMRK                    | Family life (ECHR)                    | ~40%
+
+--- SOCIAL INSURANCE LAW (8C_, 9C_) ---
+
+Art. 82 ff. BGG               | Admissibility (public law)            | ~50%
+Art. 61 ATSG                   | Cantonal court procedure              | ~60%
+Art. 17 ATSG                   | Revision of pension                   | ~40%
+Art. 43 ATSG                   | Investigation / expert assessment     | ~40%
+Art. 44 ATSG                   | Cooperation in expert assessment      | ~30%
+Art. 53 ATSG                   | Revision + reconsideration            | ~50%
+
+When DISABILITY (8C_ cases):
+Art. 4 Abs. 1 IVG             | Definition of disability              | ~60%
+Art. 28 IVG                    | Entitlement to pension                | ~50%
+Art. 28a IVG                   | Measuring degree of disability        | ~40%
+Art. 16 ATSG                   | Degree of disability / income comparison | ~70%
+
+--- APPLICATION RULES FOR THE AGENT ---
+
+1. AFTER every thematic search: Determine the case type from found citations
+2. Add the relevant standard citations from the lists above
+3. BUT: Only add if the EXACT string exists in the corpus!
+   → "Art. 42 Abs. 2 BGG" must appear as a citation string in laws_de.csv
+   → Otherwise DO NOT add (false positive)
+4. For DETENTION cases (1B_ prefix found): Mandatory check StPO detention articles + BV Art. 10/31
+5. For MIXED cases: Combine multiple case-type lists
+
+--- WHY THESE ARE NOT FOUND SEMANTICALLY ---
+
+Example: Question about child maintenance
+  → Semantic search finds: ZGB Art. 276-293, BGE 147 III 265 (maintenance)
+  → NOT found: Art. 42 Abs. 2 BGG, Art. 95 BGG, Art. 100 BGG
+  → BUT: These are Gold Citations because the Federal Court in its decision
+    E. 1 (procedural requirements) ALWAYS cites these provisions
+
+The "standard citations" are the FRAME of every decision.
+The content varies, but the frame is constant.

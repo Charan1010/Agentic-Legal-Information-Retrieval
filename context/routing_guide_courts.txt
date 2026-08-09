@@ -1,0 +1,183 @@
+=== GERICHTS-ROUTING (search_courts) ===
+Verwende search_courts wenn die Frage sich auf Bundesgerichtsentscheide oder Rechtsprechung bezieht.
+
+--- KLASSIFIKATIONSREGELN (Zuerst anwenden) ---
+
+1. LEITENTSCHEID (BGE) vs EINZELFALL:
+   - BGE = Publizierte Leitentscheide (grundsätzliche Rechtsfragen)
+   - Einzelfälle (1B_, 5A_, 6B_ etc.) = Unveröffentlichte Entscheide (Einzelfallanwendung)
+   - BEIDE suchen! BGE für Grundsätze, Einzelfälle für konkrete Anwendung
+
+2. ABTEILUNGS-ZUORDNUNG (Entscheidend für korrekte Suche):
+   - Fragen zu Strafrecht/Strafprozess → BGE IV + 6B_ + 1B_ (Haft)
+   - Fragen zu Zivilrecht/Familie/Erbrecht → BGE III + 5A_ + 4A_
+   - Fragen zu Vertragsrecht/Haftpflicht → BGE III + 4A_
+   - Fragen zu Sozialversicherung → BGE V + 8C_ + 9C_
+   - Fragen zu Öffentlichem Recht → BGE I + 1C_ + 2C_
+
+3. ERWÄGUNGEN (E.): Gerichtsentscheide sind in Erwägungen (E.) gegliedert
+   - Jede Erwägung ist ein separates Dokument im Corpus
+   - Suche nach dem INHALT der Erwägung, nicht nach der Nummer
+   - Format: "BGE 137 IV 122 E. 6.2" oder "1B_210/2023 E. 4.1"
+
+--- GERICHTSABTEILUNGEN (Präfix → Rechtsgebiet) ---
+
+=== I. ÖFFENTLICH-RECHTLICHE ABTEILUNG ===
+Präfixe: 1B_, 1C_, 1D_, 1F_
+BGE: BGE [Nr] I [Seite]
+
+• 1B_ (26'275 Entscheide): Strafprozessuale Zwangsmassnahmen
+  Inhalt: Untersuchungshaft, Haftprüfung, Beschlagnahme, Überwachung, Entsiegelung
+  Schlüsselwörter: Haft, Haftgrund, Fluchtgefahr, Kollusionsgefahr, Verhältnismässigkeit, Haftentlassung, Haftverlängerung
+  KRITISCH: Fragen zur Untersuchungshaft → IMMER 1B_ suchen (+ StPO bei Gesetzen)
+  → BEI GESETZEN: StPO (Haft Art. 212-240, Rechtsmittel Art. 382-397), BV (persönliche Freiheit Art. 10/31), BGG (Beschwerde)
+  Beispiel-Suchen: "Untersuchungshaft Verhältnismässigkeit Haftdauer Überhaft"
+
+• 1C_ (41'735 Entscheide): Verwaltungsrecht, Raumplanung, Baurecht, Staatshaftung
+  Inhalt: Baubewilligungen, Umweltschutz, Enteignung, Staatshaftung, Stimmrecht
+  Schlüsselwörter: Baubewilligung, Zonenplan, Umweltverträglichkeit, Staatshaftung, Konzession
+  → BEI GESETZEN: RPG (Raumplanung), USG (Umwelt), BV (Grundrechte), BGG (Beschwerde)
+  Beispiel-Suchen: "Baubewilligung Zonenkonformität Ausnahmebewilligung Planungszone"
+
+=== II. ÖFFENTLICH-RECHTLICHE ABTEILUNG ===
+Präfixe: 2C_, 2D_, 2F_
+BGE: BGE [Nr] II [Seite] (z.T.)
+
+• 2C_ (64'732 Entscheide): Ausländerrecht, Steuerrecht, Gesundheitsrecht
+  Inhalt: Aufenthaltsbewilligung, Wegweisung, Einbürgerung, Steuerrecht, Berufsausübung
+  Schlüsselwörter: Aufenthaltsbewilligung, Wegweisung, Härtefall, Familiennachzug, Steuerhinterziehung, Berufsausübung
+  → BEI GESETZEN: AIG (Ausländer), DBG/VStG (Steuer), BV (Grundrechte), BGG (Beschwerde)
+  Beispiel-Suchen: "Aufenthaltsbewilligung Familiennachzug Bewilligungsvoraussetzungen"
+
+=== ZIVILRECHTLICHE ABTEILUNGEN ===
+Präfixe: 4A_, 4D_, 4F_, 5A_, 5D_, 5F_
+BGE: BGE [Nr] III [Seite]
+
+• 4A_ (39'088 Entscheide): Vertragsrecht, Haftpflicht, Handelsrecht, Arbeitsrecht
+  Inhalt: Vertragsauslegung, Werkvertrag, Kaufvertrag, Haftung, Gesellschaftsrecht, Versicherungsrecht, Arbeitsvertrag
+  Schlüsselwörter: Vertrag, Vertragsauslegung, Willenserklärung, Werkvertrag, Schadenersatz, Gewährleistung, Kündigung, Haftpflicht, Gesellschaft
+  KRITISCH: "Vertrag" + "Schadenersatz" → 4A_ (+ OR bei Gesetzen)
+  → BEI GESETZEN: OR (Vertragsrecht, Haftpflicht), ZPO (Verfahren), BGG (Beschwerde)
+  Beispiel-Suchen: "Vertragsauslegung Vertrauensprinzip Willenserklärung Konsens"
+
+• 5A_ (55'882 Entscheide): Familienrecht, Erbrecht, Sachenrecht, Persönlichkeitsrecht
+  Inhalt: Scheidung, Unterhalt, Sorgerecht, Kindesschutz, Erbstreit, Grundbuch, Persönlichkeitsverletzung
+  Schlüsselwörter: Scheidung, Unterhalt, Kindesunterhalt, elterliche Sorge, Obhut, Kindeswohl, Erbschaft, Testament, Pflichtteil, Eigentum, Grundbuch
+  KRITISCH: "Familie/Kind/Ehe/Erbe" → 5A_ (+ ZGB bei Gesetzen)
+  → BEI GESETZEN: ZGB (Familienrecht Art. 111-327, Erbrecht Art. 457-640), ZPO (Verfahren), SchKG (Vollstreckung), BGG
+  Beispiel-Suchen: "Kindesunterhalt Berechnung Existenzminimum Leistungsfähigkeit"
+
+=== STRAFRECHTLICHE ABTEILUNG ===
+Präfixe: 6B_, 6F_
+BGE: BGE [Nr] IV [Seite]
+
+• 6B_ (72'691 Entscheide): Strafrecht materiell und Strafzumessung
+  Inhalt: Schuldspruch, Strafzumessung, Beweiswürdigung, Landesverweisung, Massnahmen, Opferrechte
+  Schlüsselwörter: Schuldspruch, Freispruch, Strafzumessung, bedingte Strafe, Beweiswürdigung, Landesverweisung, Härtefall, Massnahme, Verwahrung
+  KRITISCH: "Strafurteil" + "Strafmass" → 6B_ (+ StGB bei Gesetzen)
+  → BEI GESETZEN: StGB (materielles Strafrecht), StPO (Beweis Art. 139-195, Rechtsmittel Art. 382-397), BGG (Beschwerde)
+  Beispiel-Suchen: "Strafzumessung Tatkomponenten Täterkomponenten Vorstrafen"
+
+=== SOZIALVERSICHERUNGSRECHTLICHE ABTEILUNGEN ===
+Präfixe: 8C_, 8D_, 8F_, 9C_, 9F_
+BGE: BGE [Nr] V [Seite]
+
+• 8C_ (45'572 Entscheide): Invalidenversicherung, Unfallversicherung, Arbeitslosenversicherung
+  Inhalt: IV-Rente, Invaliditätsgrad, Arbeitsfähigkeit, Unfallversicherung, Kausalität, Arbeitslosenentschädigung
+  Schlüsselwörter: Invalidenrente, Invaliditätsgrad, Arbeitsfähigkeit, Einkommensvergleich, Unfallkausalität, natürliche Kausalität, Adäquanz, Schleudertrauma
+  → BEI GESETZEN: IVG/UVG/AVIG + ATSG (Allgemeiner Teil) + BGG (Beschwerde)
+  Beispiel-Suchen: "Invaliditätsgrad Einkommensvergleich Tabellenlohn leidensangepasste Tätigkeit"
+
+• 9C_ (37'065 Entscheide): AHV, IV (Beiträge), Krankenversicherung, Ergänzungsleistungen
+  Inhalt: AHV-Beiträge, IV-Beiträge, Krankenversicherung, Ergänzungsleistungen, berufliche Vorsorge
+  Schlüsselwörter: AHV-Rente, Beitragspflicht, Krankenversicherung, Leistungspflicht, Ergänzungsleistung, Pensionskasse
+  → BEI GESETZEN: AHVG/KVG/BVG + ATSG (Allgemeiner Teil) + BGG (Beschwerde)
+  Beispiel-Suchen: "Krankenversicherung Leistungspflicht Wirtschaftlichkeit Behandlung"
+
+=== BGE LEITENTSCHEIDE (Publizierte Grundsatzentscheide) ===
+
+BGE-Leitentscheide sind publizierte Grundsatzentscheide des Bundesgerichts.
+Sie definieren die Rechtsprechung und werden in JEDEM späteren Fall zitiert.
+IMMER BGE parallel zu Einzelfällen suchen!
+
+• BGE_I (Öffentliches Recht I): Grundrechte, Verwaltungsrecht, Strafprozess (Haft)
+  Filter: BGE_I
+  Zuständigkeit: 1B_ (Haft-Grundsätze), 1C_ (Verwaltung), 2C_ (z.T.)
+  Schlüsselwörter: Leitentscheid, Grundsatz, Willkürverbot, persönliche Freiheit, 
+                   Verhältnismässigkeit, rechtliches Gehör
+  KRITISCH: Parallel zu 1B_/1C_ → IMMER BGE_I mitsuchen!
+  → BEI GESETZEN: BV (Grundrechte), BGG (Verfahren), VwVG (Verwaltung)
+  Beispiel-Suchen: "Grundrecht Verhältnismässigkeit persönliche Freiheit Leitentscheid"
+
+• BGE_II (Öffentliches Recht II): Steuerrecht, Ausländerrecht (z.T.)
+  Filter: BGE_II
+  Zuständigkeit: 2C_ (Steuer, Ausländer)
+  Schlüsselwörter: Steuer, Doppelbesteuerung, Aufenthalt, Grundsatzentscheid
+  → BEI GESETZEN: DBG/VStG (Steuer), AIG (Ausländer), BGG
+  Beispiel-Suchen: "Doppelbesteuerung Grundsatz Leitentscheid Steuerrecht"
+
+• BGE_III (Zivilrecht): Vertragsrecht, Familienrecht, Erbrecht, Sachenrecht
+  Filter: BGE_III
+  Zuständigkeit: 4A_ (Verträge, Haftpflicht), 5A_ (Familie, Erbrecht)
+  Schlüsselwörter: Vertragsauslegung, Unterhalt, Kindeswohl, Erbrecht, Grundsatz
+  KRITISCH: Parallel zu 4A_/5A_ → IMMER BGE_III mitsuchen!
+  → BEI GESETZEN: OR (Verträge), ZGB (Familie/Erbrecht), ZPO (Verfahren)
+  Beispiel-Suchen: "Kindesunterhalt Berechnung Grundsatz Leitentscheid"
+  Beispiel-Suchen: "Vertragsauslegung Vertrauensprinzip Grundsatzentscheid"
+
+• BGE_IV (Strafrecht): Strafrecht materiell, Strafprozessrecht, Haftrecht
+  Filter: BGE_IV
+  Zuständigkeit: 6B_ (Strafurteile), 1B_ (Haftfragen)
+  Schlüsselwörter: Strafzumessung, Haftgrund, Kollusionsgefahr, Beweiswürdigung, 
+                   Grundsatzentscheid, Leitentscheid
+  KRITISCH: Parallel zu 6B_/1B_ → IMMER BGE_IV mitsuchen!
+  KRITISCH: Haft-Leitentscheide zu Art. 221 StPO liegen unter BGE_IV!
+  KRITISCH: Haft-GRUNDRECHTE (persönliche Freiheit, Art. 10/31 BV) → AUCH BGE_I mitsuchen!
+  → BEI GESETZEN: StGB (materielles Strafrecht), StPO (Verfahren), BGG
+  Beispiel-Suchen: "Untersuchungshaft Grundsatz Leitentscheid Kollusionsgefahr"
+  Beispiel-Suchen: "Strafzumessung Grundsatz Tatkomponenten Leitentscheid"
+
+• BGE_V (Sozialversicherungsrecht): IV, UV, KV, AHV, BVG
+  Filter: BGE_V
+  Zuständigkeit: 8C_ (IV/UV/ALV), 9C_ (AHV/KV/EL)
+  Schlüsselwörter: Invalidität, Begutachtung, Kausalität, Grundsatzentscheid
+  KRITISCH: Parallel zu 8C_/9C_ → IMMER BGE_V mitsuchen!
+  → BEI GESETZEN: IVG/UVG/KVG + ATSG + BGG
+  Beispiel-Suchen: "Begutachtung Grundsatz Beweiswert polydisziplinär Leitentscheid"
+
+=== BUNDESSTRAFGERICHT (Beschwerdekammer & Berufungskammer) ===
+Präfixe: 7B_
+BGE: (keine eigenen BGE — Bundesstrafgericht ist Vorinstanz des Bundesgerichts)
+
+• 7B_ (4'105 Entscheide): Bundesstrafgericht — Beschwerdekammer
+  Inhalt: Haft bei Bundesgerichtsbarkeit, Beschlagnahme, Entsiegelung, Rechtshilfe,
+          Verfahrensfragen, Beschwerden gegen Bundesanwaltschaft
+  Zuständigkeit: Organisierte Kriminalität, Terrorismus, Wirtschaftsstraftaten von 
+                 nationaler Bedeutung, internationale Rechtshilfe in Strafsachen,
+                 Geldwäscherei, Korruption
+  Schlüsselwörter: Bundesstrafgericht, Beschwerdekammer, Bundesgerichtsbarkeit,
+                   Bundesanwaltschaft, organisierte Kriminalität, Rechtshilfe,
+                   BStKR, StBOG, Geldwäscherei, Terrorismus
+  KRITISCH: Fragen zu Bundesstrafgericht/Bundesgerichtsbarkeit → 7B_ suchen
+  KRITISCH: Internationale Rechtshilfe in Strafsachen → 7B_ (+ IRSG bei Gesetzen)
+  KRITISCH: Haft/Untersuchungshaft → AUCH 7B_ suchen (neben 1B_)! BStGer entscheidet Haftbeschwerden in Bundesstrafsachen
+  → BEI GESETZEN: StBOG (Organisation), StPO (Verfahren), IRSG (Rechtshilfe)
+  Beispiel-Suchen: "Beschwerdekammer Bundesstrafgericht Haft Bundesgerichtsbarkeit"
+  Beispiel-Suchen: "Rechtshilfe international Herausgabe Kontosperre"
+
+--- HÄUFIGE FEHLER (VERMEIDEN) ---
+
+1. "Haft/Untersuchungshaft" → 1B_ (NICHT 6B_). 6B_ = Strafurteil, 1B_ = Haftfragen
+   ABER AUCH: 7B_ für Haftbeschwerden in Bundesstrafsachen + BGE_I für Haft-Grundrechte!
+2. "Unterhalt nach Scheidung" → 5A_ (NICHT 4A_). 4A_ = Vertragsrecht
+3. "Arbeitsvertrag" → 4A_ (NICHT 8C_). 8C_ = Sozialversicherung, NICHT Arbeitsrecht
+4. "Invalidenrente" → 8C_ oder 9C_ (NICHT 5A_)
+5. BGE und Einzelfälle IMMER BEIDE suchen — BGE für Grundsätze, Einzelfälle für Anwendung
+
+--- SUCH-STRATEGIE FÜR GERICHTE ---
+
+• Suche nach dem RECHTLICHEN KONZEPT, nicht nach Falldetails
+• Verwende die gleichen Begriffe wie die Erwägungen: "Verhältnismässigkeit", "Willkür", "Ermessen"
+• Kombiniere Rechtsfrage + Rechtsgebiet: "Haftgrund Kollusionsgefahr Beweisgefährdung"
+• BGE-Leitentscheide verwenden juristische Fachsprache — suche mit Fachbegriffen
+• Bei Familien-/Erbrecht: "Kindeswohl", "Leistungsfähigkeit", "Existenzminimum", "gebührende Lebenshaltung"

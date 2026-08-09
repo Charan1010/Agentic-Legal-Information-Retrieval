@@ -1,0 +1,1262 @@
+################################################################################
+  PIPELINE VALIDATION RUN
+  Timestamp: 2026-06-04 18:07:30
+  Config: {'model_file': 'mistral-7b-instruct-v0.2.Q4_K_M.gguf', 'n_ctx': 16384, 'n_threads': 8, 'n_gpu_layers': -1, 'max_tokens_planner': 3000, 'max_tokens_executor': 800, 'temperature': 0.1, 'temperature_executor': 0.3, 'embed_model': 'Qwen/Qwen3-Embedding-0.6B', 'embed_dim': 1024, 'embed_max_length': 1024, 'embed_batch_size': 8, 'prompt_doc_law': 'Instruct: Represent this Swiss federal statute article in German for legal citation retrieval\nDocument: ', 'prompt_doc_court': 'Instruct: Represent this Swiss Federal Court decision excerpt in German for legal citation retrieval\nDocument: ', 'prompt_query_law': 'Instruct: Given German legal search terms, retrieve relevant Swiss federal statute articles from the SR collection\nQuery: ', 'prompt_query_court': 'Instruct: Given German legal search terms, retrieve relevant Swiss Federal Court decisions (BGE)\nQuery: ', 'rerank_model': 'Qwen/Qwen3-Reranker-0.6B', 'rerank_batch_size': 8, 'rerank_score_cutoff': 0.0, 'max_final_citations': 60, 'max_executor_iterations': 3, 'executor_timeout_sec': 15, 'adaptive_fallback_threshold': 5, 'rrf_k': 60, 'search_top_k': 10, 'courts_sample_n': 200000}
+################################################################################
+
+
+Validation dataset: /kaggle/input/competitions/llm-agentic-legal-information-retrieval/val.csv
+Total queries: 10
+
+
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  QUERY 1
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  Question: May a court lawfully order a three‑month extension of pre‑trial detention under Art. 221 Abs. 1 lit. b StPO (risk of collusion) consistent with the principle of proportionality when the accused—detained after an alleged late‑night assault and theft of a courier satchel containing, inter alia, €5,600—was remanded by an order dated 18 October 2024 for a maximum period up to 15 January 2025, the prosecutor sought an extension on 10 December 2024 primarily citing a concrete risk that the detainee would influence witnesses or tamper with evidence and a risk of reoffending, while the detainee opposed the extension on the ground that most witnesses have already been interviewed, the investigative steps still pending are essentially technical (phone data extraction, CCTV image analysis, and bank record checks), his release would therefore not jeopardize the inquiry, and the alleged victim has withdrawn the complaint—i.e. does the asserted concrete risk of collusion and considerations of proportionality justify a three‑month prolongation in these circumstances?
+  Gold citations: Art. 221 Abs. 1 StPO;Art. 140 Abs. 1 StGB;Art. 396 Abs. 1 StPO;Art. 222 StPO;Art. 393 Abs. 1 StPO;Art. 382 Abs. 1 StPO;Art. 385 Abs. 1 StPO;Art. 221 Abs. 2 StPO;Art. 227 Abs. 1 StPO;Art. 212 Abs. 3 StPO;Art. 390 Abs. 2 StPO;Art. 422 Abs. 1 StPO;Art. 422 Abs. 2 StPO;Art. 428 Abs. 1 StPO;Art. 135 Abs. 4 StPO;Art. 100 Abs. 1 BGG;Art. 135 Abs. 3 StPO;Art. 37 Abs. 1 StBOG;Art. 39 Abs. 1 StBOG;BGE 137 IV 122 E. 6.2;BGE 137 IV 122 E. 6.4;BGE 137 IV 122 E. 4.2;BGE 132 I 21 E. 3.2;1B_210/2023 E. 4.1;BGE 132 I 21 E. 3.2.2;1B_536/2018 E. 5.1;BGE 139 IV 270 E. 3.1;BGE 133 I 168 E. 4.1;BGE 143 IV 168 E. 5.1;BGE 133 I 270 E. 3.4.2;BGE 137 IV 122 E. 4.1;BGE 132 I 21 E. 3.2.1;1B_90/2021 E. 2.1;1B_90/2021 E. 2.4;7B_496/2025 E. 3.2;7B_231/2025 E. 4.1;7B_69/2024 E. 3.3.2;7B_301/2024 E. 2.4;7B_12/2025 E. 2.2;1B_357/2022 E. 3.1;1B_15/2023 E. 3.1;1B_28/2022 E. 4.1
+  Gold count: 42
+    â€¢ Art. 221 Abs. 1 StPO
+    â€¢ Art. 140 Abs. 1 StGB
+    â€¢ Art. 396 Abs. 1 StPO
+    â€¢ Art. 222 StPO
+    â€¢ Art. 393 Abs. 1 StPO
+    â€¢ Art. 382 Abs. 1 StPO
+    â€¢ Art. 385 Abs. 1 StPO
+    â€¢ Art. 221 Abs. 2 StPO
+    â€¢ Art. 227 Abs. 1 StPO
+    â€¢ Art. 212 Abs. 3 StPO
+    â€¢ Art. 390 Abs. 2 StPO
+    â€¢ Art. 422 Abs. 1 StPO
+    â€¢ Art. 422 Abs. 2 StPO
+    â€¢ Art. 428 Abs. 1 StPO
+    â€¢ Art. 135 Abs. 4 StPO
+    â€¢ Art. 100 Abs. 1 BGG
+    â€¢ Art. 135 Abs. 3 StPO
+    â€¢ Art. 37 Abs. 1 StBOG
+    â€¢ Art. 39 Abs. 1 StBOG
+    â€¢ BGE 137 IV 122 E. 6.2
+    ... +22 more
+  Timestamp: 2026-06-04 18:07:30
+
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  PHASE 1: PLANNER
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  Input question: May a court lawfully order a three‑month extension of pre‑trial detention under Art. 221 Abs. 1 lit. b StPO (risk of collusion) consistent with the principle of proportionality when the accused—detained after an alleged late‑night assault and theft of a courier satchel containing, inter alia, €5,600—was remanded by an order dated 18 October 2024 for a maximum period up to 15 January 2025, the prosecutor sought an extension on 10 December 2024 primarily citing a concrete risk that the detainee would influence witnesses or tamper with evidence and a risk of reoffending, while the detainee opposed the extension on the ground that most witnesses have already been interviewed, the investigative steps still pending are essentially technical (phone data extraction, CCTV image analysis, and bank record checks), his release would therefore not jeopardize the inquiry, and the alleged victim has withdrawn the complaint—i.e. does the asserted concrete risk of collusion and considerations of proportionality justify a three‑month prolongation in these circumstances?
+
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  Context Selection (keyword matching)
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  LAW DOMAIN SCORES:
+    STRAFPROZESS              â†’  17 â˜…
+    STRAFRECHT                â†’   4 â˜…
+    ZIVILRECHT                â†’   3
+    PROZESSRECHT              â†’   2 â˜…
+    OEFFENTLICHES_RECHT       â†’   2
+    FINANZMARKTRECHT          â†’   2
+    SOZIALVERSICHERUNG        â†’   0
+    STEUERRECHT               â†’   0
+    WEITERE                   â†’   0
+  COURT DIVISION SCORES:
+    COURT_STRAFPROZESS        â†’   7
+    COURT_BGE_STRAF           â†’   2
+    COURT_VERWALTUNG          â†’   0
+    COURT_OEFFENTLICH         â†’   0
+    COURT_VERTRAG             â†’   0
+    COURT_FAMILIE             â†’   0
+    COURT_STRAF               â†’   0
+    COURT_SOZIAL_IV           â†’   0
+    COURT_SOZIAL_RENTEN       â†’   0
+    COURT_BGE_ZIVIL           â†’   0
+    COURT_BGE_SOZIAL          â†’   0
+    COURT_BGE_OEFFENTLICH     â†’   0
+    COURT_BUNDESSTRAF         â†’   0
+
+  Selected domains: {'PROZESSRECHT', 'STRAFRECHT', 'STRAFPROZESS'}
+  Context length: 8,019 chars (~2004 tokens)
+
+  --- FULL INJECTED CONTEXT ---
+=== GESETZES-ROUTING (search_laws) ===
+Verwende search_laws wenn die Frage sich auf Gesetzesartikel, Verordnungen oder die Bundesverfassung bezieht.
+
+--- KLASSIFIKATIONSREGELN (Zuerst anwenden) ---
+
+1. STRAFRECHT vs STRAFPROZESS: 
+   - Materielle Straftat (Mord, Betrug, Diebstahl, Körperverletzung) → StGB
+   - Jugendstraftaten (Minderjährige, Erziehungsmassnahmen) → JStG
+   - Verfahren (Untersuchungshaft, Beschwerde, Berufung, Beweis) → StPO
+   - Jugendstrafverfahren → JStPO
+   - FALLE: "Untersuchungshaft" ist IMMER StPO (Art. 212-240), NICHT StGB
+
+2. PRIVATRECHT vs PROZESSRECHT:
+   - Materielle Ansprüche (Vertrag, Eigentum, Familie, Erbrecht) → OR/ZGB
+   - Sachenrecht, Grundbuch → ZGB + GBV (Grundbuchverordnung)
+   - Verfahrensrecht (Klage, Berufung, Beweis, Zuständigkeit) → ZPO
+   - Internationales Privatrecht → IPRG
+   - FALLE: "Scheidung" betrifft ZGB (Art. 111-134) UND ZPO (Verfahrensvorschriften)
+
+3. BUNDESGERICHT-VERFAHREN:
+   - Beschwerde ans Bundesgericht, Legitimation, Fristen → BGG
+   - Verwaltungsverfahren des Bundes → VwVG
+   - IMMER mit BGG suchen wenn "Beschwerde in Zivilsachen/Strafsachen/öffentlich-rechtlichen Angelegenheiten" erwähnt wird
+   - Art. 100 Abs. 1 BGG (30-Tage-Frist) erscheint in FAST JEDEM Fall
+
+4. FINANZMARKT:
+   - Finanzdienstleistungen, Anlageberatung, Prospekt → FIDLEG
+   - Finanzinstitute, Bewilligungspflicht → FINIG
+   - Finanzmarktaufsicht, Marktmissbrauch → FINMAG
+   - Banken → BankG
+   - Bucheffekten → BEG
+   - FINMA-Verordnungen → FINMA (Sammelbegriff)
+
+5. MEHRFACH-SUCHE PFLICHT: Die meisten Fragen betreffen 2-3 Gesetze gleichzeitig.
+   STRAFPROZESS-MUSTER (IMMER so aufbauen!):
+   - Haftfrage → StPO (Haft) + StPO (Rechtsmittel) + StPO (Verteidigung) + StGB + BGG + BV
+   - Strafurteil → StGB + StPO (Beweis) + StPO (Rechtsmittel) + BGG
+   - Bundesstrafgericht → StBOG + StPO + IRSG (bei Rechtshilfe)
+   
+   ZIVILRECHT-MUSTER:
+   - Scheidung → ZGB + ZPO + BGG
+   - Erbstreit → ZGB (Erbrecht) + ZPO + SchKG (Vollstreckung)
+   - Vertrag → OR + ZPO + BGG
+   
+   SOZIALVERSICHERUNG-MUSTER:
+   - IV-Rente → IVG + ATSG + BGG
+   - Unfall → UVG + ATSG + BGG
+   
+   Beispiel: Strafverfahren → StPO + StGB + BGG
+   Beispiel: Kindesunterhalt → ZGB + ZPO + BGG
+   Beispiel: Asyl → AsylG + AIG + BV
+
+--- GESETZES-TAXONOMIE (Abkürzung → Rechtsgebiet → Suchbegriffe) ---
+
+
+--- RELEVANTE GESETZES-TAXONOMIE ---
+
+
+=== STRAFPROZESSRECHT ===
+
+• StPO (Schweizerische Strafprozessordnung) — 1'306 Artikel
+  Inhalt: Strafverfahrensrecht, Untersuchung, Zwangsmassnahmen, Haft, Beweis, Rechtsmittel
+  
+  WICHTIGE TEILBEREICHE (jeweils eigene Such-Richtung erstellen!):
+  A) HAFT (Art. 212-240): Untersuchungs-/Sicherheitshaft, Haftgründe
+     → Fluchtgefahr, Kollusionsgefahr, Wiederholungsgefahr, Überhaft
+     → "Untersuchungshaft Haftgründe Fluchtgefahr Kollusionsgefahr"
+  B) RECHTSMITTEL (Art. 382-397): Beschwerde, Berufung, Revision
+     → Legitimation, Beschwerdefrist, Instanzenzug, reformatio in peius
+     → "Beschwerde Haftentscheid Legitimation Beschwerdefrist Instanzenzug"
+     KRITISCH: JEDER Haftfall hat Rechtsmittel-Aspekt!
+  C) KOSTEN & ENTSCHÄDIGUNG (Art. 422-432): Verfahrenskosten, Genugtuung
+     → Kostenverlegung, unentgeltliche Rechtspflege, Parteientschädigung
+     → "Verfahrenskosten Kostenverlegung unentgeltliche Rechtspflege"
+     KRITISCH: JEDER Fall hat Kostenfolgen!
+  D) VERTEIDIGUNG (Art. 127-137): Amtliche/notwendige Verteidigung
+     → Pflichtverteidiger, Honorar, Entschädigung, Widerruf
+     → "amtliche Verteidigung notwendige Verteidigung Pflichtverteidiger"
+     KRITISCH: Bei Haft → IMMER auch Verteidigungsrecht prüfen!
+  E) BEWEIS (Art. 139-195): Beweiserhebung, Beweisverwertung
+     → Verwertungsverbot, Einvernahme, Zeuge, Sachverständiger, Gutachten
+     → "Beweisverwertung Verwertungsverbot rechtswidrig erhobener Beweis"
+  F) ZWANGSMASSNAHMEN (Art. 196-298): Beschlagnahme, Überwachung
+     → Durchsuchung, Entsiegelung, geheime/technische Überwachung
+     → "Beschlagnahme Entsiegelung Durchsuchung Überwachung"
+  
+  KRITISCH: Bei Haftfragen NICHT nur A suchen! Vollständiger Fall = A+B+C+D
+  → PARALLEL SUCHEN: 1B_ (Einzelfälle), 6B_ (Strafurteile), 7B_ (BStGer), BGE_IV (Leitentscheide)
+  Beispiel-Suchen: "Untersuchungshaft Kollusionsgefahr Haftgrund Verhältnismässigkeit"
+
+• JStPO (Jugendstrafprozessordnung) — 135 Artikel
+  Inhalt: Strafverfahren gegen Jugendliche, besondere Verfahrensregeln
+  Schlüsselwörter: Jugendstrafverfahren, Jugendanwaltschaft, Mediation, besondere Schutzmassnahmen
+  KRITISCH: Verfahren gegen Minderjährige → JStPO (nicht StPO!)
+  Beispiel-Suchen: "Jugendstrafverfahren Mediation Einstellung Jugendanwalt"
+
+• StBOG (Strafbehördenorganisationsgesetz) — 183 Artikel
+  Inhalt: Organisation der Strafbehörden des Bundes, Bundesstrafgericht, Bundesanwaltschaft
+  Schlüsselwörter: Bundesstrafgericht, Bundesanwaltschaft, Beschwerdekammer, Strafkammer, Berufungskammer, Bundesgerichtsbarkeit
+  KRITISCH: Bei Fragen zu Bundesstrafgericht → StBOG + 7B_ parallel suchen
+  → PARALLEL SUCHEN: 7B_ (Bundesstrafgericht), BGE_IV (Leitentscheide), StPO (Verfahren)
+  Beispiel-Suchen: "Bundesstrafgericht Zuständigkeit Bundesgerichtsbarkeit Organisation"
+
+• MStP (Militärstrafprozess) — 589 Artikel
+  Inhalt: Verfahren in Militärstrafsachen
+  Schlüsselwörter: Militärgericht, Militärstrafverfahren, Auditor
+
+=== PROZESSRECHT ===
+
+• ZPO (Schweizerische Zivilprozessordnung) — 857 Artikel
+  Inhalt: Zivilverfahren, Klageverfahren, Summarisches Verfahren, Beweis, Rechtsmittel
+  Schlüsselwörter: Klage, Berufung, Beschwerde, Beweis, Beweislast, Summarisches Verfahren, Schlichtung, Streitwert, Kostenvorschuss, vorsorgliche Massnahmen, Schiedsverfahren
+  → PARALLEL SUCHEN: 4A_ (Vertragsstreitigkeiten), 5A_ (Familienverfahren), BGE_III (Leitentscheide)
+  Beispiel-Suchen: "Berufung Zivilsachen Frist Novenrecht", "vorsorgliche Massnahmen Glaubhaftmachung"
+
+• BGG (Bundesgerichtsgesetz) — 325 Artikel
+  Inhalt: Verfahren vor dem Bundesgericht, Beschwerdearten, Legitimation, Fristen
+  Schlüsselwörter: Beschwerde in Zivilsachen, Beschwerde in Strafsachen, Beschwerde in öffentlich-rechtlichen Angelegenheiten, subsidiäre Verfassungsbeschwerde, Streitwert, Legitimation, Frist, Rügeprinzip
+  KRITISCH: Art. 100 Abs. 1 BGG (30-Tage-Frist) kommt in fast JEDEM Bundesgerichtsfall vor
+  → PARALLEL SUCHEN: Alle Abteilungen je nach Rechtsgebiet, BGE_I/II/III/IV/V
+  Beispiel-Suchen: "Beschwerde Bundesgericht Legitimation schutzwürdiges Interesse", "Streitwertgrenze Beschwerde Zivilsachen BGG"
+
+• VwVG (Verwaltungsverfahrensgesetz) — 205 Artikel
+  Inhalt: Verwaltungsverfahren des Bundes, Verfügung, Einsprache, Beschwerde
+  Schlüsselwörter: Verfügung, Verwaltungsverfahren, Einsprache, Beschwerde, Parteistellung, Akteneinsicht, Begründungspflicht, Wiederherstellung
+  Beispiel-Suchen: "Verwaltungsverfügung Einsprache Parteistellung rechtliches Gehör"
+
+=== STRAFRECHT (materiell) ===
+
+• StGB (Schweizerisches Strafgesetzbuch) — 1'239 Artikel
+  Inhalt: Materielle Straftaten und Strafen, Allgemeiner Teil (Vorsatz, Fahrlässigkeit, Versuch, Teilnahme), Besonderer Teil (Tötung, Körperverletzung, Diebstahl, Betrug, Urkundenfälschung)
+  Schlüsselwörter: Strafe, Freiheitsstrafe, Geldstrafe, bedingt, Bewährung, Vorsatz, Fahrlässigkeit, Strafzumessung, Landesverweisung, Täter, Opfer, Delikt, Vergehen, Verbrechen
+  Wichtige Bereiche: Art. 1-110 (AT), Art. 111-332 (BT)
+  → PARALLEL SUCHEN: 6B_ (Strafurteile), BGE_IV (Leitentscheide), 1B_ (bei Haftfällen)
+  Beispiel-Suchen: "Strafzumessung bedingte Freiheitsstrafe Bewährung", "Betrug Arglist Täuschung Vermögensschaden"
+
+• JStG (Jugendstrafgesetz) — 167 Artikel
+  Inhalt: Strafrecht für Jugendliche (10-18 Jahre), Schutzmassnahmen, Strafen für Jugendliche
+  Schlüsselwörter: Jugendlicher, Minderjähriger, Schutzmassnahme, Erziehung, Unterbringung, persönliche Verhältnisse, Jugendanwalt
+  KRITISCH: Straftaten durch Minderjährige → IMMER JStG (nicht StGB!)
+  Beispiel-Suchen: "Jugendstrafrecht Massnahme Erziehung Unterbringung Jugendlicher"
+[... gekÃ¼rzt ...]
+  --- END INJECTED CONTEXT ---
+
+  System prompt length: 18,588 chars (~4647 tokens)
+
+  --- FULL SYSTEM PROMPT ---
+Du bist ein erfahrener Schweizer Rechtsanwalt (Senior Swiss Attorney) mit 20 Jahren Berufserfahrung
+am Schweizerischen Bundesgericht. Du analysierst Rechtsfragen systematisch und planst die Recherche.
+
+DEINE AUFGABE:
+Eine englische Rechtsfrage liegt vor dir. Du musst einen RECHERCHE-PLAN erstellen:
+1. Sachverhalt erfassen (was ist passiert?)
+2. Rechtsfragen identifizieren (welche juristischen Probleme stecken drin?)
+3. Rechtsgebiete zuordnen (welche Gesetze/Gerichte sind relevant?)
+4. Such-Richtungen definieren (wo genau suchen wir?)
+
+DU DENKST WIE EIN RECHTSANWALT:
+- Du navigierst die STRUKTUR des Rechts (nicht semantische Ähnlichkeit)
+- Du weisst welche Gesetze zusammenhängen (Querverweise)
+- Du weisst dass JEDER Bundesgerichtsfall auch Verfahrensrecht zitiert
+- Du übersetzt englische Konzepte in die RICHTIGEN deutschen Fachbegriffe
+- Du kennst die "immer-zitierten" Normen (BGG, BV Art. 29, ATSG)
+
+DEIN OUTPUT (strikt JSON):
+{
+  "sachverhalt": "Kurze Zusammenfassung des Sachverhalts auf Deutsch",
+  "rechtsfragen": ["Rechtsfrage 1", "Rechtsfrage 2", ...],
+  "directions": [
+    {
+      "priority": 1,
+      "corpus": "laws|courts|both",
+      "rechtsgebiet": "Name des Rechtsgebiets",
+      "filter_codes": ["CODE1", "CODE2"],
+      "reasoning": "Warum diese Richtung (1 Satz)",
+      "seed_queries": ["Deutsche Suchbegriffe 1", "Deutsche Suchbegriffe 2"]
+    },
+    ...
+  ]
+}
+
+REGELN FÜR DIRECTIONS:
+- IMMER GENAU 6 Richtungen (nicht weniger!)
+- IMMER eine "Verfahrensrecht"-Richtung einschliessen (BGG/BV/ATSG)
+- IMMER sowohl Gesetze ALS AUCH Gerichte abdecken
+- Priorität 1 = wichtigste Richtung, höhere Zahlen = ergänzend
+- filter_codes: NUR aus den verfügbaren Codes wählen (siehe unten)
+- seed_queries: DEUTSCHE Fachbegriffe, KEINE Artikelnummern, 3-8 Wörter pro Query
+- Jede Query soll ein ANDERES Konzept/Aspekt abdecken
+
+DIVERSITÄTS-REGELN (KRITISCH — NIEMALS überspringen!):
+- JEDE direction MUSS ein ANDERES rechtliches Thema abdecken
+- VERBOTEN: 3+ directions die denselben Suchbegriff variieren (z.B. alle "Kollusionsgefahr")
+- PFLICHT bei 6 Richtungen — decke mindestens 4 VERSCHIEDENE Dimensionen ab:
+  a) Materielle Norm — das Gesetz das den Sachverhalt DIREKT regelt
+  b) Einzelfallpraxis — Gerichtsabteilung die den Fall beurteilt (1B_, 5A_, 6B_ etc.)
+  c) BGE-Leitentscheide — publizierte Grundsatzentscheide (BGE_IV, BGE_III etc.)
+  d) Verfahrensrecht — Rechtsmittel, Fristen, Kosten, Verteidigung
+  e) Verwandtes Recht — Querverweise (z.B. StGB bei StPO-Fragen, OR bei ZGB-Fragen)
+  f) Bundesstrafgericht — bei Haftbeschwerden, organisierter Kriminalität, Bundesgerichtsbarkeit: 7B_
+
+CHECKLISTEN PRO RECHTSGEBIET (IMMER prüfen):
+• STRAFPROZESS (Haft/Zwangsmassnahmen):
+  MUSS: StPO + 1B_ + BGE_IV + BGE_I (Haft-Grundrechte!) + Rechtsmittel + amtliche Verteidigung
+  SOLLTE: StGB (materielles Delikt) + 7B_ (Haftbeschwerden/BStGer) + BV/BGG
+• STRAFRECHT (Strafurteil/Strafzumessung):
+  MUSS: StGB + 6B_ + BGE_IV + Rechtsmittel
+  SOLLTE: StPO (Beweisverwertung) + 1B_ (bei vorheriger Haft) + BV/BGG
+• FAMILIENRECHT:
+  MUSS: ZGB + 5A_ + BGE_III + Kindesschutz/Unterhalt
+  SOLLTE: SchKG (Vollstreckung) + ZPO (Verfahren) + BGG
+• SOZIALVERSICHERUNG:
+  MUSS: Spezialgesetz (IVG/UVG/KVG) + ATSG + 8C_/9C_ + BGE_V
+  SOLLTE: Begutachtung + Verfahrensrecht + BGG
+• ÖFFENTLICHES RECHT:
+  MUSS: Spezialgesetz (AIG/RPG/USG) + BV + 1C_/2C_ + BGE_I
+  SOLLTE: VwVG (Verfahren) + BGG
+
+IMMER-REGEL: Mindestens EINE Richtung muss BGE-Leitentscheide suchen (BGE_I bis BGE_V)!
+IMMER-REGEL: Bei Strafrecht → IMMER auch materielles Recht (StGB) als eigene Richtung!
+
+VERFÜGBARE FILTER-CODES (NUR diese verwenden — NIEMALS Codes erfinden!):
+Format: CODE(Anzahl_Dokumente) — die Zahl zeigt wie viele Dokumente unter diesem Code existieren.
+Wähle Codes mit VIELEN Dokumenten für breite Suche, Codes mit WENIGEN für gezielte Suche.
+
+Gesetze: OR(3662), FINMA(2589), ZGB(2395), StPO(1306), StGB(1239), ETH(1127), TSV(1094), SchKG(1060), VTS(1022), ZPO(857), MStG(811), ZV(717), AVO(716), TSchV(710), BSV(699), AIG(665), BV(658), AHVV(625), DBG(614), KVV(600), MStP(589), ERV(576), ParlG(571), StSV(568), BPV(562), PatV(554), KKV(547), SSV(539), VZV(539), EnFV(531), LwG(527), AsylG(526), GE(521), AVIV(514), VRV(512), SVG(509), IPRG(494), EBG(486), DZV(476), MG(476), BVG(473), GBV(469), IVV(465), ZDV(450), HRegV(447), KVG(446), AVIG(443), FinfraV(442), LFG(441), ZStV(440), FinfraG(435), HMG(433), MWSTV(432), SSG(430), ZG(424), MWSTG(418), EDA(409), IVG(405), EMKV(398), LeV(398), AHVG(397), FMG(396), VRAB(396), FDV(391), VAG(391), BVV(387), RTVG(386), KAG(385), BAZG(380), FIFG(378), SprstV(376), IRSG(375), KV(374), UVV(374), HFKG(373), VZAE(372), PSMV(370), PatG(364), DS(361), RTVV(354), USG(354), BGS(343), EJPD(343), VGS(340), EBV(339), StHG(339), LMVV(338), EnG(333), UVG(331), BGG(325), VMDP(323), FiFV(320), VZG(319), ASG(318), FIDLEV(318), VLtH(317), FINIV(314), EnV(309), VStrR(309), MepV(308), PGesV(302), NDG(297), VLpH(297), BZG(296), WV(292), ZSV(287), VUV(286), KEG(285), URG(285), VBP(281), MIG(279), LFV(273), ISG(271), LGV(271), ARV(269), BankG(269), ChemV(267), BauAV(266), PBG(266), BPR(264), BBV(262), FusG(262), MSchG(261), BankV(260), BetmKV(256), VBS(253), VPG(253), VPB(250), ZDG(250), HyV(249), RVOG(248), SVV(248), EntG(247), IvDV(247), FIDLEG(246), FMV(244), VVA(243), KlinV(240), VMSV(240), SebV(239), StromVG(239), VVV(239), MVG(237), WG(235), AlkG(234), SVAV(233), GSchG(232), StromVV(232), BGBB(230), KLV(230), LMG(229), IPFiV(226), VAM(226), VSFK(226), VVG(226), WRG(225), ATSG(224), FINMAG(224), VStG(223), UEV(222), RVOV(221), VIL(219), EpV(217), ELV(211), BSG(209), DSG(209), GSchV(209), FHG(208), EDI(207), METAS(207), VStV(207), FHV(206), VWEG(206), MSchV(205), VwVG(205), GRN(204), MIV(204), UraM(202), VBPV(201), ArG(200), VABFP(200), NDB(200), HFG(199), KEV(199), KVAV(199), WaV(197), BZP(196), AVV(195), BGerR(195), EpG(195), BPG(194), AMBV(192), BBG(191), FrSV(191), AEFV(188), AlkV(186), BevSV(185), VID(185), LiqV(184), FINIG(183), MedBG(183), StBOG(183), RLSV(182), TSG(182), ARPV(180), PHV(179), StReG(177), VTE(177), WBF(176), RAV(176), RPV(175), TAMV(175), VAwG(174), TZV(173), SBV(171), StReV(171), EOV(170), KOV(170), GUMV(168), LIV(168), AVG(167), JStG(167), EMKG(165), ISV(165), VEV(165), ASV(164), BauPV(164), VFB(164), VFSD(164), GwG(162), KG(160), NSG(160), LVG(158), NIV(158), WaG(158), FiLaV(157), WEG(157), EleG(156), EOG(156), VZEG(156), RPG(155), RAG(154), VAF(154), BetmG(153), KVAG(153), NHG(153), NDV(150), VVWAL(150), AZGV(149), VNF(149), NBV(148), NBG(146), VSZV(146), WFV(146), NZV(145), LSV(143), VUZPE(143), ZISG(143), GSG(142), VLL(142), WPEG(142), EU(141), VAPK(141), VGR(141), FAV(140), JSV(140), GUMG(139), KPFV(139), GRS(138), VCITES(138), NSV(137), VVEA(136), JStPO(135), SEFV(135), WPEV(134), AEV(133), BAZL(133), MStV(133), VLBE(133), VAV(132), PsyG(131), LPG(131), SKV(129), BStatV(128), FZG(128), SprstG(127), TSchG(127), VeVA(127), VHIS(127), VPR(127), BauPG(126), BPDV(126), ChemG(126), HFV(126), StG(126), VSB(126), BWIS(125), DesG(125), MVV(125), WFG(125), ATSV(124), StAhiG(124), TSchAV(124), VILB(123), GeoIV(122), MinVG(122), TabPV(122), TStG(122), WResV(122), IQG(121), EFD(121), ParlVV(121), RLG(120), BPI(119), ELG(119), SV(119), VGG(119), VTNP(119), ChKV(118), TStV(118), AIAG(117), TabPG(117), GeoIG(116), KMG(114), DSV(113), DigiV(112), LRV(112), PAVO(112), PG(112), BewG(111), BMV(111), FMedG(111), BStG(109), BEG(108), DesV(108), FiG(108), SebG(108), StSG(108), VBVA(108), MinVV(107), PAV(107), VUB(107), GTG(106), KPAV(106), KRV(106), MindStV(106), PublV(106), STEBV(106), VLK(106), VPSP(105), KFG(104), KKG(104), MeAV(104), SuG(104), VWLV(104), VAZV(103), RVUS(102), ESV(102), VAmFD(102), KJFV(101), ISLV(100), LBG(100), PatGG(100), EHSM(99), ASTRA(99), StAV(99), TGV(99), GeoNV(98), KRG(98), SAFIG(98), SERVG(98), VIZMB(98), EPDV(97), PVFMH(97), VOCV(97), ZSTEBV(97), AkkBV(96), GebV(96), JSG(96), LSMV(96), StV(96), VISV(96), VORA(96), KBFHV(95), VASm(94), AuLaV(94), NISSG(94), FQIV(93), THG(93), VEMV(93), KMV(92), RDV(92), VDTI(92), GeomV(91), LBV(91), NHV(91), VSG(91), FamZV(90), EDAV(89), GesBG(89), SeilV(89), SVAG(89), BPS(87), UVEK(87), ZeugSG(87), FamZG(86), FV(86), IRSV(86), OHG(86), RLV(86), TGBV(86), VSS(86), AStG(85), KlV(85), VFBF(85), BeV(84), MLFV(84), PBV(84), StAG(84), ViZG(84), ZAV(84), PartG(83), AZG(82), FMBV(82), MeQV(82), VBGA(82), BetmSV(81), BStatG(81), WEKO(81), LTrV(81), VIntA(81), VTSchS(81), BGFA(80), NEV(80), PfG(80), SRVG(80), VMWG(80), FMedV(79), PersV(79), BStGerOR(78), FZV(78), UIDV(78), SpV(77), URV(77), VG(77), VPeA(77), AMZV(76), BGCITES(76), MJV(76), RHV(76), ZWG(76), BetmPV(75), GwV(75), KGTG(75), MPV(75), SERV(75), StADG(75), VATT(75), VD(75), WBV(75), EIMG(74), FiLaG(74), MAV(74), ALBAG(73), BStKR(73), KHG(73), MessMV(73), VBGF(73), VLIb(73), IAMV(72), SaV(72), VGSEB(72), EntsV(71), NSAG(71), VETHBK(71), VStFG(71), ZMessV(71), BGF(70), CZV(70), EMBAG(70), VVSG(70), ZUG(70), BASPO(69), InvV(69), MSG(69), VDZV(69), EFZ(68), EPDG(67), FiREG(67), GGBV(67), NBibV(67), VFP(67), VPGA(67), WSchG(67), KGTV(66), SBMV(66), UVPV(66), VBSV(66), VBWK(66), VFRR(66), VPV(66), AFZFG(65), EntsG(65), SFV(65), SSchV(65), StFV(65), BGA(64), PrSG(64), StFG(64), AltlV(63), AWV(63), BewV(63), EKBV(63), GKV(63), LVV(63), HF(63), TPFV(63), ZeugSV(63), LAfV(62), PublG(62), VGWR(62), VVAwG(62), AdoV(61), BehiG(61), FKG(61), PrSV(61), SSchG(61), ENSIG(60), IBSG(60), ISLK(60), MedBV(60), VHyMP(60), ZAG(60), ZertES(60), BAlV(59), IVZV(59), SBBG(59), ToV(59), VLIp(59), AIAV(58), FIPBV(58), EMK(58), PAVV(58), BehiV(57), FLG(57), GlG(57), InkHV(57), MGwV(57), SAMV(57), SIRG(57), SpG(57), UIDG(57), VAU(57), VIPaV(57), AtraV(56), AwG(56), BG(56), GGUV(56), ESBK(56), MessG(56), UWG(56), VEJ(56), VGV(56), KHV(55), STUG(55), ZEV(55), BGSA(54), ChemRRV(54), HFMV(54), ISUV(54), QStV(54), BStV(53), MNKPV(53), TUG(53), VGeK(53), EESV(52), NISV(52), VEBMP(52), RAB(51), KFV(51), RHG(51), VFD(51), VGKE(51), NDA(51), MSt(51), GKG(50), GLPV(50), HSBBV(50), LSMG(50), MFV(50), TVS(50), SDR(50), TGDV(50), VKOVA(50), VPA(50), SQWI(50), VVK(50), VWBG(50), WZVV(50), ZBstG(50), EigVV(49), MatV(49), VLF(49), VlV(49), VPRG(49), ZentG(49), AVEG(48), KGSG(48), NARV(48), UEK(48), VSVB(48), IBSV(47), KJFG(47), LDV(47), PfV(47), PVSPA(47), STUV(47), VFV(47), BGIAA(46), ENSIV(46), FiV(46), MSV(46), PAG(46), POG(46), ZSSV(46), VKNS(46), VVMH(46), BGBM(45), BURV(45), SIAG(45), UEG(45), VASA(45), WeBiG(45), WEFV(45), CSV(44), KOBV(44), TEVG(44), VEAGOG(44), VwV(44), WZV(44), FWG(43), HHV(43), ISABV(43), OBG(43), VPS(43), VUM(43), VZertES(43), BGLE(42), EnEV(42), HBV(42), LGeoIV(42), SnAV(42), VEleS(42), VEVERA(42), VIMK(42), VSUV(42), AOV(41), ChemPICV(41), BLW(41), FOrgV(41), MaLV(41), MiPV(41), BK(41), ToG(41), VAEW(41), VAND(41), VBSTB(41), VKA(41), VKL(41), VMILAK(41), VSoTr(41), VZSchB(41), AllgGebV(40), IGEG(40), JSFVG(40), LMmV(40), TrG(40), VKKL(40), VLHb(40), VPABP(40), VSFS(40), VWEV(40), VWL(40), IsV(39), BGST(39), EmbG(39), GR(39), KlG(39), NagV(39), NFSV(39), SpDV(39), StMmV(39), VMD(39), VTM(39), VVS(39), ZuV(39), VBO(38), VKKG(38), VSL(38), AtraG(37), HKSV(37), IBH(37), BAV(37), StAhiV(37), TwwV(37), VATV(37), VGVL(37), VHBT(37), VPiB(37), VPVKEU(37), ZStGV(37), ZTG(37), DBZV(36), HArG(36), VES(36), VISOS(36), VLE(36), AFZFV(35), MetV(35), NAFG(35), VBPO(35), VBVV(35), VIVS(35), VKZ(35), VSMS(35), VUFB(35), WeBiV(35), EMmV(34), PV(34), MBV(34), MinLV(34), PRG(34), SVKG(34), VBBo(34), VBNIB(34), VHyS(34), VPAV(34), VPRH(34), VVAG(34), AlgV(33), EichGebV(33), EMBAV(33), HArGV(33), BR(33), SIaG(33), VHK(33), VPrP(33), VPVK(33), KKE(32), HasLV(32), PelzV(32), PRTR(32), QuNaV(32), VDSZ(32), VEKF(32), VFAL(32), VlG(32), VNEK(32), WZG(32), NBibG(31), VOSA(31), HVI(30), PGRELV(30), TBDV(30), VMBM(30), BB(30), VREG(30), VSBN(30), VUKBK(30), HS(30), BIZMB(29), CartV(29), IBTV(29), KIG(29), KR(29), MAkkV(29), NSAV(29), TAFV(29), VAN(29), VFAI(29), VMS(29), VRSL(29), VST(29), VVNF(29), AufzV(28), BIFG(28), FPV(28), TPS(28), GVVG(28), OHV(28), VBB(28), DB(28), VRKD(28), BiGV(27), VPVE(27), VVE(27), VZVM(27), ZWV(27), AllergV(26), OV(26), LGBV(26), PrHG(26), VPGS(26), ZDUeV(26), AStV(25), FLV(25), IGE(25), KoVo(25), NV(25), VEL(25), LG(25), KMU(25), VPEV(25), GesBAV(24), IR(24), JSFVV(24), VBLN(24), VFAV(24), SB(24), VHyPrP(24), VITH(24), VOD(24), VtVtH(24), BGRB(23), GaGV(23), GKZ(23), OECD(23), VABUA(23), VAK(23), VEMZ(23), VNEF(23), VOEW(23), VSR(23), VWS(23), ZEBG(23), ALBAV(22), AlkBestV(22), DGV(22), EIMV(22), FWV(22), BAFU(22), MetG(22), PaRV(22), PsyBV(22), VGD(22), VKKP(22), VmKI(22), BiZ(22), AAMV(21), SAR(21), TMmV(21), VDPS(21), LTDB(21), VSPS(21), WHG(21), EiV(20), EPDFV(20), HGVAnG(20), PSAV(20), RSD(20), VAMV(20), VLKA(20), VOGW(20), VRA(20), VRLtH(20), AVFV(19), BStGerNR(19), IFEG(19), MCAV(19), AHV(19), VBRK(19), VFlaW(19), BGMD(18), DBV(18), KGVV(18), MaschV(18), OrFV(18), VAI(18), VAPF(18), VKSWk(18), BGMK(17), BTrV(17), EmGvV(17), ETrV(17), FDO(17), KGSV(17), SGV(17), TVSV(17), VKP(17), VPOB(17), FKINV(16), PhaV(16), VEAF(16), VKSD(16), WSchV(16), AO(15), ESTV(15), GesBKV(15), VAMF(15), VATPE(15), ChemGebV(14), StS(14), VSRL(14), ExpaV(13), BAR(13), SBFI(13), HVUV(13), KFZV(13), VPOG(13), VRP(13), STVG(12), FSTD(12), VSPA(12), VSV(11), BVVG(10), ESA(10), HVA(10), VABK(10), PLS(10), WRV(10)
+Gerichte: 6B_(25579), 2C_(25496), 5A_(19745), 8C_(18625), 9C_(16790), 4A_(15351), 1C_(14959), 1B_(8245), 7B_(4105), 5D_(2423), BGE_V(1923), BGE_III(1839), BGE_II(1832), 4D_(1324), 2D_(1210), BGE_I(1182), BGE_IV(1067), 2F_(432), 6F_(427), 1F_(392), 5F_(353), 4F_(305), 9F_(235), 8F_(215), 1D_(192), 8D_(153), 7F_(93), 2E_(80), 9D_(57)
+
+KRITISCH: Verwende AUSSCHLIESSLICH Codes aus den obigen Listen. Jeder Code der NICHT
+in diesen Listen steht wird automatisch entfernt und deine Suche wird unfiltered.
+Denke wie ein Anwalt: Welches Gesetz/Gericht ist für DIESEN Sachverhalt einschlägig?
+
+DENKPROZESS (intern): KERN der Frage → HAUPTGESETZ → verwandte Gesetze → BGer-Abteilung → Verfahrensrecht (BGG/BV) → englische Begriffe KORREKT übersetzen
+
+BEISPIEL (Strafverfahren — Haft, 6 diverse Richtungen):
+Frage: "Under what conditions can pre-trial detention be extended?"
+{
+  "sachverhalt": "Frage nach Voraussetzungen der Haftverlängerung im Strafverfahren",
+  "rechtsfragen": ["Haftgründe nach StPO", "Verhältnismässigkeit der Haft", "Rechtsmittel gegen Haftentscheid", "Amtliche Verteidigung bei Haft", "BGE-Grundsätze zur Haft"],
+  "directions": [
+    {
+      "priority": 1,
+      "corpus": "laws",
+      "rechtsgebiet": "Strafprozessrecht-Haft",
+      "filter_codes": ["StPO"],
+      "reasoning": "Haftvoraussetzungen Art. 221-228 StPO — materielles Haftrecht",
+      "seed_queries": ["Untersuchungshaft Haftgründe Fluchtgefahr Kollusionsgefahr Wiederholungsgefahr", "Haftverlängerung Verhältnismässigkeit Überhaft Haftdauer"]
+    },
+    {
+      "priority": 2,
+      "corpus": "courts",
+      "rechtsgebiet": "Haftpraxis Einzelfälle",
+      "filter_codes": ["1B_"],
+      "reasoning": "BGer-Praxis Abt. 1B — konkrete Haftfälle und Anwendung",
+      "seed_queries": ["Kollusionsgefahr Beweisgefährdung Verdunkelungsgefahr Haftbeschwerde", "Haftdauer Verhältnismässigkeit Überhaft Ersatzmassnahme"]
+    },
+    {
+      "priority": 3,
+      "corpus": "courts",
+      "rechtsgebiet": "Leitentscheide Haftrecht",
+      "filter_codes": ["BGE_IV", "BGE_I"],
+      "reasoning": "BGE_IV für Strafprozess-Haft + BGE_I für Grundrechte (persönliche Freiheit bei Haft)",
+      "seed_queries": ["Haft Grundsatz Leitentscheid Voraussetzungen Bundesgericht", "persönliche Freiheit Haft Grundrecht Freiheitsentzug BGE"]
+    },
+    {
+      "priority": 4,
+      "corpus": "courts",
+      "rechtsgebiet": "Bundesstrafgericht Haftpraxis",
+      "filter_codes": ["7B_"],
+      "reasoning": "BStGer entscheidet Haftbeschwerden in Bundesstrafsachen — aktuelle Praxis",
+      "seed_queries": ["Haftbeschwerde Bundesstrafgericht Untersuchungshaft Verlängerung", "Haftentlassung Ersatzmassnahme Bundesstrafsache"]
+    },
+    {
+      "priority": 5,
+      "corpus": "laws",
+      "rechtsgebiet": "Rechtsmittel und Verteidigung",
+      "filter_codes": ["StPO"],
+      "reasoning": "Beschwerde gegen Haftentscheid + amtliche Verteidigung",
+      "seed_queries": ["Beschwerde Haftentscheid Beschwerdefrist Instanzenzug", "amtliche Verteidigung notwendige Verteidigung Haft"]
+    },
+    {
+      "priority": 6,
+      "corpus": "laws",
+      "rechtsgebiet": "Verfassungsrecht",
+      "filter_codes": ["BV", "BGG"],
+      "reasoning": "Persönliche Freiheit + Beschwerdeweg ans Bundesgericht",
+      "seed_queries": ["persönliche Freiheit Freiheitsentzug Grundrecht Verhältnismässigkeit"]
+    }
+  ]
+}
+
+BEISPIEL 2 (Sozialversicherung — IV, 5 Richtungen kompakt):
+Frage: "How should conflicting medical opinions be handled in disability assessment?"
+{
+  "sachverhalt": "Umgang mit widersprüchlichen Gutachten bei IV-Abklärung",
+  "rechtsfragen": ["Beweiswürdigung Gutachten", "Anforderungen polydisziplinäres Gutachten", "BGE-Grundsätze Begutachtung"],
+  "directions": [
+    {"priority":1,"corpus":"laws","rechtsgebiet":"IV materiell","filter_codes":["IVG","ATSG"],"reasoning":"IV-Begutachtung in IVG+ATSG","seed_queries":["Begutachtung Gutachten Beweiswert medizinisch ATSG","Invaliditätsgrad Einkommensvergleich Restarbeitsfähigkeit"]},
+    {"priority":2,"corpus":"courts","rechtsgebiet":"IV-Praxis","filter_codes":["8C_"],"reasoning":"BGer-Praxis Gutachten Beweiswürdigung","seed_queries":["medizinisches Gutachten Beweiswert Anforderungen widersprechend","polydisziplinäres Gutachten Qualität Parteigutachten"]},
+    {"priority":3,"corpus":"courts","rechtsgebiet":"Leitentscheide SV","filter_codes":["BGE_V"],"reasoning":"Grundsatzentscheide Begutachtung","seed_queries":["Gutachten Beweiswert polydisziplinär Leitentscheid Qualität"]},
+    {"priority":4,"corpus":"courts","rechtsgebiet":"AHV/KV-Praxis","filter_codes":["9C_"],"reasoning":"Abt. 9C — Rentenrevision bei neuer Begutachtung","seed_queries":["IV-Revision Neuanmeldung veränderte Verhältnisse Begutachtung"]},
+    {"priority":5,"corpus":"laws","rechtsgebiet":"Verfahrensrecht","filter_codes":["BGG","BV"],"reasoning":"Sachverhaltsrüge + rechtliches Gehör","seed_queries":["Beschwerde Sachverhaltsrüge willkürliche Beweiswürdigung"]}
+  ]
+}
+
+WARNUNG: Die Beispiele zeigen nur die STRUKTUR und Diversität. Kopiere NICHT die Begriffe/Codes
+aus den Beispielen! Passe rechtsgebiet, filter_codes und seed_queries an die TATSÄCHLICHE Frage an.
+Jede Rechtsfrage hat ANDERE relevante Gesetze und Gerichte.
+
+JETZT ANALYSIERE DIE FOLGENDE RECHTSFRAGE UND ERSTELLE DEN PLAN:
+
+  --- END SYSTEM PROMPT ---
+
+  User message length: 9,096 chars (~2274 tokens)
+  TOTAL PROMPT: 27,701 chars (~6925 tokens)
+
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  LLM Call (Planner)
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  LLM response time: 62.65s
+  RAW LLM OUTPUT:
+  {
+  "sachverhalt": "Ein Richter darf eine Dreimonatsverlängerung der Untersuchungshaft gemäß Art. 221 Abs. 1 Lit. b StPO (Kollusionsgefahr) zulassen, die mit dem Prinzip der Verhältnismäßigkeit vereinbar ist, wenn der Beschuldigte, der nach einer vermuteten Spätnacht Übergriff und Diebstahl eines Courier-Sackes mit insgesamt €5.600 betreut wurde, am 18. Oktober 2024 durch eine Anordnung für eine maximale Dauer bis zum 15. Januar 2025 remittiert wurde, der Anklagevertreter hat eine Verlängerung am 10. Dezember 2024 angefordert hauptsächlich aus Gründen einer konkreten Gefahr, dass der Haftgefangene Zeugen beeinflussen oder Beweismittel verfälschen könnte und eine Wiederbeteiligung riskiert, während der Haftgefangene die Verlängerung wegen der Tatsache ablehnt, dass die meisten Zeugen bereits befragt wurden, die noch ausstehenden Ermittlungsmaßnahmen hauptsächlich technischer Art sind (Telefondatenauswertung, CCTV-Bildanalyse und Bankaufschläge), seine Freilassung würde somit nicht die Ermittlung gefährden und der Beschwerdeführer die Klage zurückgezogen hat.",
+  "rechtsfragen": [
+    "Kollusionsgefahr bei Untersuchungshaft",
+    "Verhältnismäßigkeit von Haftverlängerung",
+    "Rechtsgrundlage für Haftverlängerung",
+    "Bedeutung des Beschwerdeführers Rückzug der Klage"
+  ],
+  "directions": [
+    {
+      "priority": 1,
+      "corpus": "laws",
+      "rechtsgebiet": "Strafprozessrecht-Haft",
+      "filter_codes": ["StPO"],
+      "reasoning": "Haftverlängerung aufgrund von Kollusionsgefahr Art. 221 Abs. 1 StPO",
+      "seed_queries": [
+        "Untersuchungshaft Haftverlängerung Kollusionsgefahr Verhältnismässigkeit",
+        "Haftgrund Kollusionsgefahr Beweisgefährdung Reoffendierung"
+      ]
+    },
+    {
+      "priority": 2,
+      "corpus": "courts",
+      "rechtsgebiet": "Haftpraxis Einzelfälle",
+      "filter_codes": ["1B_"],
+      "reasoning": "BGer-Praxis Haftverlängerung in Einzelfällen",
+      "seed_queries": [
+        "Haftverlängerung Kollusionsgefahr Beweisgefährdung Reoffendierung",
+        "BGer-Praxis Haftverlängerung in Strafsachen"
+      ]
+    },
+    {
+      "priority": 3,
+      "corpus": "courts",
+      "rechtsgebiet": "Leitentscheide Haftrecht",
+      "filter_codes": ["BGE_IV"],
+      "reasoning": "Grundsatzentscheide zur Haftverlängerung aufgrund von Kollusionsgefahr",
+      "seed_queries": [
+        "Gutachten Haftverlängerung Kollusionsgefahr Verhältnismässigkeit",
+        "BGE_IV Haftverlängerung Kollusionsgefahr"
+      ]
+    },
+    {
+      "priority": 4,
+      "corpus": "laws",
+      "rechtsgebiet": "Verfassungsrecht",
+      "filter_codes": ["BV"],
+      "reasoning": "Verhältnismäßigkeit Haftverlängerung Grundrechte",
+      "seed_queries": [
+        "Verhältnismässigkeit Haftverlängerung persönliche Freiheit",
+        "Grundrechte Haftverlängerung persönliche Freiheit"
+      ]
+    },
+    {
+      "priority": 5,
+      "corpus": "laws",
+      "rechtsgebiet": "Strafprozessrecht-Rechtsmittel",
+      "filter_codes": ["StPO"],
+      "reasoning": "Rechtsmittel gegen Haftverlängerung",
+      "seed_queries": [
+        "Rechtsmittel Haftverlängerung Beschwerdefrist Instanzenzug",
+        "StPO Rechtsmittel Haftverlängerung"
+      ]
+    }
+  ,
+  {
+    "priority": 6,
+      "corpus": "laws",
+      "rechtsgebiet": "Strafprozessrecht-Verfahren",
+      "filter_codes": ["StPO"],
+      "reasoning": "Verfahrensrecht bei Haftverlängerung",
+      "seed_queries": [
+        "Verfahrensrecht Haftverlängerung Fristen",
+        "StPO Verfahrensrecht Haftverlängerung"
+      ]
+    }
+  ]
+}
+
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  Planner JSON Parsing
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  âœ“ JSON parsed successfully
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  Plan Construction
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  Sachverhalt: Ein Richter darf eine Dreimonatsverlängerung der Untersuchungshaft gemäß Art. 221 Abs. 1 Lit. b StPO (Kollusionsgefahr) zulassen, die mit dem Prinzip der Verhältnismäßigkeit vereinbar ist, wenn der Beschuldigte, der nach einer vermuteten Spätnacht Übergriff und Diebstahl eines Courier-Sackes mit insgesamt €5.600 betreut wurde, am 18. Oktober 2024 durch eine Anordnung für eine maximale Dauer bis zum 15. Januar 2025 remittiert wurde, der Anklagevertreter hat eine Verlängerung am 10. Dezember 2024 angefordert hauptsächlich aus Gründen einer konkreten Gefahr, dass der Haftgefangene Zeugen beeinflussen oder Beweismittel verfälschen könnte und eine Wiederbeteiligung riskiert, während der Haftgefangene die Verlängerung wegen der Tatsache ablehnt, dass die meisten Zeugen bereits befragt wurden, die noch ausstehenden Ermittlungsmaßnahmen hauptsächlich technischer Art sind (Telefondatenauswertung, CCTV-Bildanalyse und Bankaufschläge), seine Freilassung würde somit nicht die Ermittlung gefährden und der Beschwerdeführer die Klage zurückgezogen hat.
+  Rechtsfragen: ['Kollusionsgefahr bei Untersuchungshaft', 'Verhältnismäßigkeit von Haftverlängerung', 'Rechtsgrundlage für Haftverlängerung', 'Bedeutung des Beschwerdeführers Rückzug der Klage']
+
+  Direction 1:
+    Priority: 1
+    Corpus: laws
+    Rechtsgebiet: Strafprozessrecht-Haft
+    Filter codes: ['StPO']
+    Reasoning: Haftverlängerung aufgrund von Kollusionsgefahr Art. 221 Abs. 1 StPO
+    Seed queries: ['Untersuchungshaft Haftverlängerung Kollusionsgefahr Verhältnismässigkeit', 'Haftgrund Kollusionsgefahr Beweisgefährdung Reoffendierung']
+
+  Direction 2:
+    Priority: 2
+    Corpus: courts
+    Rechtsgebiet: Haftpraxis Einzelfälle
+    Filter codes: ['1B_']
+    Reasoning: BGer-Praxis Haftverlängerung in Einzelfällen
+    Seed queries: ['Haftverlängerung Kollusionsgefahr Beweisgefährdung Reoffendierung', 'BGer-Praxis Haftverlängerung in Strafsachen']
+
+  Direction 3:
+    Priority: 3
+    Corpus: courts
+    Rechtsgebiet: Leitentscheide Haftrecht
+    Filter codes: ['BGE_IV']
+    Reasoning: Grundsatzentscheide zur Haftverlängerung aufgrund von Kollusionsgefahr
+    Seed queries: ['Gutachten Haftverlängerung Kollusionsgefahr Verhältnismässigkeit', 'BGE_IV Haftverlängerung Kollusionsgefahr']
+
+  Direction 4:
+    Priority: 4
+    Corpus: laws
+    Rechtsgebiet: Verfassungsrecht
+    Filter codes: ['BV']
+    Reasoning: Verhältnismäßigkeit Haftverlängerung Grundrechte
+    Seed queries: ['Verhältnismässigkeit Haftverlängerung persönliche Freiheit', 'Grundrechte Haftverlängerung persönliche Freiheit']
+
+  Direction 5:
+    Priority: 5
+    Corpus: laws
+    Rechtsgebiet: Strafprozessrecht-Rechtsmittel
+    Filter codes: ['StPO']
+    Reasoning: Rechtsmittel gegen Haftverlängerung
+    Seed queries: ['Rechtsmittel Haftverlängerung Beschwerdefrist Instanzenzug', 'StPO Rechtsmittel Haftverlängerung']
+
+  Direction 6:
+    Priority: 6
+    Corpus: laws
+    Rechtsgebiet: Strafprozessrecht-Verfahren
+    Filter codes: ['StPO']
+    Reasoning: Verfahrensrecht bei Haftverlängerung
+    Seed queries: ['Verfahrensrecht Haftverlängerung Fristen', 'StPO Verfahrensrecht Haftverlängerung']
+
+  PLAN SUMMARY: 6 directions total
+
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  PHASE 2: DIRECTION EXECUTORS
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  Executing 6 directions...
+
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  DIRECTION 1/6
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  Priority: 1
+  Corpus: laws
+  Rechtsgebiet: Strafprozessrecht-Haft
+  Filter codes: ['StPO']
+  Reasoning: Haftverlängerung aufgrund von Kollusionsgefahr Art. 221 Abs. 1 StPO
+  Seed queries: ['Untersuchungshaft Haftverlängerung Kollusionsgefahr Verhältnismässigkeit', 'Haftgrund Kollusionsgefahr Beweisgefährdung Reoffendierung']
+  Prior findings count: 0
+
+  [Iter 0] SEED QUERY (no LLM): "Untersuchungshaft Haftverlängerung Kollusionsgefahr Verhältnismässigkeit"
+    Filter pool: StPO=1306 docs in scope
+    Results: 10 hits
+      1. Art. 226 Abs. 4 StPO (score=0.032) â€” 4 Es kann in seinem Entscheid:a. eine Höchstdauer der Untersuchungshaft festlege...
+      2. Art. 227 Abs. 7 StPO (score=0.031) â€” 7 Die Verlängerung der Untersuchungshaft wird jeweils für längstens 3 Monate, in...
+      3. Art. 227 Abs. 4 StPO (score=0.031) â€” 4 Es kann die provisorische Fortdauer der Untersuchungshaft bis zu seinem Entsch...
+      4. Art. 227 Abs. 1 StPO (score=0.030) â€” 1 Läuft die vom Zwangsmassnahmengericht festgesetzte Dauer der Untersuchungshaft...
+      5. Art. 229 Abs. 1 StPO (score=0.027) â€” 1 Über die Anordnung der Sicherheitshaft bei vorbestehender Untersuchungshaft en...
+      6. Art. 220 Abs. 1 StPO (score=0.026) â€” 1 Die Untersuchungshaft beginnt mit ihrer Anordnung durch das Zwangsmassnahmenge...
+      7. Art. 431 Abs. 2 StPO (score=0.016) â€” 2 Im Fall von Untersuchungs- und Sicherheitshaft besteht der Anspruch, wenn die ...
+      8. Art. 212 Abs. 3 StPO (score=0.016) â€” 3 Untersuchungs- und Sicherheitshaft dürfen nicht länger dauern als die zu erwar...
+      9. Art. 229 Abs. 3 StPO (score=0.016) â€” 3 Das Verfahren vor dem Zwangsmassnahmengericht richtet sich:a. ohne vorbestehen...
+      10. Art. 226 Abs. 5 StPO (score=0.016) â€” 5 Ordnet es die Untersuchungshaft nicht an, so wird die beschuldigte Person unve...
+
+  [Iter 1] LLM CALL (executor)
+    Template: STANDARD | Taxonomy: 175 chars
+    Prompt length: 8,374 chars
+    LLM time: 6.23s
+    Raw output: {"thought": "Zu den bereits gesuchten Themen 'Haft' und 'Verhältnismäßigkeit' in dieser Richtung gehören auch die Themen 'Rechtsmittel' und 'Strafmaß'. Die nächste Suchanfrage sollte deshalb einen anderen Aspekt abdecken.", "query": "Untersuchungshaft Haftverlängerung Kollusionsgefahr Rechtsmittel Strafmaß","done": false}
+
+  Direction 1 COMPLETE: 10 citations in 6.6s
+  Unique citations: 10
+    â€¢ Art. 226 Abs. 5 StPO
+    â€¢ Art. 220 Abs. 1 StPO
+    â€¢ Art. 431 Abs. 2 StPO
+    â€¢ Art. 226 Abs. 4 StPO
+    â€¢ Art. 212 Abs. 3 StPO
+    â€¢ Art. 229 Abs. 3 StPO
+    â€¢ Art. 227 Abs. 1 StPO
+    â€¢ Art. 227 Abs. 7 StPO
+    â€¢ Art. 227 Abs. 4 StPO
+    â€¢ Art. 229 Abs. 1 StPO
+
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  DIRECTION 2/6
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  Priority: 2
+  Corpus: courts
+  Rechtsgebiet: Haftpraxis Einzelfälle
+  Filter codes: ['1B_']
+  Reasoning: BGer-Praxis Haftverlängerung in Einzelfällen
+  Seed queries: ['Haftverlängerung Kollusionsgefahr Beweisgefährdung Reoffendierung', 'BGer-Praxis Haftverlängerung in Strafsachen']
+  Prior findings count: 10
+
+  [Iter 0] SEED QUERY (no LLM): "Haftverlängerung Kollusionsgefahr Beweisgefährdung Reoffendierung"
+    Filter pool: 1B_=8245 docs in scope
+    Results: 10 hits
+      1. 1B_300/2008 25.11.2008 E. 3 (score=0.030) â€” Der Beschwerdeführer bestreitet erneut den Haftgrund der Kollusionsgefahr. Wie b...
+      2. 1B_606/2020 E. 5 (score=0.030) â€” Zu prüfen ist damit, ob die Vorinstanz und das Zwangsmassnahmengericht im Haftve...
+      3. 1B_203/2016 E. 4 (score=0.028) â€” Der Beschwerdeführer wendet sich auch gegen die Annahme des besonderen Haftgrund...
+      4. 1B_288/2008 28.11.2008 E. 2.4 (score=0.028) â€” 2.4.1 Kollusion bedeutet nach der bundesgerichtlichen Praxis insbesondere, dass ...
+      5. 1B_164/2020 E. 2.1 (score=0.027) â€” 2.1. Gemäss Art. 221 Abs. 1 lit. b StPO ist Untersuchungshaft zulässig, wenn die...
+      6. 1B_218/2018 E. 3.1 (score=0.027) â€” 3.1. Der Haftgrund der Kollusionsgefahr liegt vor, wenn ernsthaft zu befürchten ...
+      7. 1B_166/2016 E. 2.2 (score=0.027) â€” 2.2. Die Vorinstanz bejahte im vorliegenden Fall den gegenüber dem Beschwerdefüh...
+      8. 1B_406/2016 E. 2.3 (score=0.027) â€” 2.3. Der Haftgrund der Kollusionsgefahr liegt vor, wenn ernsthaft zu befürchten ...
+      9. 1B_28/2022 E. 4.4 (score=0.027) â€” 4.4. Demnach hat die Vorinstanz den besonderen Haftgrund der Kollusionsgefahr im...
+      10. 1B_361/2010 29.11.2010 E. 4 (score=0.026) â€” Im angefochtenen Entscheid wird dargelegt, dass hinsichtlich des haftrelevanten ...
+
+  [Iter 1] LLM CALL (executor)
+    Template: STANDARD | Taxonomy: 570 chars
+    Prompt length: 9,048 chars
+    LLM time: 5.08s
+    Raw output: {"thought": "Fokus auf Rechtsgrundlagen für Haftverlängerung in Einzelfällen (Beyond Art. 221 StPO)", "query": "Haftverlängerung Rechtsgrundlagen Einzelfälle","done": false}
+    Results: 10 hits
+      1. 1B_12/2013 01.02.2013 E. B (score=0.032) â€” Gegen die Haftverlängerung vom 12. November 2012 erhob X.________ Beschwerde bei...
+      2. 1B_189/2009 30.07.2009 E. 1 (score=0.032) â€” Angefochten ist ein strafprozessualer Entscheid betreffend Haftverlängerung. Sow...
+      3. 1B_470/2022 E. 5.3 (score=0.030) â€” 5.3. Soweit der Beschwerdeführer die strittige Haftverlängerung sonst als unverh...
+      4. 1B_379/2019 E. 7.1 (score=0.029) â€” 7.1. Schliesslich rügt der Beschwerdeführer, die Haftverlängerung sei unverhältn...
+      5. 1B_94/2010 22.07.2010 E. 3 (score=0.016) â€” 3.1 Der Beschwerdeführer bringt vor, da das Haftverlängerungsgesuch verspätet ge...
+      6. 1B_451/2015 E. C (score=0.016) â€” Am 22. Dezember 2016 wies das Obergericht des Kantons Aargau, Beschwerdekammer i...
+      7. 1B_65/2015 E. 6 (score=0.016) â€” Die Gesamtdauer der bisher erstandenen Haft lässt eine erneute Inhaftierung ange...
+      8. 1B_424/2017 E. 1.1 (score=0.015) â€” 1.1. Beim angefochtenen Entscheid handelt es sich um einen letztinstanzlichen ka...
+      9. 1B_261/2013 E. 4.2 (score=0.015) â€” 4.2. Gemäss Art. 227 Abs. 7 StPO wird die Verlängerung der Untersuchungshaft jew...
+      10. 1B_31/2007 19.03.2007 E. D (score=0.015) â€” Am 2. Februar 2007 beantragte das URA eine weitere Haftverlängerung. Mit prozess...
+
+  [Iter 2] LLM CALL (executor)
+    Template: STANDARD | Taxonomy: 570 chars
+    Prompt length: 10,946 chars
+    LLM time: 10.92s
+    Raw output: {"thought": "Zur Vollständigkeit des Rechercheplans hinzu führende Konzepte: Haftgrund, Haftverlängerung, Kollusionsgefahr, Verhältnismässigkeit, Rechtsgrundlagen, Einzelfälle, Beweisgefährdung, Reoffendierung, Untersuchungshaft, Prüfung, Vorinstanz, Zwangsmassnahmengericht, Beschwerdeführer, Haftverlängerungsgesuch, Verspätung. Neue Begriffe: Haftgrundsbedürftigkeit, Haftbefugnis, Haftbeschränkung, Haftbefreiung.", "query": "Haftgrundsbedürftigkeit Haftbefugnis Haftbeschränkung Haftbefreiung Rechtsgrundlagen Einzelfälle","done": false}
+    Results: 10 hits
+      1. 1B_51/2015 E. 4.7 (score=0.016) â€” 4.7. Aus der von der Staatsanwaltschaft zitierten Literaturstelle lässt sich nic...
+      2. 1B_300/2007 15.01.2008 E. 2 (score=0.016) â€” 2.1 Nach dem kantonalen Strafverfahrensrecht ist die Anordnung bzw. Aufrechterha...
+      3. 1B_78/2009 01.04.2009 E. 2 (score=0.016) â€” 2.1 Die Beschwerdeführerin rügt, die angefochtene Verfügung verletze ihr verfass...
+      4. 1B_21/2007 06.03.2007 E. 3 (score=0.016) â€” Die Anordnung und Fortdauer von strafprozessualer Haft setzt nach aargauischem S...
+      5. 1B_199/2018 E. 5.2 (score=0.015) â€” 5.2. Gemäss Art. 31 Abs. 3 BV und Art. 5 Ziff. 3 EMRK hat eine in strafprozessua...
+      6. 1B_149/2015 E. 2.6 (score=0.015) â€” 2.6. Anzumerken bleibt Folgendes: Bejaht das kantonale Gericht einen Haftgrund, ...
+      7. 1B_398/2021 E. 2.3 (score=0.015) â€” 2.3. Nach Art. 235 Abs. 1 StPO darf die inhaftierte Person in ihrer persönlichen...
+      8. 1B_31/2023 E. 5.1 (score=0.015) â€” 5.1. Mit Blick auf Art. 212 Abs. 3 StPO ist zu vermeiden, dass die Haftdauer in ...
+      9. 1B_178/2016 E. 4.1 (score=0.014) â€” 4.1. Gemäss Art. 31 Abs. 3 BV und Art. 5 Ziff. 3 EMRK hat eine in strafprozessua...
+      10. 1B_291/2014 E. 3.2 (score=0.014) â€” 3.2. Gemäss Art. 31 Abs. 3 BV und Art. 5 Ziff. 3 EMRK hat eine in strafprozessua...
+
+  [Iter 3] TIMEOUT â€” stopping direction
+
+  Direction 2 COMPLETE: 30 citations in 17.5s
+  Unique citations: 30
+    â€¢ 1B_51/2015 E. 4.7
+    â€¢ 1B_166/2016 E. 2.2
+    â€¢ 1B_406/2016 E. 2.3
+    â€¢ 1B_28/2022 E. 4.4
+    â€¢ 1B_12/2013 01.02.2013 E. B
+    â€¢ 1B_31/2023 E. 5.1
+    â€¢ 1B_178/2016 E. 4.1
+    â€¢ 1B_94/2010 22.07.2010 E. 3
+    â€¢ 1B_361/2010 29.11.2010 E. 4
+    â€¢ 1B_291/2014 E. 3.2
+    â€¢ 1B_261/2013 E. 4.2
+    â€¢ 1B_470/2022 E. 5.3
+    â€¢ 1B_65/2015 E. 6
+    â€¢ 1B_288/2008 28.11.2008 E. 2.4
+    â€¢ 1B_78/2009 01.04.2009 E. 2
+    ... +15 more
+
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  DIRECTION 3/6
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  Priority: 3
+  Corpus: courts
+  Rechtsgebiet: Leitentscheide Haftrecht
+  Filter codes: ['BGE_IV']
+  Reasoning: Grundsatzentscheide zur Haftverlängerung aufgrund von Kollusionsgefahr
+  Seed queries: ['Gutachten Haftverlängerung Kollusionsgefahr Verhältnismässigkeit', 'BGE_IV Haftverlängerung Kollusionsgefahr']
+  Prior findings count: 20
+
+  [Iter 0] SEED QUERY (no LLM): "Gutachten Haftverlängerung Kollusionsgefahr Verhältnismässigkeit"
+    Filter pool: BGE_IV=1067 docs in scope
+    Results: 10 hits
+      1. BGE 150 IV 405 E. 15 (score=0.016) â€” oder...
+      2. BGE 137 IV 177 E. 2 (score=0.016) â€” (...)...
+      3. BGE 146 IV 30 E. 3.4 (score=0.016) â€” p. 161 s.; ATF 140 IV 82 consid. 2.3 p. 84 et...
+      4. BGE 144 IV 113 E. 3.2 (score=0.016) â€” Die Vorinstanz hat ausgeführt, ziehe man bei der Prüfung der Verhältnismässigkei...
+      5. BGE 147 IV 2 E. 1 (score=0.015) â€” (...)...
+      6. BGE 142 IV 11 E. 1 (score=0.015) â€” (...)...
+      7. BGE 146 IV 311 E. 3.5.1 (score=0.015) â€” Art. 66b StGB sieht unter der Marginalie "c. Gemeinsame Bestimmungen. Wiederholu...
+      8. BGE 141 IV 459 E. 3 (score=0.015) â€” (...)...
+      9. BGE 146 IV 279 E. 2.6 (score=0.014) â€” Die Sicherheitshaft wird hier deshalb längstens für 3 Monate bewilligt. Sollte s...
+      10. BGE 146 IV 23 E. 2 (score=0.014) â€” (...)...
+
+  [Iter 1] LLM CALL (executor)
+    Template: STANDARD | Taxonomy: 713 chars
+    Prompt length: 8,255 chars
+    LLM time: 5.56s
+    Raw output: {"thought": "Deine bisherigen Queries fokussieren Haftverlängerung und Kollusionsgefahr. Nun suche nach Leitentscheiden zum Thema Rechtsgrundlagen für Haftverlängerung.", "query": "Leitentscheide Haftgrundlage Haftverlängerung Schweiz","done": false}
+    Results: 10 hits
+      1. BGE 146 IV 311 E. 3.5.1 (score=0.016) â€” Art. 66b StGB sieht unter der Marginalie "c. Gemeinsame Bestimmungen. Wiederholu...
+      2. BGE 146 IV 279 E. 3.5 (score=0.016) â€” Bei der Anordnung von Sicherheitshaft bei vorbestehender Untersuchungshaft kann,...
+      3. BGE 150 IV 405 E. 15 (score=0.016) â€” oder...
+      4. BGE 146 IV 30 E. 3.4 (score=0.016) â€” p. 161 s.; ATF 140 IV 82 consid. 2.3 p. 84 et...
+      5. BGE 137 IV 177 E. 2 (score=0.016) â€” (...)...
+      6. BGE 141 IV 459 E. 3 (score=0.015) â€” (...)...
+      7. BGE 147 IV 2 E. 1 (score=0.015) â€” (...)...
+      8. BGE 141 IV 145 E. 2.2 (score=0.015) â€” Die Bestimmungen des Strafgesetzbuches über die Verjährung wurden durch Bundesge...
+      9. BGE 148 IV 113 E. 5 (score=0.015) â€” (...)...
+      10. BGE 142 IV 11 E. 1 (score=0.014) â€” (...)...
+
+  [Iter 2] LLM CALL (executor)
+    Template: STANDARD | Taxonomy: 713 chars
+    Prompt length: 9,493 chars
+    LLM time: 4.46s
+    Raw output: {"thought": "Fokus auf Rechtsmittel oder Kosten als nächste Themen in Haftrecht", "query": "Leitentscheide Haftrecht Rechtsmittel Schweiz","done": false}
+
+  Direction 3 COMPLETE: 20 citations in 11.0s
+  Unique citations: 13
+    â€¢ BGE 146 IV 30 E. 3.4
+    â€¢ BGE 141 IV 145 E. 2.2
+    â€¢ BGE 141 IV 459 E. 3
+    â€¢ BGE 146 IV 311 E. 3.5.1
+    â€¢ BGE 137 IV 177 E. 2
+    â€¢ BGE 146 IV 23 E. 2
+    â€¢ BGE 146 IV 279 E. 3.5
+    â€¢ BGE 150 IV 405 E. 15
+    â€¢ BGE 148 IV 113 E. 5
+    â€¢ BGE 144 IV 113 E. 3.2
+    â€¢ BGE 146 IV 279 E. 2.6
+    â€¢ BGE 142 IV 11 E. 1
+    â€¢ BGE 147 IV 2 E. 1
+
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  DIRECTION 4/6
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  Priority: 4
+  Corpus: laws
+  Rechtsgebiet: Verfassungsrecht
+  Filter codes: ['BV']
+  Reasoning: Verhältnismäßigkeit Haftverlängerung Grundrechte
+  Seed queries: ['Verhältnismässigkeit Haftverlängerung persönliche Freiheit', 'Grundrechte Haftverlängerung persönliche Freiheit']
+  Prior findings count: 20
+
+  [Iter 0] SEED QUERY (no LLM): "Verhältnismässigkeit Haftverlängerung persönliche Freiheit"
+    Filter pool: BV=658 docs in scope
+    Results: 10 hits
+      1. Art. 10 Abs. 2 BV (score=0.033) â€” 2 Jeder Mensch hat das Recht auf persönliche Freiheit, insbesondere auf körperli...
+      2. Art. 21 BV (score=0.028) â€” Die Freiheit der Kunst ist gewährleistet....
+      3. Art. 31 Abs. 1 BV (score=0.016) â€” 1 Die Freiheit darf einer Person nur in den vom Gesetz selbst vorgesehenen Fälle...
+      4. Art. 121 Abs. 3 BV (score=0.016) â€” 3 Sie verlieren unabhängig von ihrem ausländerrechtlichen Status ihr Aufenthalts...
+      5. Art. 20 BV (score=0.016) â€” Die Freiheit der wissenschaftlichen Lehre und Forschung ist gewährleistet....
+      6. Art. 10 Abs. 1 BV (score=0.016) â€” 1 Jeder Mensch hat das Recht auf Leben. Die Todesstrafe ist verboten....
+      7. Art. 36 Abs. 3 BV (score=0.015) â€” 3 Einschränkungen von Grundrechten müssen verhältnismässig sein....
+      8. Art. 31 Abs. 4 BV (score=0.015) â€” 4 Jede Person, der die Freiheit nicht von einem Gericht entzogen wird, hat das R...
+      9. Art. 32 Abs. 1 BV (score=0.015) â€” 1 Jede Person gilt bis zur rechtskräftigen Verurteilung als unschuldig....
+      10. Art. 2 Abs. 1 BV (score=0.015) â€” 1 Die Schweizerische Eidgenossenschaft schützt die Freiheit und die Rechte des V...
+
+  [Iter 1] LLM CALL (executor)
+    Template: STANDARD | Taxonomy: 515 chars
+    Prompt length: 8,558 chars
+    LLM time: 6.92s
+    Raw output: {"thought": "Zurückgezogene Klage und Haftverlängerung im Kontext des Rechtsprinzips der Verhältnismäßigkeit in Verfassungsrecht — Suche nach Rechtsgrundlagen und Leitentscheiden zur Haftverlängerung in Abhängigkeit von der Bedeutung des Beschwerdeführers Rückzug der Klage.", "query": "Beschwerdeführer Rückzug Klage Haftverlängerung Verhältnismäßigkeit Bundesverfassung","done": false}
+    Results: 10 hits
+      1. Art. 192 Abs. 1 BV (score=0.030) â€” 1 Die Bundesverfassung kann jederzeit ganz oder teilweise revidiert werden....
+      2. Art. 123a Abs. 2 BV (score=0.016) â€” 2 Nur wenn durch neue, wissenschaftliche Erkenntnisse erwiesen wird, dass der Tä...
+      3. Art. 140 Abs. 2 BV (score=0.016) â€” 2 Dem Volk werden zur Abstimmung unterbreitet:a. die Volksinitiativen auf Totalr...
+      4. Art. 36 Abs. 3 BV (score=0.016) â€” 3 Einschränkungen von Grundrechten müssen verhältnismässig sein....
+      5. Art. 42 Abs. 1 BV (score=0.016) â€” 1 Der Bund erfüllt die Aufgaben, die ihm die Bundesverfassung zuweist....
+      6. Art. 123a Abs. 1 BV (score=0.016) â€” 1 Wird ein Sexual- oder Gewaltstraftäter in den Gutachten, die für das Gerichtsu...
+      7. Art. 191 Abs. 4 BV (score=0.016) â€” 4 Für offensichtlich unbegründete Beschwerden kann das Gesetz ein vereinfachtes ...
+      8. Art. 139 Abs. 1 BV (score=0.015) â€” 1 100 000 Stimmberechtigte können innert 18 Monaten seit der amtlichen Veröffent...
+      9. Art. 164 Abs. 2 BV (score=0.015) â€” 2 Rechtsetzungsbefugnisse können durch Bundesgesetz übertragen werden, soweit di...
+      10. Art. 121 Abs. 3 BV (score=0.015) â€” 3 Sie verlieren unabhängig von ihrem ausländerrechtlichen Status ihr Aufenthalts...
+
+  [Iter 2] LLM CALL (executor)
+    Template: STANDARD | Taxonomy: 515 chars
+    Prompt length: 10,448 chars
+    LLM time: 6.22s
+    Raw output: {"thought": "In this direction, I need to explore the concepts of 'Haftverlängerung' (probable cause and necessity), 'Rechtsmittel' (legal remedies), and 'Verhältnismässigkeit' (proportionality) in the context of Swiss Constitutional Law.", "query": "Swiss Constitutional Law Haftverlängerung Rechtsmittel Verhältnismässigkeit","done": false}
+
+  Direction 4 COMPLETE: 20 citations in 14.1s
+  Unique citations: 18
+    â€¢ Art. 121 Abs. 3 BV
+    â€¢ Art. 42 Abs. 1 BV
+    â€¢ Art. 192 Abs. 1 BV
+    â€¢ Art. 32 Abs. 1 BV
+    â€¢ Art. 10 Abs. 2 BV
+    â€¢ Art. 21 BV
+    â€¢ Art. 123a Abs. 2 BV
+    â€¢ Art. 164 Abs. 2 BV
+    â€¢ Art. 139 Abs. 1 BV
+    â€¢ Art. 36 Abs. 3 BV
+    â€¢ Art. 191 Abs. 4 BV
+    â€¢ Art. 123a Abs. 1 BV
+    â€¢ Art. 10 Abs. 1 BV
+    â€¢ Art. 20 BV
+    â€¢ Art. 2 Abs. 1 BV
+    ... +3 more
+
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  DIRECTION 5/6
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  Priority: 5
+  Corpus: laws
+  Rechtsgebiet: Strafprozessrecht-Rechtsmittel
+  Filter codes: ['StPO']
+  Reasoning: Rechtsmittel gegen Haftverlängerung
+  Seed queries: ['Rechtsmittel Haftverlängerung Beschwerdefrist Instanzenzug', 'StPO Rechtsmittel Haftverlängerung']
+  Prior findings count: 20
+
+  [Iter 0] SEED QUERY (no LLM): "Rechtsmittel Haftverlängerung Beschwerdefrist Instanzenzug"
+    Filter pool: StPO=1306 docs in scope
+    Results: 10 hits
+      1. Art. 285 Abs. 4 StPO (score=0.029) â€” 4 Personen, deren Bankverkehr überwacht wurde, können Beschwerde nach den Artike...
+      2. Art. 437 Abs. 1 StPO (score=0.028) â€” 1 Urteile und andere verfahrenserledigende Entscheide, gegen die ein Rechtsmitte...
+      3. Art. 227 Abs. 1 StPO (score=0.016) â€” 1 Läuft die vom Zwangsmassnahmengericht festgesetzte Dauer der Untersuchungshaft...
+      4. Art. 388 Abs. 2 StPO (score=0.016) â€” 2 Sie entscheidet über das Nichteintreten auf:a. offensichtlich unzulässige Rech...
+      5. Art. 92 StPO (score=0.016) â€” Die Behörden können von Amtes wegen oder auf Gesuch hin die von ihnen angesetzte...
+      6. Art. 397 Abs. 5 StPO (score=0.016) â€” 5 Die Beschwerdeinstanz entscheidet innerhalb von sechs Monaten.268...
+      7. Art. 428 Abs. 1 StPO (score=0.016) â€” 1 Die Kosten des Rechtsmittelverfahrens tragen die Parteien nach Massgabe ihres ...
+      8. Art. 396 Abs. 2 StPO (score=0.016) â€” 2 Beschwerden wegen Rechtsverweigerung oder Rechtsverzögerung sind an keine Fris...
+      9. Art. 381 Abs. 3 StPO (score=0.016) â€” 3 Sie regeln, welche Behörden im Übertretungsstrafverfahren Rechtsmittel ergreif...
+      10. Art. 274 Abs. 5 StPO (score=0.015) â€” 5 Das Zwangsmassnahmengericht erteilt die Genehmigung für höchstens 3 Monate. Di...
+
+  [Iter 1] LLM CALL (executor)
+    Template: STANDARD | Taxonomy: 175 chars
+    Prompt length: 8,559 chars
+    LLM time: 5.15s
+    Raw output: {"thought": "Neue Konzepte: Kollisionsgefahr Prüfung, Haftgrund, Rechtsgrundlage, Verhältnismäßigkeit", "query": "Kollisionsgefahr Prüfung Haftgrund Rechtsgrundlage Verhältnismäßigkeit StPO","done": false}
+    Results: 10 hits
+      1. Art. 10 Abs. 3 StPO (score=0.016) â€” 3 Bestehen unüberwindliche Zweifel an der Erfüllung der tatsächlichen Voraussetz...
+      2. Art. 239 Abs. 1 StPO (score=0.016) â€” 1 Die Sicherheitsleistung wird freigegeben, wenn:a. der Haftgrund weggefallen is...
+      3. Art. 6 Abs. 2 StPO (score=0.016) â€” 2 Sie untersuchen die belastenden und entlastenden Umstände mit gleicher Sorgfal...
+      4. Art. 219 Abs. 3 StPO (score=0.016) â€” 3 Ergeben die Abklärungen, dass Haftgründe nicht oder nicht mehr bestehen, so lä...
+      5. Art. 126 Abs. 3 StPO (score=0.016) â€” 3 Wäre die vollständige Beurteilung des Zivilanspruchs unverhältnismässig aufwen...
+      6. Art. 412 Abs. 1 StPO (score=0.016) â€” 1 Das Berufungsgericht nimmt in einem schriftlichen Verfahren eine vorläufige Pr...
+      7. Art. 404 Abs. 2 StPO (score=0.016) â€” 2 Es kann zugunsten der beschuldigten Person auch nicht angefochtene Punkte über...
+      8. Art. 247 Abs. 2 StPO (score=0.016) â€” 2 Zur Prüfung des Inhalts der Aufzeichnungen, insbesondere zur Aussonderung von ...
+      9. Art. 221 Abs. 1bis StPO (score=0.015) â€” 1bis Untersuchungs- und Sicherheitshaft sind ausnahmsweise zulässig, wenn:a. die...
+      10. Art. 269quater Abs. 3 StPO (score=0.015) â€” 3 Die Strafverfolgungsbehörde stellt sicher, dass der Quellcode überprüft werden...
+
+  [Iter 2] LLM CALL (executor)
+    Template: STANDARD | Taxonomy: 175 chars
+    Prompt length: 10,516 chars
+    LLM time: 4.45s
+    Raw output: {"thought": "Nächste Suche: Rechtsmittel Haftverlängerung Kollisionsgefahr Prüfung StPO", "query": "", "done": false}
+    â†’ DONE signal received (done=False, query='')
+
+  Direction 5 COMPLETE: 20 citations in 10.4s
+  Unique citations: 20
+    â€¢ Art. 381 Abs. 3 StPO
+    â€¢ Art. 437 Abs. 1 StPO
+    â€¢ Art. 221 Abs. 1bis StPO
+    â€¢ Art. 227 Abs. 1 StPO
+    â€¢ Art. 388 Abs. 2 StPO
+    â€¢ Art. 428 Abs. 1 StPO
+    â€¢ Art. 126 Abs. 3 StPO
+    â€¢ Art. 412 Abs. 1 StPO
+    â€¢ Art. 92 StPO
+    â€¢ Art. 10 Abs. 3 StPO
+    â€¢ Art. 239 Abs. 1 StPO
+    â€¢ Art. 396 Abs. 2 StPO
+    â€¢ Art. 397 Abs. 5 StPO
+    â€¢ Art. 6 Abs. 2 StPO
+    â€¢ Art. 269quater Abs. 3 StPO
+    ... +5 more
+
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  DIRECTION 6/6
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  Priority: 6
+  Corpus: laws
+  Rechtsgebiet: Strafprozessrecht-Verfahren
+  Filter codes: ['StPO']
+  Reasoning: Verfahrensrecht bei Haftverlängerung
+  Seed queries: ['Verfahrensrecht Haftverlängerung Fristen', 'StPO Verfahrensrecht Haftverlängerung']
+  Prior findings count: 20
+
+  [Iter 0] SEED QUERY (no LLM): "Verfahrensrecht Haftverlängerung Fristen"
+    Filter pool: StPO=1306 docs in scope
+    Results: 10 hits
+      1. Art. 89 Abs. 1 StPO (score=0.033) â€” 1 Gesetzliche Fristen können nicht erstreckt werden....
+      2. Art. 227 Abs. 1 StPO (score=0.016) â€” 1 Läuft die vom Zwangsmassnahmengericht festgesetzte Dauer der Untersuchungshaft...
+      3. Art. 314 Abs. 2 StPO (score=0.016) â€” 2 Im Fall von Absatz 1 Buchstabe c ist die Sistierung auf 3 Monate befristet; si...
+      4. Art. 227 Abs. 7 StPO (score=0.016) â€” 7 Die Verlängerung der Untersuchungshaft wird jeweils für längstens 3 Monate, in...
+      5. Art. 274 Abs. 5 StPO (score=0.015) â€” 5 Das Zwangsmassnahmengericht erteilt die Genehmigung für höchstens 3 Monate. Di...
+      6. Art. 289 Abs. 5 StPO (score=0.015) â€” 5 Die Genehmigung wird für höchstens 12 Monate erteilt. Sie kann einmal oder meh...
+      7. Art. 165 Abs. 2 StPO (score=0.015) â€” 2 Die Verpflichtung wird befristet....
+      8. Art. 91 Abs. 4 StPO (score=0.015) â€” 4 Die Frist gilt auch dann als gewahrt, wenn die Eingabe spätestens am letzten T...
+      9. Art. 91 Abs. 1 StPO (score=0.014) â€” 1 Die Frist ist eingehalten, wenn die Verfahrenshandlung spätestens am letzten T...
+      10. Art. 92 StPO (score=0.014) â€” Die Behörden können von Amtes wegen oder auf Gesuch hin die von ihnen angesetzte...
+
+  [Iter 1] LLM CALL (executor)
+    Template: STANDARD | Taxonomy: 175 chars
+    Prompt length: 8,437 chars
+    LLM time: 4.20s
+    Raw output: {"thought": "Begründung für Haftverlängerung im Rechtsgebiet Rechtsmittel", "query": "Haftverlängerung Rechtsmittel Begründung","done": false}
+
+  Direction 6 COMPLETE: 10 citations in 4.5s
+  Unique citations: 10
+    â€¢ Art. 89 Abs. 1 StPO
+    â€¢ Art. 91 Abs. 4 StPO
+    â€¢ Art. 91 Abs. 1 StPO
+    â€¢ Art. 314 Abs. 2 StPO
+    â€¢ Art. 165 Abs. 2 StPO
+    â€¢ Art. 92 StPO
+    â€¢ Art. 227 Abs. 1 StPO
+    â€¢ Art. 227 Abs. 7 StPO
+    â€¢ Art. 274 Abs. 5 StPO
+    â€¢ Art. 289 Abs. 5 StPO
+
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  PHASE 3: AGGREGATION + RERANKING
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  Total raw citations (all directions): 110
+  Unique citations before aggregation: 96
+  Duplicates removed: 14
+  â–¸ Per-Direction Contribution
+    Direction 1: 10 raw, 10 unique
+    Direction 2: 30 raw, 30 unique
+    Direction 3: 20 raw, 13 unique
+    Direction 4: 20 raw, 18 unique
+    Direction 5: 20 raw, 20 unique
+    Direction 6: 10 raw, 10 unique
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  RERANKER INPUT QUERY
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  sachverhalt present: True
+  Using: plan.sachverhalt
+  Rerank query text:
+    Ein Richter darf eine Dreimonatsverlängerung der Untersuchungshaft gemäß Art. 221 Abs. 1 Lit. b StPO (Kollusionsgefahr) zulassen, die mit dem Prinzip der Verhältnismäßigkeit vereinbar ist, wenn der Beschuldigte, der nach einer vermuteten Spätnacht Übergriff und Diebstahl eines Courier-Sackes mit insgesamt €5.600 betreut wurde, am 18. Oktober 2024 durch eine Anordnung für eine maximale Dauer bis zum 15. Januar 2025 remittiert wurde, der Anklagevertreter hat eine Verlängerung am 10. Dezember 2024 angefordert hauptsächlich aus Gründen einer konkreten Gefahr, dass der Haftgefangene Zeugen beeinflussen oder Beweismittel verfälschen könnte und eine Wiederbeteiligung riskiert, während der Haftgefangene die Verlängerung wegen der Tatsache ablehnt, dass die meisten Zeugen bereits befragt wurden, die noch ausstehenden Ermittlungsmaßnahmen hauptsächlich technischer Art sind (Telefondatenauswertung, CCTV-Bildanalyse und Bankaufschläge), seine Freilassung würde somit nicht die Ermittlung gefährden und der Beschwerdeführer die Klage zurückgezogen hat.
+
+
+  Detected case type: criminal
+  Detected prefixes: ['BGE_IV', '1B_']
+  Procedural defaults injected: 11
+    + Art. 42 Abs. 2 BGG
+    + Art. 95 BGG
+    + Art. 100 Abs. 1 BGG
+    + Art. 105 Abs. 1 BGG
+    + Art. 29 Abs. 2 BV
+    + Art. 78 Abs. 1 BGG
+    + Art. 80 Abs. 1 BGG
+    + Art. 81 Abs. 1 BGG
+    + Art. 221 Abs. 1 StPO
+    + Art. 10 Abs. 2 BV
+    + Art. 31 Abs. 3 BV
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  RERANKER (Qwen3-Reranker-0.6B)
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  Stage: Phase 3 â€” after all directions complete, reranking combined unique citations
+  Input: 106 candidates (unique + defaults)
+  Cutoff threshold: 0.0
+  Max output: 60
+  Reranker time: 1.35s
+
+  ALL RERANKER SCORES (sorted desc):
+  Rank  Score    RRF    Dirs       Citation                                 Text Preview
+  ----- -------- ------ ---------- ---------------------------------------- ----------------------------------------
+  âœ“ 1    0.0328   0.033  [4]        Art. 10 Abs. 2 BV                        2 Jeder Mensch hat das Recht auf persönliche Freih
+  âœ“ 2    0.0328   0.033  [6]        Art. 89 Abs. 1 StPO                      1 Gesetzliche Fristen können nicht erstreckt werde
+  âœ“ 3    0.0318   0.032  [1]        Art. 226 Abs. 4 StPO                     4 Es kann in seinem Entscheid:a. eine Höchstdauer 
+  âœ“ 4    0.0317   0.032  [2]        1B_12/2013 01.02.2013 E. B               Gegen die Haftverlängerung vom 12. November 2012 e
+  âœ“ 5    0.0315   0.032  [2]        1B_189/2009 30.07.2009 E. 1              Angefochten ist ein strafprozessualer Entscheid be
+  âœ“ 6    0.0310   0.031  [1, 6]     Art. 227 Abs. 7 StPO                     7 Die Verlängerung der Untersuchungshaft wird jewe
+  âœ“ 7    0.0308   0.031  [1]        Art. 227 Abs. 4 StPO                     4 Es kann die provisorische Fortdauer der Untersuc
+  âœ“ 8    0.0304   0.030  [1, 5, 6]  Art. 227 Abs. 1 StPO                     1 Läuft die vom Zwangsmassnahmengericht festgesetz
+  âœ“ 9    0.0303   0.030  [2]        1B_470/2022 E. 5.3                       5.3. Soweit der Beschwerdeführer die strittige Haf
+  âœ“ 10   0.0302   0.030  [2]        1B_300/2008 25.11.2008 E. 3              Der Beschwerdeführer bestreitet erneut den Haftgru
+  âœ“ 11   0.0300   0.030  [4]        Art. 192 Abs. 1 BV                       1 Die Bundesverfassung kann jederzeit ganz oder te
+  âœ“ 12   0.0297   0.030  [2]        1B_606/2020 E. 5                         Zu prüfen ist damit, ob die Vorinstanz und das Zwa
+  âœ“ 13   0.0291   0.029  [2]        1B_379/2019 E. 7.1                       7.1. Schliesslich rügt der Beschwerdeführer, die H
+  âœ“ 14   0.0287   0.029  [5]        Art. 285 Abs. 4 StPO                     4 Personen, deren Bankverkehr überwacht wurde, kön
+  âœ“ 15   0.0280   0.028  [2]        1B_203/2016 E. 4                         Der Beschwerdeführer wendet sich auch gegen die An
+  âœ“ 16   0.0278   0.028  [4]        Art. 21 BV                               Die Freiheit der Kunst ist gewährleistet.
+  âœ“ 17   0.0276   0.028  [5]        Art. 437 Abs. 1 StPO                     1 Urteile und andere verfahrenserledigende Entsche
+  âœ“ 18   0.0276   0.028  [2]        1B_288/2008 28.11.2008 E. 2.4            2.4.1 Kollusion bedeutet nach der bundesgerichtlic
+  âœ“ 19   0.0274   0.027  [2]        1B_164/2020 E. 2.1                       2.1. Gemäss Art. 221 Abs. 1 lit. b StPO ist Unters
+  âœ“ 20   0.0273   0.027  [2]        1B_218/2018 E. 3.1                       3.1. Der Haftgrund der Kollusionsgefahr liegt vor,
+  âœ“ 21   0.0270   0.027  [1]        Art. 229 Abs. 1 StPO                     1 Über die Anordnung der Sicherheitshaft bei vorbe
+  âœ“ 22   0.0270   0.027  [2]        1B_166/2016 E. 2.2                       2.2. Die Vorinstanz bejahte im vorliegenden Fall d
+  âœ“ 23   0.0267   0.027  [2]        1B_406/2016 E. 2.3                       2.3. Der Haftgrund der Kollusionsgefahr liegt vor,
+  âœ“ 24   0.0266   0.027  [2]        1B_28/2022 E. 4.4                        4.4. Demnach hat die Vorinstanz den besonderen Haf
+  âœ“ 25   0.0260   0.026  [2]        1B_361/2010 29.11.2010 E. 4              Im angefochtenen Entscheid wird dargelegt, dass hi
+  âœ“ 26   0.0258   0.026  [1]        Art. 220 Abs. 1 StPO                     1 Die Untersuchungshaft beginnt mit ihrer Anordnun
+  âœ“ 27   0.0164   0.016  [1]        Art. 431 Abs. 2 StPO                     2 Im Fall von Untersuchungs- und Sicherheitshaft b
+  âœ“ 28   0.0164   0.016  [2]        1B_94/2010 22.07.2010 E. 3               3.1 Der Beschwerdeführer bringt vor, da das Haftve
+  âœ“ 29   0.0164   0.016  [2]        1B_51/2015 E. 4.7                        4.7. Aus der von der Staatsanwaltschaft zitierten 
+  âœ“ 30   0.0164   0.016  [3, 3]     BGE 150 IV 405 E. 15                     oder
+  âœ“ 31   0.0164   0.016  [3, 3]     BGE 146 IV 311 E. 3.5.1                  Art. 66b StGB sieht unter der Marginalie "c. Gemei
+  âœ“ 32   0.0164   0.016  [3]        BGE 146 IV 279 E. 3.5                    Bei der Anordnung von Sicherheitshaft bei vorbeste
+  âœ“ 33   0.0164   0.016  [4]        Art. 123a Abs. 2 BV                      2 Nur wenn durch neue, wissenschaftliche Erkenntni
+  âœ“ 34   0.0164   0.016  [4]        Art. 140 Abs. 2 BV                       2 Dem Volk werden zur Abstimmung unterbreitet:a. d
+  âœ“ 35   0.0164   0.016  [5]        Art. 388 Abs. 2 StPO                     2 Sie entscheidet über das Nichteintreten auf:a. o
+  âœ“ 36   0.0164   0.016  [5]        Art. 10 Abs. 3 StPO                      3 Bestehen unüberwindliche Zweifel an der Erfüllun
+  âœ“ 37   0.0164   0.016  [5]        Art. 239 Abs. 1 StPO                     1 Die Sicherheitsleistung wird freigegeben, wenn:a
+  âœ“ 38   0.0161   0.016  [1]        Art. 212 Abs. 3 StPO                     3 Untersuchungs- und Sicherheitshaft dürfen nicht 
+  âœ“ 39   0.0161   0.016  [1]        Art. 229 Abs. 3 StPO                     3 Das Verfahren vor dem Zwangsmassnahmengericht ri
+  âœ“ 40   0.0161   0.016  [2]        1B_451/2015 E. C                         Am 22. Dezember 2016 wies das Obergericht des Kant
+  âœ“ 41   0.0161   0.016  [2]        1B_300/2007 15.01.2008 E. 2              2.1 Nach dem kantonalen Strafverfahrensrecht ist d
+  âœ“ 42   0.0161   0.016  [3, 3]     BGE 137 IV 177 E. 2                      (...)
+  âœ“ 43   0.0161   0.016  [4]        Art. 31 Abs. 1 BV                        1 Die Freiheit darf einer Person nur in den vom Ge
+  âœ“ 44   0.0161   0.016  [4, 4]     Art. 36 Abs. 3 BV                        3 Einschränkungen von Grundrechten müssen verhältn
+  âœ“ 45   0.0161   0.016  [4]        Art. 42 Abs. 1 BV                        1 Der Bund erfüllt die Aufgaben, die ihm die Bunde
+  âœ“ 46   0.0161   0.016  [5, 6]     Art. 92 StPO                             Die Behörden können von Amtes wegen oder auf Gesuc
+  âœ“ 47   0.0161   0.016  [5]        Art. 6 Abs. 2 StPO                       2 Sie untersuchen die belastenden und entlastenden
+  âœ“ 48   0.0161   0.016  [5]        Art. 219 Abs. 3 StPO                     3 Ergeben die Abklärungen, dass Haftgründe nicht o
+  âœ“ 49   0.0159   0.016  [2]        1B_78/2009 01.04.2009 E. 2               2.1 Die Beschwerdeführerin rügt, die angefochtene 
+  âœ“ 50   0.0159   0.016  [3, 3]     BGE 146 IV 30 E. 3.4                     p. 161 s.; ATF 140 IV 82 consid. 2.3 p. 84 et
+  âœ“ 51   0.0159   0.016  [4, 4]     Art. 121 Abs. 3 BV                       3 Sie verlieren unabhängig von ihrem ausländerrech
+  âœ“ 52   0.0159   0.016  [4]        Art. 20 BV                               Die Freiheit der wissenschaftlichen Lehre und Fors
+  âœ“ 53   0.0159   0.016  [4]        Art. 123a Abs. 1 BV                      1 Wird ein Sexual- oder Gewaltstraftäter in den Gu
+  âœ“ 54   0.0159   0.016  [5]        Art. 397 Abs. 5 StPO                     5 Die Beschwerdeinstanz entscheidet innerhalb von 
+  âœ“ 55   0.0159   0.016  [5]        Art. 428 Abs. 1 StPO                     1 Die Kosten des Rechtsmittelverfahrens tragen die
+  âœ“ 56   0.0159   0.016  [5]        Art. 126 Abs. 3 StPO                     3 Wäre die vollständige Beurteilung des Zivilanspr
+  âœ“ 57   0.0159   0.016  [5]        Art. 412 Abs. 1 StPO                     1 Das Berufungsgericht nimmt in einem schriftliche
+  âœ“ 58   0.0159   0.016  [6]        Art. 314 Abs. 2 StPO                     2 Im Fall von Absatz 1 Buchstabe c ist die Sistier
+  âœ“ 59   0.0156   0.016  [1]        Art. 226 Abs. 5 StPO                     5 Ordnet es die Untersuchungshaft nicht an, so wir
+  âœ“ 60   0.0156   0.016  [2]        1B_65/2015 E. 6                          Die Gesamtdauer der bisher erstandenen Haft lässt 
+  âœ“ 61   0.0156   0.016  [2]        1B_21/2007 06.03.2007 E. 3               Die Anordnung und Fortdauer von strafprozessualer 
+  âœ“ 62   0.0156   0.016  [3]        BGE 144 IV 113 E. 3.2                    Die Vorinstanz hat ausgeführt, ziehe man bei der P
+  âœ“ 63   0.0156   0.016  [4]        Art. 10 Abs. 1 BV                        1 Jeder Mensch hat das Recht auf Leben. Die Todess
+  âœ“ 64   0.0156   0.016  [4]        Art. 191 Abs. 4 BV                       4 Für offensichtlich unbegründete Beschwerden kann
+  âœ“ 65   0.0156   0.016  [5]        Art. 396 Abs. 2 StPO                     2 Beschwerden wegen Rechtsverweigerung oder Rechts
+  âœ“ 66   0.0156   0.016  [5]        Art. 381 Abs. 3 StPO                     3 Sie regeln, welche Behörden im Übertretungsstraf
+  âœ“ 67   0.0156   0.016  [5]        Art. 404 Abs. 2 StPO                     2 Es kann zugunsten der beschuldigten Person auch 
+  âœ“ 68   0.0156   0.016  [5]        Art. 247 Abs. 2 StPO                     2 Zur Prüfung des Inhalts der Aufzeichnungen, insb
+  âœ“ 69   0.0154   0.015  [2]        1B_424/2017 E. 1.1                       1.1. Beim angefochtenen Entscheid handelt es sich 
+  âœ“ 70   0.0154   0.015  [2]        1B_199/2018 E. 5.2                       5.2. Gemäss Art. 31 Abs. 3 BV und Art. 5 Ziff. 3 E
+  âœ“ 71   0.0154   0.015  [3, 3]     BGE 147 IV 2 E. 1                        (...)
+  âœ“ 72   0.0154   0.015  [3, 3]     BGE 141 IV 459 E. 3                      (...)
+  âœ“ 73   0.0154   0.015  [4]        Art. 139 Abs. 1 BV                       1 100 000 Stimmberechtigte können innert 18 Monate
+  âœ“ 74   0.0154   0.015  [5, 6]     Art. 274 Abs. 5 StPO                     5 Das Zwangsmassnahmengericht erteilt die Genehmig
+  âœ“ 75   0.0154   0.015  [5]        Art. 221 Abs. 1bis StPO                  1bis Untersuchungs- und Sicherheitshaft sind ausna
+  âœ“ 76   0.0154   0.015  [5]        Art. 269quater Abs. 3 StPO               3 Die Strafverfolgungsbehörde stellt sicher, dass 
+  âœ“ 77   0.0152   0.015  [2]        1B_261/2013 E. 4.2                       4.2. Gemäss Art. 227 Abs. 7 StPO wird die Verlänge
+  âœ“ 78   0.0152   0.015  [2]        1B_31/2007 19.03.2007 E. D               Am 2. Februar 2007 beantragte das URA eine weitere
+  âœ“ 79   0.0152   0.015  [2]        1B_149/2015 E. 2.6                       2.6. Anzumerken bleibt Folgendes: Bejaht das kanto
+  âœ“ 80   0.0152   0.015  [3, 3]     BGE 142 IV 11 E. 1                       (...)
+  âœ“ 81   0.0152   0.015  [4]        Art. 31 Abs. 4 BV                        4 Jede Person, der die Freiheit nicht von einem Ge
+  âœ“ 82   0.0152   0.015  [4]        Art. 164 Abs. 2 BV                       2 Rechtsetzungsbefugnisse können durch Bundesgeset
+  âœ“ 83   0.0152   0.015  [6]        Art. 289 Abs. 5 StPO                     5 Die Genehmigung wird für höchstens 12 Monate ert
+  âœ“ 84   0.0149   0.015  [2]        1B_398/2021 E. 2.3                       2.3. Nach Art. 235 Abs. 1 StPO darf die inhaftiert
+  âœ“ 85   0.0149   0.015  [3]        BGE 141 IV 145 E. 2.2                    Die Bestimmungen des Strafgesetzbuches über die Ve
+  âœ“ 86   0.0149   0.015  [4]        Art. 32 Abs. 1 BV                        1 Jede Person gilt bis zur rechtskräftigen Verurte
+  âœ“ 87   0.0149   0.015  [6]        Art. 165 Abs. 2 StPO                     2 Die Verpflichtung wird befristet.
+  âœ“ 88   0.0147   0.015  [2]        1B_31/2023 E. 5.1                        5.1. Mit Blick auf Art. 212 Abs. 3 StPO ist zu ver
+  âœ“ 89   0.0147   0.015  [3]        BGE 148 IV 113 E. 5                      (...)
+  âœ“ 90   0.0147   0.015  [4]        Art. 2 Abs. 1 BV                         1 Die Schweizerische Eidgenossenschaft schützt die
+  âœ“ 91   0.0147   0.015  [6]        Art. 91 Abs. 4 StPO                      4 Die Frist gilt auch dann als gewahrt, wenn die E
+  âœ“ 92   0.0145   0.014  [2]        1B_178/2016 E. 4.1                       4.1. Gemäss Art. 31 Abs. 3 BV und Art. 5 Ziff. 3 E
+  âœ“ 93   0.0145   0.014  [3]        BGE 146 IV 279 E. 2.6                    Die Sicherheitshaft wird hier deshalb längstens fü
+  âœ“ 94   0.0145   0.014  [6]        Art. 91 Abs. 1 StPO                      1 Die Frist ist eingehalten, wenn die Verfahrensha
+  âœ“ 95   0.0143   0.014  [2]        1B_291/2014 E. 3.2                       3.2. Gemäss Art. 31 Abs. 3 BV und Art. 5 Ziff. 3 E
+  âœ“ 96   0.0143   0.014  [3]        BGE 146 IV 23 E. 2                       (...)
+  âœ“ 97   0.0033   0.003  ['default'] Art. 31 Abs. 3 BV                        3 Jede Person, die in Untersuchungshaft genommen w
+  âœ“ 98   0.0032   0.003  ['default'] Art. 221 Abs. 1 StPO                     1 Untersuchungs- und Sicherheitshaft sind nur zulä
+  âœ“ 99   0.0023   0.002  ['default'] Art. 81 Abs. 1 BGG                       1 Zur Beschwerde in Strafsachen ist berechtigt, we
+  âœ“ 100  0.0023   0.002  ['default'] Art. 100 Abs. 1 BGG                      1 Die Beschwerde gegen einen Entscheid ist innert 
+  âœ“ 101  0.0022   0.002  ['default'] Art. 78 Abs. 1 BGG                       1 Das Bundesgericht beurteilt Beschwerden gegen En
+  âœ“ 102  0.0022   0.002  ['default'] Art. 42 Abs. 2 BGG                       2 In der Begründung ist in gedrängter Form darzule
+  âœ“ 103  0.0020   0.002  ['default'] Art. 80 Abs. 1 BGG                       1 Die Beschwerde ist zulässig gegen Entscheide let
+  âœ“ 104  0.0018   0.002  ['default'] Art. 105 Abs. 1 BGG                      1 Das Bundesgericht legt seinem Urteil den Sachver
+  âœ“ 105  0.0016   0.002  ['default'] Art. 95 BGG                              Mit der Beschwerde kann die Verletzung gerügt werd
+  âœ“ 106  0.0016   0.002  ['default'] Art. 29 Abs. 2 BV                        2 Die Parteien haben Anspruch auf rechtliches Gehö
+
+  RERANKER SUMMARY:
+    Above cutoff (0.0): 106
+    Below cutoff (dropped): 0
+    Score range: 0.0328 â†’ 0.0016
+    Kept scores: mean=0.0176, min=0.0016
+
+  Explicit citations extracted from question text: ['Art. 221 Abs. 1 lit. b StPO']
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  FINAL OUTPUT
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  Final citation count: 60
+    1. Art. 10 Abs. 2 BV  [from direction(s): [4]]
+    2. Art. 89 Abs. 1 StPO  [from direction(s): [6]]
+    3. Art. 226 Abs. 4 StPO  [from direction(s): [1]]
+    4. 1B_12/2013 01.02.2013 E. B  [from direction(s): [2]]
+    5. 1B_189/2009 30.07.2009 E. 1  [from direction(s): [2]]
+    6. Art. 227 Abs. 7 StPO  [from direction(s): [1, 6]]
+    7. Art. 227 Abs. 4 StPO  [from direction(s): [1]]
+    8. Art. 227 Abs. 1 StPO  [from direction(s): [1, 5, 6]]
+    9. 1B_470/2022 E. 5.3  [from direction(s): [2]]
+    10. 1B_300/2008 25.11.2008 E. 3  [from direction(s): [2]]
+    11. Art. 192 Abs. 1 BV  [from direction(s): [4]]
+    12. 1B_606/2020 E. 5  [from direction(s): [2]]
+    13. 1B_379/2019 E. 7.1  [from direction(s): [2]]
+    14. Art. 285 Abs. 4 StPO  [from direction(s): [5]]
+    15. 1B_203/2016 E. 4  [from direction(s): [2]]
+    16. Art. 21 BV  [from direction(s): [4]]
+    17. Art. 437 Abs. 1 StPO  [from direction(s): [5]]
+    18. 1B_288/2008 28.11.2008 E. 2.4  [from direction(s): [2]]
+    19. 1B_164/2020 E. 2.1  [from direction(s): [2]]
+    20. 1B_218/2018 E. 3.1  [from direction(s): [2]]
+    21. Art. 229 Abs. 1 StPO  [from direction(s): [1]]
+    22. 1B_166/2016 E. 2.2  [from direction(s): [2]]
+    23. 1B_406/2016 E. 2.3  [from direction(s): [2]]
+    24. 1B_28/2022 E. 4.4  [from direction(s): [2]]
+    25. 1B_361/2010 29.11.2010 E. 4  [from direction(s): [2]]
+    26. Art. 220 Abs. 1 StPO  [from direction(s): [1]]
+    27. Art. 431 Abs. 2 StPO  [from direction(s): [1]]
+    28. 1B_94/2010 22.07.2010 E. 3  [from direction(s): [2]]
+    29. 1B_51/2015 E. 4.7  [from direction(s): [2]]
+    30. BGE 150 IV 405 E. 15  [from direction(s): [3, 3]]
+    31. BGE 146 IV 311 E. 3.5.1  [from direction(s): [3, 3]]
+    32. BGE 146 IV 279 E. 3.5  [from direction(s): [3]]
+    33. Art. 123a Abs. 2 BV  [from direction(s): [4]]
+    34. Art. 140 Abs. 2 BV  [from direction(s): [4]]
+    35. Art. 388 Abs. 2 StPO  [from direction(s): [5]]
+    36. Art. 10 Abs. 3 StPO  [from direction(s): [5]]
+    37. Art. 239 Abs. 1 StPO  [from direction(s): [5]]
+    38. Art. 212 Abs. 3 StPO  [from direction(s): [1]]
+    39. Art. 229 Abs. 3 StPO  [from direction(s): [1]]
+    40. 1B_451/2015 E. C  [from direction(s): [2]]
+    41. 1B_300/2007 15.01.2008 E. 2  [from direction(s): [2]]
+    42. BGE 137 IV 177 E. 2  [from direction(s): [3, 3]]
+    43. Art. 31 Abs. 1 BV  [from direction(s): [4]]
+    44. Art. 36 Abs. 3 BV  [from direction(s): [4, 4]]
+    45. Art. 42 Abs. 1 BV  [from direction(s): [4]]
+    46. Art. 92 StPO  [from direction(s): [5, 6]]
+    47. Art. 6 Abs. 2 StPO  [from direction(s): [5]]
+    48. Art. 219 Abs. 3 StPO  [from direction(s): [5]]
+    49. 1B_78/2009 01.04.2009 E. 2  [from direction(s): [2]]
+    50. BGE 146 IV 30 E. 3.4  [from direction(s): [3, 3]]
+    51. Art. 121 Abs. 3 BV  [from direction(s): [4, 4]]
+    52. Art. 20 BV  [from direction(s): [4]]
+    53. Art. 123a Abs. 1 BV  [from direction(s): [4]]
+    54. Art. 397 Abs. 5 StPO  [from direction(s): [5]]
+    55. Art. 428 Abs. 1 StPO  [from direction(s): [5]]
+    56. Art. 126 Abs. 3 StPO  [from direction(s): [5]]
+    57. Art. 412 Abs. 1 StPO  [from direction(s): [5]]
+    58. Art. 314 Abs. 2 StPO  [from direction(s): [6]]
+    59. Art. 226 Abs. 5 StPO  [from direction(s): [1]]
+    60. 1B_65/2015 E. 6  [from direction(s): [2]]
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  EVALUATION vs GOLD
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  Precision: 0.0500 (3/60)
+  Recall:    0.0714 (3/42)
+  F1:        0.0588
+
+  TRUE POSITIVES (3):
+    âœ“ Art. 212 Abs. 3 StPO
+    âœ“ Art. 227 Abs. 1 StPO
+    âœ“ Art. 428 Abs. 1 StPO
+
+  FALSE POSITIVES (57) â€” predicted but not in gold:
+    âœ— 1B_12/2013 01.02.2013 E. B
+    âœ— 1B_164/2020 E. 2.1
+    âœ— 1B_166/2016 E. 2.2
+    âœ— 1B_189/2009 30.07.2009 E. 1
+    âœ— 1B_203/2016 E. 4
+    âœ— 1B_218/2018 E. 3.1
+    âœ— 1B_28/2022 E. 4.4
+    âœ— 1B_288/2008 28.11.2008 E. 2.4
+    âœ— 1B_300/2007 15.01.2008 E. 2
+    âœ— 1B_300/2008 25.11.2008 E. 3
+    âœ— 1B_361/2010 29.11.2010 E. 4
+    âœ— 1B_379/2019 E. 7.1
+    âœ— 1B_406/2016 E. 2.3
+    âœ— 1B_451/2015 E. C
+    âœ— 1B_470/2022 E. 5.3
+    âœ— 1B_51/2015 E. 4.7
+    âœ— 1B_606/2020 E. 5
+    âœ— 1B_65/2015 E. 6
+    âœ— 1B_78/2009 01.04.2009 E. 2
+    âœ— 1B_94/2010 22.07.2010 E. 3
+    âœ— Art. 10 Abs. 2 BV
+    âœ— Art. 10 Abs. 3 StPO
+    âœ— Art. 121 Abs. 3 BV
+    âœ— Art. 123a Abs. 1 BV
+    âœ— Art. 123a Abs. 2 BV
+    âœ— Art. 126 Abs. 3 StPO
+    âœ— Art. 140 Abs. 2 BV
+    âœ— Art. 192 Abs. 1 BV
+    âœ— Art. 20 BV
+    âœ— Art. 21 BV
+    âœ— Art. 219 Abs. 3 StPO
+    âœ— Art. 220 Abs. 1 StPO
+    âœ— Art. 226 Abs. 4 StPO
+    âœ— Art. 226 Abs. 5 StPO
+    âœ— Art. 227 Abs. 4 StPO
+    âœ— Art. 227 Abs. 7 StPO
+    âœ— Art. 229 Abs. 1 StPO
+    âœ— Art. 229 Abs. 3 StPO
+    âœ— Art. 239 Abs. 1 StPO
+    âœ— Art. 285 Abs. 4 StPO
+    âœ— Art. 31 Abs. 1 BV
+    âœ— Art. 314 Abs. 2 StPO
+    âœ— Art. 36 Abs. 3 BV
+    âœ— Art. 388 Abs. 2 StPO
+    âœ— Art. 397 Abs. 5 StPO
+    âœ— Art. 412 Abs. 1 StPO
+    âœ— Art. 42 Abs. 1 BV
+    âœ— Art. 431 Abs. 2 StPO
+    âœ— Art. 437 Abs. 1 StPO
+    âœ— Art. 6 Abs. 2 StPO
+    âœ— Art. 89 Abs. 1 StPO
+    âœ— Art. 92 StPO
+    âœ— BGE 137 IV 177 E. 2
+    âœ— BGE 146 IV 279 E. 3.5
+    âœ— BGE 146 IV 30 E. 3.4
+    âœ— BGE 146 IV 311 E. 3.5.1
+    âœ— BGE 150 IV 405 E. 15
+
+  FALSE NEGATIVES (39) â€” in gold but missed:
+    âœ— 1B_15/2023 E. 3.1
+    âœ— 1B_210/2023 E. 4.1
+    âœ— 1B_28/2022 E. 4.1
+    âœ— 1B_357/2022 E. 3.1
+    âœ— 1B_536/2018 E. 5.1
+    âœ— 1B_90/2021 E. 2.1
+    âœ— 1B_90/2021 E. 2.4
+    âœ— 7B_12/2025 E. 2.2
+    âœ— 7B_231/2025 E. 4.1
+    âœ— 7B_301/2024 E. 2.4
+    âœ— 7B_496/2025 E. 3.2
+    âœ— 7B_69/2024 E. 3.3.2
+    âœ— Art. 100 Abs. 1 BGG
+    âœ— Art. 135 Abs. 3 StPO
+    âœ— Art. 135 Abs. 4 StPO
+    âœ— Art. 140 Abs. 1 StGB
+    âœ— Art. 221 Abs. 1 StPO
+    âœ— Art. 221 Abs. 2 StPO
+    âœ— Art. 222 StPO
+    âœ— Art. 37 Abs. 1 StBOG
+    âœ— Art. 382 Abs. 1 StPO
+    âœ— Art. 385 Abs. 1 StPO
+    âœ— Art. 39 Abs. 1 StBOG
+    âœ— Art. 390 Abs. 2 StPO
+    âœ— Art. 393 Abs. 1 StPO
+    âœ— Art. 396 Abs. 1 StPO
+    âœ— Art. 422 Abs. 1 StPO
+    âœ— Art. 422 Abs. 2 StPO
+    âœ— BGE 132 I 21 E. 3.2
+    âœ— BGE 132 I 21 E. 3.2.1
+    âœ— BGE 132 I 21 E. 3.2.2
+    âœ— BGE 133 I 168 E. 4.1
+    âœ— BGE 133 I 270 E. 3.4.2
+    âœ— BGE 137 IV 122 E. 4.1
+    âœ— BGE 137 IV 122 E. 4.2
+    âœ— BGE 137 IV 122 E. 6.2
+    âœ— BGE 137 IV 122 E. 6.4
+    âœ— BGE 139 IV 270 E. 3.1
+    âœ— BGE 143 IV 168 E. 5.1
+
+  Total pipeline time: 128.8s
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+
+
+
+################################################################################
+  VALIDATION SUMMARY
+################################################################################
+  Queries: 1
+  Macro Precision: 0.0500
+  Macro Recall:    0.0714
+  Macro F1:        0.0588
+
+  Per-query breakdown:
+    val_001: P=0.050 R=0.071 F1=0.059

@@ -1,0 +1,4 @@
+Cell 14 has 327 lines
+old_start=46, old_end=66
+SYNTAX OK
+SUCCESS: 327 -> 341 lines (removed -14 old lines)

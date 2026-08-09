@@ -1,0 +1,11 @@
+root ::= "{" ws "\"thought\"" ws ":" ws string "," ws "\"query\"" ws ":" ws string "," ws "\"done\"" ws ":" ws boolean ws "}"
+
+string ::= "\"" char* "\""
+
+char ::= [^"\\] | "\\" escape-char
+
+escape-char ::= "\"" | "\\" | "/" | "n" | "t" | "r"
+
+boolean ::= "true" | "false"
+
+ws ::= [ \t\n]*

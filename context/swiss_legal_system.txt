@@ -1,0 +1,188 @@
+=== DAS SCHWEIZERISCHE RECHTSSYSTEM (Für LLM-Agenten) ===
+
+Dieses Dokument beschreibt wie das schweizerische Rechtssystem strukturiert ist,
+damit der Agent wie ein Rechtsanwalt navigieren kann — nicht nur semantisch suchen.
+
+--- RECHTSQUELLEN-HIERARCHIE ---
+
+Die Schweiz hat eine STRIKTE Hierarchie der Rechtsquellen:
+
+1. Bundesverfassung (BV) — Höchstes Recht
+   → Grundrechte (Art. 7-36 BV)
+   → Staatsorganisation (Art. 143-191 BV)
+   → JEDES Bundesgesetz muss BV-konform sein
+   → Art. 190 BV: Bundesgesetze sind für das Bundesgericht massgebend (auch wenn verfassungswidrig!)
+
+2. Bundesgesetze (Gesetze im formellen Sinn)
+   → Vom Parlament beschlossen
+   → Systematische Sammlung (SR-Nummer)
+   → Beispiele: OR (SR 220), ZGB (SR 210), StGB (SR 311.0), StPO (SR 312.0)
+
+3. Verordnungen (Bundesratsverordnungen)
+   → Konkretisieren Gesetze
+   → Erlassen durch Bundesrat (Exekutive)
+   → Bsp: AVIG → AVIV (Arbeitslosenversicherungsverordnung)
+
+4. Bundesgerichtspraxis (BGE + unveröffentlichte Entscheide)
+   → Interpretiert Gesetze und BV
+   → BGE = Leitentscheide (publiziert, autoritativ)
+   → Unveröffentlichte Entscheide = Einzelfallanwendung
+
+--- WIE DAS BUNDESGERICHT FUNKTIONIERT ---
+
+Das Schweizerische Bundesgericht (BGer) in Lausanne ist die LETZTE Instanz.
+
+Instanzenzug (Weg ans Bundesgericht):
+  Erstinstanz (Bezirksgericht/Kreisgericht)
+  → Zweitinstanz (Kantonsgericht/Obergericht)
+  → Bundesgericht (letzte Instanz, nur Rechtsfragen)
+
+Beschwerdearten ans Bundesgericht (Art. 72-89 BGG):
+  • Beschwerde in Zivilsachen (Art. 72 BGG) — Streitwert ≥ CHF 30'000
+  • Beschwerde in Strafsachen (Art. 78 BGG) — Strafurteile + Haftfragen
+  • Beschwerde in öffentlich-rechtlichen Angelegenheiten (Art. 82 BGG) — Verwaltung, Steuern, Ausländerrecht
+  • Subsidiäre Verfassungsbeschwerde (Art. 113 BGG) — wenn keine andere Beschwerde möglich
+
+KRITISCH: In JEDEM Bundesgerichtsfall werden folgende Normen geprüft:
+  → Legitimation (Art. 76/81/89 BGG)
+  → Beschwerdefrist (Art. 100 BGG — 30 Tage)
+  → Rügegründe (Art. 95 BGG — Rechtsverletzung)
+  → Sachverhaltsbindung (Art. 105 BGG)
+  → Begründungsanforderung (Art. 42 Abs. 2 BGG)
+
+--- ABTEILUNGEN DES BUNDESGERICHTS ---
+
+5 Abteilungen mit klarer Zuständigkeitsverteilung:
+
+I. Öffentlich-rechtliche Abteilung (Lausanne)
+   → Strafprozessuale Zwangsmassnahmen (Haft! → Präfix 1B_)
+   → Verwaltungsrecht, Raumplanung (→ Präfix 1C_)
+   → BGE-Publikation: BGE [Band] I [Seite]
+
+II. Öffentlich-rechtliche Abteilung (Lausanne)
+   → Ausländerrecht, Steuerrecht (→ Präfix 2C_)
+   → BGE-Publikation: BGE [Band] II [Seite]
+
+I. Zivilrechtliche Abteilung (Lausanne)
+   → Vertragsrecht, Haftpflicht, Arbeitsrecht (→ Präfix 4A_)
+   → BGE-Publikation: BGE [Band] III [Seite]
+
+II. Zivilrechtliche Abteilung (Lausanne)
+   → Familienrecht, Erbrecht, Sachenrecht (→ Präfix 5A_)
+   → BGE-Publikation: BGE [Band] III [Seite]
+
+Strafrechtliche Abteilung (Lausanne)
+   → Strafurteile, Strafzumessung (→ Präfix 6B_)
+   → BGE-Publikation: BGE [Band] IV [Seite]
+
+Sozialversicherungsrechtliche Abteilungen (Luzern)
+   → 1. Abteilung: IV, UV, ALV (→ Präfix 8C_)
+   → 2. Abteilung: AHV, KV, BVG, EL (→ Präfix 9C_)
+   → BGE-Publikation: BGE [Band] V [Seite]
+
+--- QUERVERWEISE: WIE GESETZE MITEINANDER VERKNÜPFT SIND ---
+
+KRITISCH: Schweizerische Gesetze sind STARK querverwiesen. Eine Rechtsfrage
+betrifft IMMER mehrere Gesetze gleichzeitig.
+
+Typische Verknüpfungsmuster:
+
+1. VERTRAG: OR (Substanz) + ZGB Art. 2 (Treu und Glauben) + BGG (Verfahren)
+2. SCHEIDUNG: ZGB (Substanz) + ZPO (Verfahren) + BGG (Rechtsmittel) + BV Art. 29
+3. STRAFVERFAHREN: StGB (Delikt) + StPO (Verfahren) + BGG + BV Art. 29-32
+4. HAFT: StPO Art. 212-240 (Substanz) + BV Art. 10/31 (Freiheit) + BGG (Rechtsmittel)
+5. SOZIALVERSICHERUNG: IVG/KVG/BVG (spezifisch) + ATSG (allgemeiner Teil) + BGG + BV
+6. AUSLÄNDERRECHT: AIG (Substanz) + BV Art. 13 (Privatleben) + EMRK Art. 8 + BGG
+7. STEUERN: DBG/StHG (Substanz) + BV Art. 127 (Besteuerungsgrundsätze) + BGG
+
+Regel: JEDE Rechtsfrage hat mindestens:
+  (a) Materielles Recht (Substanzgesetz)
+  (b) Verfahrensrecht (ZPO/StPO/VwVG)
+  (c) Rechtsmittelrecht (BGG wenn Bundesgericht)
+  (d) Verfassungsrecht (BV — Grundrechte tangiert)
+
+--- ERWÄGUNGEN (E.) — DAS HERZSTÜCK DER RECHTSPRECHUNG ---
+
+Jeder Bundesgerichtsentscheid ist in nummerierte Erwägungen (E.) gegliedert:
+
+Typischer Aufbau:
+  E. 1 — Prozessvoraussetzungen (Legitimation, Frist, Streitwert)
+  E. 2 — Sachverhalt und Rügen
+  E. 3 — Rechtliche Würdigung (KERNERWÄGUNG)
+  E. 3.1 — Untererwägung (spezifische Rechtsfrage)
+  E. 3.2 — Weitere Untererwägung
+  E. 4 — Ergebnis / Kostenentscheid
+
+JEDE Erwägung ist ein SEPARATES Dokument im Corpus!
+  → "BGE 137 IV 122 E. 6.2" = eine spezifische Erwägung
+  → "1B_210/2023 E. 4.1" = eine spezifische Erwägung
+
+Für die Suche bedeutet das:
+  → Suche nach dem INHALT der Erwägung
+  → Die gleiche Rechtsfrage kann in E. 3 ODER E. 4 ODER E. 2.3 diskutiert werden
+  → NIEMALS nach der E.-Nummer suchen — immer nach dem rechtlichen Konzept
+
+--- BGE-NUMMERIERUNG ---
+
+Format: BGE [Band] [Abteilung-röm.] [Seite] E. [Erwägung]
+
+Beispiele:
+  BGE 137 IV 122 E. 6.2
+  │    │   │   │   └── Erwägung 6.2
+  │    │   │   └── Seite 122
+  │    │   └── Abteilung IV (Strafrecht)
+  │    └── Band 137
+  └── Bundesgerichtsentscheid (Leitentscheid)
+
+Abteilungs-Zuordnung:
+  I = Öffentliches Recht (1. Abteilung)
+  II = Öffentliches Recht (2. Abteilung) — Ausländer, Steuern
+  III = Zivilrecht (beide Abteilungen)
+  IV = Strafrecht
+  V = Sozialversicherungsrecht
+
+Unveröffentlichte Entscheide:
+  Format: [Präfix]_[Nummer]/[Jahr] E. [Erwägung]
+  Beispiel: 1B_210/2023 E. 4.1
+  Beispiel: 5A_800/2019 E. 2.
+
+--- SUBSUMTION: DER JURISTISCHE DENKPROZESS ---
+
+Subsumtion = "Passt der Sachverhalt unter die Norm?"
+
+Obersatz: Die Norm (z.B. Art. 41 OR: "Wer einem andern widerrechtlich Schaden zufügt...")
+Untersatz: Der Sachverhalt (z.B. "Beklagter fuhr bei Rot und verletzte Kläger")  
+Schlusssatz: Die Rechtsfolge (z.B. "→ Schadenersatzpflicht")
+
+Für die SUCHE bedeutet das:
+  → Suche nach den TATBESTANDSELEMENTEN der Norm
+  → Nicht nach dem Sachverhalt, sondern nach dem RECHTLICHEN KONZEPT
+  → "Widerrechtlichkeit", "Schaden", "Kausalzusammenhang", "Verschulden"
+  → NICHT: "Autounfall", "Verletzung", "Krankenhaus"
+
+--- ALLGEMEINE TEILE (immer anwendbar) ---
+
+Viele Gesetze haben einen "Allgemeinen Teil" der IMMER gilt:
+
+• OR Art. 1-183: Allgemeiner Teil des Obligationenrechts
+  → Gilt für JEDEN Vertrag (Kauf, Werkvertrag, Miete, Arbeitsvertrag...)
+  → Art. 1-10: Vertragsschluss
+  → Art. 11-16: Form
+  → Art. 17-40: Willensmängel, Stellvertretung
+  → Art. 41-61: Haftpflicht (ausservertraglich)
+  → Art. 62-67: Ungerechtfertigte Bereicherung
+  → Art. 68-96: Erfüllung
+  → Art. 97-109: Nichterfüllung
+
+• ATSG Art. 1-78: Allgemeiner Teil Sozialversicherung
+  → Gilt für IVG, KVG, BVG, AVIG, UVG, AHV gleichermassen
+  → Art. 16-21: Leistungen allgemein
+  → Art. 25: Rückerstattung
+  → Art. 43-49: Verwaltungsverfahren
+  → Art. 56-62: Rechtspflege
+
+• ZGB Art. 1-10: Einleitungsartikel
+  → Gelten für das GESAMTE Privatrecht (ZGB + OR)
+  → Art. 2: Treu und Glauben (zitiert in fast JEDEM Zivilfall)
+  → Art. 4: Richterliches Ermessen
+  → Art. 8: Beweislast (erscheint in 30%+ der Zivilfälle)

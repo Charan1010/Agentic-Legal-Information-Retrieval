@@ -1,0 +1,113 @@
+=== VERFAHRENSRECHTLICHE STANDARDZITATE (Procedural Defaults) ===
+
+Dieses Dokument listet Normen die in fast JEDEM Bundesgerichtsfall zitiert werden,
+UNABHÄNGIG vom materiellen Rechtsgebiet. Ein rein semantischer Ansatz findet diese NICHT,
+weil sie keinen inhaltlichen Bezug zur konkreten Rechtsfrage haben — aber IMMER Teil
+der Gold-Citations sind.
+
+--- STRATEGIE ---
+
+Nach Abschluss aller thematischen Such-Richtungen:
+1. Bestimme den Falltyp (Strafverfahren, Zivilsachen, etc.)
+2. Füge die Standard-Zitate für diesen Falltyp hinzu
+3. Verifiziere dass die Zitate im Corpus existieren (exakter String-Match!)
+
+--- UNIVERSELL (in JEDEM Bundesgerichtsfall) ---
+
+Norm                          | Inhalt                              | Häufigkeit
+Art. 42 Abs. 2 BGG            | Begründungsanforderung              | ~80%
+Art. 95 BGG                   | Zulässige Rügegründe                | ~70%
+Art. 97 Abs. 1 BGG            | Sachverhaltsrüge                    | ~60%
+Art. 100 Abs. 1 BGG           | Beschwerdefrist (30 Tage)           | ~90%
+Art. 105 Abs. 1 BGG           | Sachverhalt verbindlich             | ~60%
+Art. 106 Abs. 2 BGG           | Rügeprinzip (Grundrechte)           | ~50%
+Art. 29 Abs. 2 BV             | Rechtliches Gehör                   | ~70%
+
+--- BESCHWERDE IN STRAFSACHEN (Art. 78-81 BGG) ---
+
+Zusätzlich zu den universellen:
+Art. 78 Abs. 1 BGG            | Zulässigkeit Strafbeschwerde        | ~80%
+Art. 80 Abs. 1 BGG            | Letztinstanzlichkeit                | ~60%
+Art. 81 Abs. 1 BGG            | Legitimation Strafrecht             | ~70%
+
+Wenn HAFT betroffen (1B_-Fälle):
+Art. 212 StPO                  | Anordnung Haft allgemein            | ~60%
+Art. 221 Abs. 1 StPO          | Haftgründe (Flucht/Kollusion/Wdh)  | ~90%
+Art. 222 StPO                  | Rechte des Inhaftierten             | ~40%
+Art. 226 StPO                  | Haftanordnung durch ZMG             | ~50%
+Art. 227 StPO                  | Haftverlängerung                    | ~50%
+Art. 5 Ziff. 3 EMRK           | Recht auf Haftprüfung               | ~40%
+Art. 31 Abs. 3 BV             | Recht auf Haftrichter               | ~40%
+Art. 10 Abs. 2 BV             | Persönliche Freiheit                | ~30%
+
+Wenn STRAFZUMESSUNG (6B_-Fälle):
+Art. 47 StGB                   | Strafzumessungsgrundsätze           | ~80%
+Art. 50 StGB                   | Begründung der Strafe               | ~50%
+Art. 42 StGB                   | Bedingte Strafe                     | ~40%
+Art. 43 StGB                   | Teilbedingte Strafe                 | ~30%
+
+--- BESCHWERDE IN ZIVILSACHEN (Art. 72-77 BGG) ---
+
+Zusätzlich zu den universellen:
+Art. 72 Abs. 1 BGG            | Zulässigkeit Zivilbeschwerde        | ~70%
+Art. 74 Abs. 1 BGG            | Streitwert CHF 30'000               | ~60%
+Art. 75 BGG                   | Letztinstanzlichkeit                | ~60%
+Art. 76 Abs. 1 BGG            | Legitimation Zivilsachen            | ~60%
+
+Wenn FAMILIENRECHT (5A_-Fälle):
+Art. 98 BGG                    | Beschränkte Kognition (Willkür)      | ~70%
+Art. 9 BV                      | Willkürverbot                       | ~60%
+Art. 2 ZGB                     | Treu und Glauben                    | ~30%
+Art. 4 ZGB                     | Richterliches Ermessen              | ~30%
+
+Wenn VERTRAGSRECHT (4A_-Fälle):
+Art. 8 ZGB                     | Beweislast                          | ~40%
+Art. 18 Abs. 1 OR              | Vertragsauslegung                   | ~40%
+
+--- BESCHWERDE IN ÖFFENTLICH-RECHTL. ANGELEGENHEITEN (Art. 82-89 BGG) ---
+
+Art. 82 BGG                    | Zulässigkeit                        | ~70%
+Art. 83 BGG                    | Ausnahmen (Ausschluss)              | ~40%
+Art. 86 Abs. 1 BGG            | Vorinstanzen                        | ~50%
+Art. 89 Abs. 1 BGG            | Legitimation öffentl. Recht         | ~70%
+
+Wenn AUSLÄNDERRECHT (2C_-Fälle):
+Art. 83 lit. c Ziff. 2 BGG    | Ausschluss bei Bewilligungsanspruch | ~50%
+Art. 13 Abs. 1 BV             | Privat- und Familienleben           | ~50%
+Art. 8 EMRK                    | Familienleben (EMRK)                | ~40%
+
+--- SOZIALVERSICHERUNGSRECHT (8C_, 9C_) ---
+
+Art. 82 ff. BGG               | Zulässigkeit (öffentl.-rechtl.)     | ~50%
+Art. 61 ATSG                   | Verfahren Kantonsgericht            | ~60%
+Art. 17 ATSG                   | Revision Rente                      | ~40%
+Art. 43 ATSG                   | Abklärung / Gutachten               | ~40%
+Art. 44 ATSG                   | Mitwirkung bei Gutachten            | ~30%
+Art. 53 ATSG                   | Revision + Wiedererwägung            | ~50%
+
+Wenn IV (8C_-Fälle):
+Art. 4 Abs. 1 IVG             | Invaliditätsbegriff                 | ~60%
+Art. 28 IVG                    | Rentenanspruch                      | ~50%
+Art. 28a IVG                   | Bemessung Invaliditätsgrad          | ~40%
+Art. 16 ATSG                   | Invaliditätsgrad / Einkommensvergleich | ~70%
+
+--- ANWENDUNGSREGELN FÜR DEN AGENTEN ---
+
+1. NACH jeder thematischen Suche: Bestimme den Falltyp aus den gefundenen Zitaten
+2. Füge die relevanten Standardzitate der obigen Liste hinzu
+3. ABER: Nur hinzufügen wenn der EXAKTE String im Corpus existiert!
+   → "Art. 42 Abs. 2 BGG" muss als Citation-String in laws_de.csv vorkommen
+   → Sonst NICHT hinzufügen (false positive)
+4. Bei HAFT-Fällen (1B_-Präfix gefunden): Zwingend StPO-Haftartikel + BV Art. 10/31 prüfen
+5. Bei GEMISCHTEN Fällen: Mehrere Falltyp-Listen kombinieren
+
+--- WARUM DIESE NICHT SEMANTISCH GEFUNDEN WERDEN ---
+
+Beispiel: Frage über Kindesunterhalt
+  → Semantische Suche findet: ZGB Art. 276-293, BGE 147 III 265 (Unterhalt)
+  → NICHT gefunden: Art. 42 Abs. 2 BGG, Art. 95 BGG, Art. 100 BGG
+  → ABER: Diese sind Gold-Citations weil das Bundesgericht in seinem Entscheid
+    E. 1 (Prozessvoraussetzungen) IMMER diese Normen nennt
+
+Die "Standard-Zitate" sind der RAHMEN jedes Entscheids.
+Der Inhalt variiert, aber der Rahmen ist konstant.

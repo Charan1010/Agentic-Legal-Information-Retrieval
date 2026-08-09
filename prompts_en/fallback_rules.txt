@@ -1,0 +1,114 @@
+=== FALLBACK RULES: Keyword-based Direction Decomposition ===
+
+When the LLM planner fails to produce a valid plan (JSON parse error,
+empty directions, invalid filter_codes), use these RULE-BASED
+mappings as fallback.
+
+--- KEYWORD MATCHING (case-insensitive on English query) ---
+
+Priority: More specific matches before general ones.
+Multiple can trigger simultaneously → multiple directions.
+
+=== CRIMINAL LAW ===
+Keywords: murder, homicide, manslaughter, assault, theft, robbery, fraud,
+          embezzlement, forgery, criminal, crime, offense, sentence, sentencing,
+          punishment, prison, conviction, acquittal, penalty, probation, arson,
+          trafficking, weapons, drugs
+→ Direction: {corpus: "laws", filter_codes: ["StGB"], rechtsgebiet: "Criminal Law"}
+→ Direction: {corpus: "courts", filter_codes: ["6B_", "BGE_IV"], rechtsgebiet: "Criminal Law FedCourt"}
+
+=== CRIMINAL PROCEDURE / DETENTION ===
+Keywords: detention, custody, pre-trial, remand, flight risk, collusion,
+          bail, arrest, investigation, prosecution, evidence, seizure,
+          surveillance, procedural rights, criminal procedure
+→ Direction: {corpus: "laws", filter_codes: ["StPO"], rechtsgebiet: "Criminal Procedure"}
+→ Direction: {corpus: "courts", filter_codes: ["1B_"], rechtsgebiet: "Criminal Procedure FedCourt"}
+
+=== CONTRACT LAW ===
+Keywords: contract, agreement, breach, performance, damages, warranty,
+          guarantee, sale, purchase, lease, rental, employment, termination,
+          notice period, compensation, liability, obligation, negligence,
+          tort, construction contract, mandate
+→ Direction: {corpus: "laws", filter_codes: ["OR"], rechtsgebiet: "Law of Obligations"}
+→ Direction: {corpus: "courts", filter_codes: ["4A_", "BGE_III"], rechtsgebiet: "Contract Law FedCourt"}
+
+=== FAMILY LAW ===
+Keywords: marriage, divorce, separation, maintenance, alimony, child support,
+          custody (child), parental authority, visitation, child welfare,
+          adoption, prenuptial, matrimonial property, family
+→ Direction: {corpus: "laws", filter_codes: ["ZGB"], rechtsgebiet: "Family Law"}
+→ Direction: {corpus: "courts", filter_codes: ["5A_", "BGE_III"], rechtsgebiet: "Family Law FedCourt"}
+
+=== SUCCESSION LAW ===
+Keywords: will, testament, inheritance, heir, estate, succession, legacy,
+          bequest, probate, disinheritance, forced heirship, holographic,
+          testamentary capacity, inter vivos, gift
+→ Direction: {corpus: "laws", filter_codes: ["ZGB"], rechtsgebiet: "Succession Law"}
+→ Direction: {corpus: "courts", filter_codes: ["5A_", "BGE_III"], rechtsgebiet: "Succession Law FedCourt"}
+
+=== SOCIAL INSURANCE / DISABILITY ===
+Keywords: disability, invalidity, pension, rehabilitation, work capacity,
+          medical assessment, degree of disability, insurance, IV, accident,
+          unemployment, health insurance, social security, OASI, benefits,
+          vocational, retraining, incapacity
+→ Direction: {corpus: "laws", filter_codes: ["IVG", "ATSG"], rechtsgebiet: "Social Insurance"}
+→ Direction: {corpus: "courts", filter_codes: ["8C_", "9C_", "BGE_V"], rechtsgebiet: "Social Insurance FedCourt"}
+
+=== IMMIGRATION LAW ===
+Keywords: immigration, residence permit, deportation, expulsion, asylum,
+          refugee, family reunification, integration, foreign national,
+          settlement permit, hardship
+→ Direction: {corpus: "laws", filter_codes: ["AIG"], rechtsgebiet: "Immigration Law"}
+→ Direction: {corpus: "courts", filter_codes: ["2C_", "BGE_II"], rechtsgebiet: "Immigration Law FedCourt"}
+
+=== ADMINISTRATIVE LAW / PLANNING ===
+Keywords: planning, construction, building permit, zoning, expropriation,
+          environmental, state liability, administrative, public authority
+→ Direction: {corpus: "laws", filter_codes: ["RPG", "USG"], rechtsgebiet: "Administrative Law"}
+→ Direction: {corpus: "courts", filter_codes: ["1C_", "BGE_I"], rechtsgebiet: "Administrative Law FedCourt"}
+
+=== TAX LAW ===
+Keywords: tax, taxation, income tax, corporate tax, deduction, assessment,
+          evasion, avoidance, withholding, VAT
+→ Direction: {corpus: "laws", filter_codes: ["DBG"], rechtsgebiet: "Tax Law"}
+→ Direction: {corpus: "courts", filter_codes: ["2C_", "BGE_II"], rechtsgebiet: "Tax Law FedCourt"}
+
+=== DEBT COLLECTION & BANKRUPTCY ===
+Keywords: debt, collection, enforcement, bankruptcy, insolvency, seizure,
+          attachment, garnishment, debt restructuring
+→ Direction: {corpus: "laws", filter_codes: ["SchKG"], rechtsgebiet: "Debt Collection"}
+→ Direction: {corpus: "courts", filter_codes: ["5A_", "BGE_III"], rechtsgebiet: "Debt Collection FedCourt"}
+
+=== PROPERTY LAW ===
+Keywords: property, ownership, possession, mortgage, easement, land register,
+          real estate, good faith acquisition, pledge
+→ Direction: {corpus: "laws", filter_codes: ["ZGB"], rechtsgebiet: "Property Law"}
+→ Direction: {corpus: "courts", filter_codes: ["5A_", "BGE_III"], rechtsgebiet: "Property Law FedCourt"}
+
+--- ALWAYS ADD (regardless of keywords) ---
+
+→ Direction: {corpus: "laws", filter_codes: ["BGG", "BV"], rechtsgebiet: "Procedural Law",
+              priority: 99, seed_queries: ["Beschwerde Bundesgericht Legitimation Frist"]}
+
+--- DEFAULT (when NO keyword matches) ---
+
+→ Direction: {corpus: "laws", filter_codes: [], rechtsgebiet: "General (unfiltered)",
+              seed_queries: [translated_query_to_german]}
+→ Direction: {corpus: "courts", filter_codes: [], rechtsgebiet: "General (unfiltered)",
+              seed_queries: [translated_query_to_german]}
+→ Direction: {corpus: "laws", filter_codes: ["BGG", "BV"], rechtsgebiet: "Procedural Law"}
+
+--- QUERY GENERATION FOR FALLBACK ---
+
+For each direction without explicit seed_queries:
+1. Extract nouns/concepts from the English query
+2. Translate using terminology_bridge.txt
+3. Combine 3-5 German legal terms into a query
+4. Generate 2 variants (different aspects)
+
+Example:
+  English: "What are the requirements for extending pre-trial detention?"
+  Keywords matched: detention, pre-trial → CRIMINAL PROCEDURE/DETENTION
+  Seed queries generated:
+    - "Haftverlängerung Voraussetzungen Verhältnismässigkeit Dauer"
+    - "Untersuchungshaft Verlängerung Haftgründe Zwangsmassnahmengericht"

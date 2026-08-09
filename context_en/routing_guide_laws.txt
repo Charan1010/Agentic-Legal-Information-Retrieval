@@ -1,0 +1,304 @@
+=== LAW ROUTING (search_laws) ===
+Use search_laws when the question relates to statutory articles, ordinances, or the Federal Constitution.
+
+--- CLASSIFICATION RULES (Apply first) ---
+
+1. CRIMINAL LAW vs CRIMINAL PROCEDURE:
+   - Substantive offense (murder, fraud, theft, bodily harm) → StGB
+   - Juvenile offenses (minors, educational measures) → JStG
+   - Procedure (pre-trial detention, appeal, evidence) → StPO
+   - Juvenile criminal procedure → JStPO
+   - TRAP: "Pre-trial detention" (Untersuchungshaft) is ALWAYS StPO (Art. 212-240), NOT StGB
+
+2. PRIVATE LAW vs PROCEDURAL LAW:
+   - Substantive claims (contract, property, family, inheritance) → OR/ZGB
+   - Property law, land register → ZGB + GBV (Land Register Ordinance)
+   - Procedural law (action, appeal, evidence, jurisdiction) → ZPO
+   - Private international law → IPRG
+   - TRAP: "Divorce" involves ZGB (Art. 111-134) AND ZPO (procedural rules)
+
+3. FEDERAL COURT PROCEDURE:
+   - Appeal to Federal Court, standing, deadlines → BGG
+   - Federal administrative procedure → VwVG
+   - ALWAYS search BGG when "appeal in civil/criminal/public law matters" mentioned
+   - Art. 100 para. 1 BGG (30-day deadline) appears in ALMOST EVERY case
+
+4. FINANCIAL MARKETS:
+   - Financial services, investment advice, prospectus → FIDLEG
+   - Financial institutions, licensing → FINIG
+   - Financial market supervision, market abuse → FINMAG
+   - Banks → BankG
+   - Book-entry securities → BEG
+   - FINMA ordinances → FINMA (collective term)
+
+5. MANDATORY MULTI-SEARCH: Most questions involve 2-3 statutes simultaneously.
+   Example: Criminal procedure → StPO + StGB + BGG
+   Example: Child maintenance → ZGB + ZPO + BGG
+   Example: Asylum → AsylG + AIG + BV
+
+--- LAW TAXONOMY (Abbreviation → Legal Domain → Search Terms) ---
+
+=== CRIMINAL LAW (substantive) ===
+
+• StGB (Swiss Criminal Code) — 1,239 articles
+  Content: Substantive criminal offenses and penalties, General Part (intent, negligence, attempt, participation), Special Part (homicide, bodily harm, theft, fraud, forgery)
+  Keywords: penalty, imprisonment, fine, suspended sentence, probation, intent, negligence, sentencing, deportation, perpetrator, victim, offense, misdemeanor, felony
+  Important Sections: Art. 1-110 (General Part), Art. 111-332 (Special Part)
+  Example Searches: "Strafzumessung bedingte Freiheitsstrafe Bewährung", "Betrug Arglist Täuschung Vermögensschaden"
+
+• JStG (Juvenile Criminal Law Act) — 167 articles
+  Content: Criminal law for juveniles (10-18 years), protective measures, juvenile penalties
+  Keywords: juvenile, minor, protective measure, education, placement, personal circumstances, juvenile prosecutor
+  CRITICAL: Offenses by minors → ALWAYS JStG (not StGB!)
+  Example Searches: "Jugendstrafrecht Massnahme Erziehung Unterbringung Jugendlicher"
+
+• MStG (Military Criminal Law) — 811 articles
+  Content: Criminal law for military personnel, military offenses
+  Keywords: military service, conscientious objection, insubordination, desertion
+
+=== CRIMINAL PROCEDURE ===
+
+• StPO (Swiss Criminal Procedure Code) — 1,306 articles
+  Content: Criminal procedure, investigation, coercive measures, detention, evidence, legal remedies
+  Keywords: pre-trial detention, safety detention, grounds for detention, flight risk, collusion risk, recidivism risk, appeal, prosecution, evidence admissibility, discontinuation, indictment
+  Important Sections: Art. 212-240 (Detention), Art. 382-397 (Legal Remedies), Art. 139-141 (Evidence)
+  CRITICAL: "Detention review", "detention extension" → ALWAYS StPO
+  Example Searches: "Untersuchungshaft Kollusionsgefahr Haftgrund Verhältnismässigkeit"
+
+• JStPO (Juvenile Criminal Procedure Code) — 135 articles
+  Content: Criminal procedure for juveniles, special procedural rules
+  Keywords: juvenile criminal procedure, juvenile prosecution office, mediation, special protective measures
+  CRITICAL: Proceedings against minors → JStPO (not StPO!)
+  Example Searches: "Jugendstrafverfahren Mediation Einstellung Jugendanwalt"
+
+• StBOG (Criminal Justice Authorities Organization Act) — 183 articles
+  Content: Organization of federal criminal justice authorities
+  Keywords: Federal Criminal Court, Federal Prosecutor, Appeals Chamber, Criminal Chamber
+
+• MStP (Military Criminal Procedure) — 589 articles
+  Content: Procedure in military criminal matters
+  Keywords: military court, military criminal procedure, auditor
+
+=== CIVIL LAW ===
+
+• ZGB (Swiss Civil Code) — 2,395 articles
+  Content: Personal law, family law, inheritance law, property law
+  Keywords: marriage, divorce, maintenance, child welfare, custody, parental authority, inheritance, will, legacy, ownership, possession, land register, personality rights
+  Important Sections: Art. 111-134 (Divorce), Art. 270-327 (Child Law), Art. 457-640 (Inheritance), Art. 641-977 (Property)
+  CRITICAL: "Child maintenance" → ZGB Art. 276-293, "parental authority" → ZGB Art. 296-306
+  Example Searches: "Kindesunterhalt Berechnung Bedarf Leistungsfähigkeit", "Erbfolge Testament Pflichtteil"
+
+• OR (Code of Obligations) — 3,662 articles
+  Content: Contract law, tort law, commercial law, corporate law, employment law
+  Keywords: contract, sales contract, work contract, mandate, lease, employment contract, termination, damages, warranty, default, performance, defect, liability, company, AG, GmbH
+  Important Sections: Art. 1-40 (Contract Formation), Art. 41-61 (Tort), Art. 97-109 (Non-Performance), Art. 184-529 (Specific Contracts), Art. 319-362 (Employment)
+  Example Searches: "Werkvertrag Mangel Nachbesserung Gewährleistung", "Schadenersatz Vertragsverletzung Verschulden"
+
+• GBV (Land Register Ordinance) — 469 articles
+  Content: Land register management, annotations, notations, easements, mortgages
+  Keywords: land register, registration, annotation, notation, easement, mortgage, condominium, deletion
+  CRITICAL: Land register questions → GBV (not just ZGB property law!)
+  Example Searches: "Grundbucheintragung Dienstbarkeit Löschung Vormerkung"
+
+• IPRG (Private International Law) — 494 articles
+  Content: Applicable law in international matters, jurisdiction, recognition
+  Keywords: international matter, applicable law, jurisdiction, recognition, enforcement, foreign law, treaty, arbitration
+  Example Searches: "anwendbares Recht internationaler Vertrag Rechtswahl", "Anerkennung ausländisches Urteil Vollstreckung"
+
+• SchKG (Debt Collection and Bankruptcy Act) — 1,060 articles
+  Content: Debt collection, seizure, bankruptcy, composition agreement, definitive release
+  Keywords: debt collection, seizure, definitive release, bankruptcy, certificate of loss, subsistence minimum, payment order, arrest, composition agreement
+  Example Searches: "definitive Rechtsöffnung Schuldanerkennung Betreibung", "Pfändung Existenzminimum Kompetenzstücke"
+
+• URG (Copyright Act) — 285 articles
+  Content: Copyright, related rights, work protection, licenses
+  Keywords: copyright, work, author, exploitation, license, reproduction, distribution, author's moral rights, tariff
+  Example Searches: "Urheberrecht Werkschutz Vervielfältigung Verwertungsrecht"
+
+• DSG (Data Protection Act) — 209 articles
+  Content: Data protection, personality protection, data processing, information duty
+  Keywords: personal data, data protection, processing, consent, right of access, profiling, cross-border data transfer
+  Example Searches: "Datenschutz Personendaten Bearbeitung Einwilligung Auskunftsrecht"
+
+=== PROCEDURAL LAW ===
+
+• ZPO (Swiss Civil Procedure Code) — 857 articles
+  Content: Civil procedure, action proceedings, summary proceedings, evidence, legal remedies
+  Keywords: action, appeal, objection, evidence, burden of proof, summary proceedings, conciliation, amount in dispute, advance on costs, interim measures, arbitration
+  Example Searches: "Berufung Zivilsachen Frist Novenrecht", "vorsorgliche Massnahmen Glaubhaftmachung"
+
+• BGG (Federal Supreme Court Act) — 325 articles
+  Content: Procedure before the Federal Court, types of appeal, standing, deadlines
+  Keywords: appeal in civil matters, appeal in criminal matters, appeal in public law matters, subsidiary constitutional complaint, amount in dispute, standing, deadline, exhaustion principle
+  CRITICAL: Art. 100 para. 1 BGG (30-day deadline) appears in almost EVERY Federal Court case
+  Example Searches: "Beschwerde Bundesgericht Legitimation schutzwürdiges Interesse", "Streitwertgrenze Beschwerde Zivilsachen BGG"
+
+• VwVG (Administrative Procedure Act) — 205 articles
+  Content: Federal administrative procedure, rulings, objection, appeal
+  Keywords: ruling, administrative procedure, objection, appeal, party status, file inspection, duty to state reasons, restitution
+  Example Searches: "Verwaltungsverfügung Einsprache Parteistellung rechtliches Gehör"
+
+=== SOCIAL INSURANCE LAW ===
+
+• ATSG (General Part of Social Insurance Law) — 224 articles
+  Content: General provisions for all social insurances, procedure, coordination
+  Keywords: benefits, recovery, revision, reconsideration, administrative procedure, objection, deadline, reporting obligation
+  Example Searches: "Revision Rentenanpassung veränderte Verhältnisse ATSG"
+
+• IVG (Disability Insurance Act) — 405 articles
+  Content: Disability pension, rehabilitation measures, degree of disability, work capacity
+  Keywords: disability, disability pension, rehabilitation, work capacity, degree of disability, IV office, expert assessment, residual work capacity, income comparison
+  Example Searches: "Invaliditätsgrad Einkommensvergleich Restarbeitsfähigkeit Tabellenlohn"
+
+• UVG (Accident Insurance Act) — 331 articles
+  Content: Accident insurance, occupational diseases, causation, benefits
+  Keywords: accident, occupational disease, causation, natural causation, adequacy, integrity compensation, daily allowance
+  Example Searches: "Unfallversicherung Kausalität Adäquanz Schleudertrauma"
+
+• KVG (Health Insurance Act) — 446 articles
+  Content: Mandatory health insurance, benefits, premiums
+  Keywords: health care, premium, deductible, obligation to provide benefits, cost-effectiveness, hospital treatment
+
+• BVG (Occupational Pensions) — 473 articles
+  Content: Pension fund, retirement pension, disability pension, vesting
+  Keywords: pension fund, vesting, retirement pension, over-compensation, pension institution, exit benefit
+
+• AVIG (Unemployment Insurance Act) — 443 articles
+  Content: Unemployment benefits, short-time work, insolvency compensation
+  Keywords: unemployment benefits, short-time work, suspension days, employability, reference period
+
+• AHVG (Old-Age and Survivors' Insurance Act) — 397 articles
+  Content: Old-age and survivors' insurance, contributions, pensions
+  Keywords: AHV pension, contribution obligation, old-age pension, survivors' pension, contribution years
+
+=== PUBLIC LAW ===
+
+• BV (Federal Constitution) — 658 articles
+  Content: Fundamental rights, state organization, division of powers
+  Keywords: fundamental right, equal treatment, prohibition of arbitrariness, right to be heard, personal liberty, proportionality, property guarantee, freedom of expression
+  CRITICAL: Art. 29 para. 2 BV (right to be heard) appears in MANY cases
+  Example Searches: "rechtliches Gehör Anspruch Begründungspflicht Bundesverfassung"
+
+• AIG (Foreign Nationals and Integration Act) — 665 articles
+  Content: Residence, settlement, removal, family reunification, employment
+  Keywords: residence permit, settlement permit, removal, family reunification, integration, deportation, hardship case
+  Example Searches: "Aufenthaltsbewilligung Familiennachzug Bewilligungsvoraussetzungen"
+
+• AsylG (Asylum Act) — 526 articles
+  Content: Asylum procedure, refugee status, provisional admission, removal
+  Keywords: asylum, refugee, persecution, removal, provisional admission, unreasonableness, safe country, Dublin
+  CRITICAL: Asylum/refugee → AsylG (NOT AIG!)
+  Example Searches: "Flüchtlingseigenschaft Verfolgung Wegweisung Unzumutbarkeit vorläufige Aufnahme"
+
+• RPG (Spatial Planning Act) — 155 articles
+  Content: Spatial planning, zoning, building permits
+  Keywords: zoning, building permit, zone conformity, special permit, planning zone
+  Example Searches: "Baubewilligung Zonenkonformität Ausnahmebewilligung Landwirtschaftszone"
+
+• USG (Environmental Protection Act) — 354 articles
+  Content: Environmental protection, immissions, waste, environmental impact
+  Keywords: environmental impact assessment, immissions, emissions, noise, air pollution, contaminated sites
+  Example Searches: "Umweltverträglichkeitsprüfung Immissionsgrenzwerte Sanierung"
+
+• NHG (Nature and Heritage Protection Act) — 153 articles
+  Content: Nature conservation, landscape protection, heritage protection
+  Keywords: nature conservation, landscape protection, biotope, inventory, worthy of protection
+
+=== TAX LAW ===
+
+• DBG (Federal Direct Tax Act) — 614 articles
+  Content: Federal income and profit tax
+  Keywords: income tax, profit tax, deduction, taxable income, assessment, capital gain
+
+• VStG (Withholding Tax Act) — 223 articles
+  Content: Withholding tax on capital income, dividends, interest
+  Keywords: withholding tax, refund, notification procedure, dividend, capital income
+  Example Searches: "Verrechnungssteuer Rückerstattung Meldeverfahren"
+
+• MWSTG (Value Added Tax Act) — 418 articles
+  Content: VAT, input tax deduction, tax liability
+  Keywords: value added tax, input tax, tax liability, turnover, supply
+
+=== FINANCIAL MARKET LAW ===
+
+• FIDLEG (Financial Services Act) — 246 articles
+  Content: Financial services, investment advice, prospectus duty, client protection
+  Keywords: financial service, investment advice, prospectus, client segmentation, information duty, suitability assessment
+  Example Searches: "Finanzdienstleistung Prospektpflicht Anlageberatung Informationspflicht"
+
+• FINMAG (Financial Market Supervision Act) — 224 articles
+  Content: Financial market supervision, licensing, enforcement, market abuse
+  Keywords: FINMA, license, supervision, market abuse, insider trading, enforcement
+  Example Searches: "FINMA Bewilligungspflicht Aufsichtsmassnahme Marktmissbrauch"
+
+• FINIG (Financial Institutions Act) — 183 articles
+  Content: Licensing and supervision of financial institutions
+  Keywords: asset manager, fund management, securities firm, licensing requirement
+
+• BankG (Banking Act) — 269 articles
+  Content: Banks, savings banks, deposit insurance, restructuring
+  Keywords: bank, license, capital adequacy, liquidity, deposit insurance, banking secrecy
+  Example Searches: "Bankbewilligung Eigenmittel Liquiditätsanforderungen"
+
+• BEG (Book-Entry Securities Act) — 108 articles
+  Content: Book-entry securities, custody, disposition
+  Keywords: book-entry security, custody, disposition, security, securities account
+
+• FINMA (FINMA Ordinances/Circulars) — 2,589 articles
+  Content: Detailed FINMA regulation (ABV-FINMA, GwV-FINMA, KAV-FINMA etc.)
+  Keywords: money laundering, capital adequacy, disclosure, risk diversification, liquidity
+
+=== OTHER IMPORTANT STATUTES ===
+
+• SVG (Road Traffic Act) — 509 articles
+  Content: Traffic offenses, driving license, administrative measures, liability
+  Keywords: driving license withdrawal, speeding, alcohol, driving ability, serious violation
+  Example Searches: "Führerausweisentzug Geschwindigkeitsüberschreitung Warnungsentzug"
+
+• IRSG (International Mutual Assistance in Criminal Matters Act) — 375 articles
+  Content: International mutual assistance in criminal matters, extradition, enforcement
+  Keywords: mutual assistance, extradition, specialty principle, dual criminality
+
+• UWG (Unfair Competition Act) — 56 articles
+  Content: Fair trading law, unfair business practices, competition law
+  Keywords: unfair competition, misleading advertising, imitation, business methods
+  Example Searches: "unlauterer Wettbewerb irreführend Nachahmung Verwechslungsgefahr"
+
+• KGTG (Cultural Property Transfer Act) — 75 articles
+  Content: Cultural property transfer, import/export, due diligence
+  Keywords: cultural property, transfer, due diligence, restitution, inventory
+
+• ParlG (Parliament Act) — 571 articles
+  Content: Organization of Federal Assembly, legislative process
+  Keywords: Federal Assembly, National Council, Council of States, motion, initiative, committee
+
+• LwG (Agriculture Act) — 527 articles
+  Content: Agricultural direct payments, structural improvement, market regulation
+  Keywords: direct payments, ecological services, farm subsidies, alpine farming
+
+• HMG (Therapeutic Products Act) — 433 articles
+  Content: Pharmaceuticals, medical devices, authorization, distribution
+  Keywords: pharmaceutical, authorization, Swissmedic, therapeutic product, advertising
+
+--- COMMON MISTAKES (AVOID) ---
+
+1. "Detention" without context → StPO (NOT StGB). StGB governs penalties, StPO governs pre-trial/safety detention
+2. "Maintenance" → ZGB Art. 276ff (child maintenance) or Art. 125ff (post-marital maintenance)
+3. "Appeal" → BGG (Federal Court), OR StPO Art. 393ff (criminal proceedings), OR ZPO (civil proceedings), OR VwVG (administrative)
+4. "Contract" → OR (Code of Obligations), NOT ZGB
+5. "Damages" → OR Art. 41ff (tort) OR Art. 97ff (contractual)
+6. "Limitation period" → OR Art. 127ff (obligations) OR StGB Art. 97ff (criminal law)
+7. "Right to be heard" → BV Art. 29 para. 2 (fundamental right) + respective procedural law
+8. "Juvenile" → JStG/JStPO (NOT StGB/StPO!)
+9. "Asylum/refugee" → AsylG (NOT AIG, although residence may be involved)
+10. "Land register" → GBV + ZGB (Property Law), NOT just ZGB
+11. "Financial service" → FIDLEG (NOT BankG or FINMAG)
+12. "Data protection" → DSG, NOT BV Art. 13
+
+--- SEARCH STRATEGY FOR LAWS ---
+
+• Use GERMAN legal terms (corpus is in German)
+• Combine legal domain + specific legal question: "Kindesunterhalt Berechnung Bedarf Existenzminimum"
+• Search BROADLY (different aspects of same question): first substantive, then procedural
+• Do NOT use article numbers in search — the embedding model searches semantically
+• Use MULTIPLE filter_codes for related areas: e.g. ["StGB", "StPO"] together

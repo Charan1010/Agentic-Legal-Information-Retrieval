@@ -1,0 +1,19 @@
+root ::= "{" ws "\"sachverhalt\"" ws ":" ws string "," ws "\"rechtsfragen\"" ws ":" ws string-array "," ws "\"directions\"" ws ":" ws directions-array ws "}"
+
+string-array ::= "[" ws string (ws "," ws string)* ws "]"
+
+directions-array ::= "[" ws direction (ws "," ws direction)(ws "," ws direction)(ws "," ws direction)(ws "," ws direction)(ws "," ws direction) ws "]"
+
+direction ::= "{" ws "\"priority\"" ws ":" ws integer "," ws "\"corpus\"" ws ":" ws corpus-val "," ws "\"rechtsgebiet\"" ws ":" ws string "," ws "\"filter_codes\"" ws ":" ws string-array "," ws "\"reasoning\"" ws ":" ws string "," ws "\"seed_queries\"" ws ":" ws string-array ws "}"
+
+corpus-val ::= "\"laws\"" | "\"courts\"" | "\"both\""
+
+integer ::= [0-9] [0-9]?
+
+string ::= "\"" char* "\""
+
+char ::= [^"\\] | "\\" escape-char
+
+escape-char ::= "\"" | "\\" | "/" | "n" | "t" | "r"
+
+ws ::= [ \t\n]*

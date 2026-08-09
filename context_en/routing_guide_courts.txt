@@ -1,0 +1,103 @@
+=== COURT ROUTING (search_courts) ===
+Use search_courts when the question relates to Federal Court decisions or case law.
+
+--- CLASSIFICATION RULES (Apply first) ---
+
+1. LEADING CASE (BGE) vs INDIVIDUAL CASE:
+   - BGE = Published leading decisions (fundamental legal questions)
+   - Individual cases (1B_, 5A_, 6B_ etc.) = Unpublished decisions (case-specific application)
+   - ALWAYS search BOTH! BGE for principles, individual cases for concrete application
+
+2. DIVISION ASSIGNMENT (Decisive for correct search):
+   - Questions on criminal law/procedure → BGE IV + 6B_ + 1B_ (detention)
+   - Questions on civil law/family/inheritance → BGE III + 5A_ + 4A_
+   - Questions on contract law/tort → BGE III + 4A_
+   - Questions on social insurance → BGE V + 8C_ + 9C_
+   - Questions on public law → BGE I + 1C_ + 2C_
+
+3. CONSIDERATIONS (E.): Court decisions are structured into considerations (Erwägungen)
+   - Each consideration is a SEPARATE document in the corpus
+   - Search for the CONTENT of the consideration, not the number
+   - Format: "BGE 137 IV 122 E. 6.2" or "1B_210/2023 E. 4.1"
+
+--- COURT DIVISIONS (Prefix → Legal Domain) ---
+
+=== I. PUBLIC LAW DIVISION ===
+Prefixes: 1B_, 1C_, 1D_, 1F_
+BGE: BGE [No.] I [Page]
+
+• 1B_ (26,275 decisions): Criminal procedural coercive measures
+  Content: Pre-trial detention, detention review, seizure, surveillance, unsealing
+  Keywords: detention, grounds for detention, flight risk, collusion risk, proportionality, release from detention, extension of detention
+  CRITICAL: Questions about pre-trial detention → ALWAYS search 1B_ (+ StPO for laws)
+  Example Searches: "Untersuchungshaft Verhältnismässigkeit Haftdauer Überhaft"
+
+• 1C_ (41,735 decisions): Administrative law, spatial planning, construction law, state liability
+  Content: Building permits, environmental protection, expropriation, state liability, voting rights
+  Keywords: building permit, zoning plan, environmental impact, state liability, concession
+  Example Searches: "Baubewilligung Zonenkonformität Ausnahmebewilligung Planungszone"
+
+=== II. PUBLIC LAW DIVISION ===
+Prefixes: 2C_, 2D_, 2F_
+BGE: BGE [No.] II [Page] (partly)
+
+• 2C_ (64,732 decisions): Immigration law, tax law, health law
+  Content: Residence permit, removal, naturalization, tax law, professional practice
+  Keywords: residence permit, removal, hardship case, family reunification, tax evasion, professional practice
+  Example Searches: "Aufenthaltsbewilligung Familiennachzug Bewilligungsvoraussetzungen"
+
+=== CIVIL LAW DIVISIONS ===
+Prefixes: 4A_, 4D_, 4F_, 5A_, 5D_, 5F_
+BGE: BGE [No.] III [Page]
+
+• 4A_ (39,088 decisions): Contract law, tort law, commercial law, employment law
+  Content: Contract interpretation, work contract, sales contract, liability, corporate law, insurance law, employment contract
+  Keywords: contract, interpretation, declaration of intent, work contract, damages, warranty, termination, tort, company
+  CRITICAL: "Contract" + "damages" → 4A_ (+ OR for laws)
+  Example Searches: "Vertragsauslegung Vertrauensprinzip Willenserklärung Konsens"
+
+• 5A_ (55,882 decisions): Family law, inheritance law, property law, personality rights
+  Content: Divorce, maintenance, custody, child protection, inheritance disputes, land register, personality violation
+  Keywords: divorce, maintenance, child maintenance, parental authority, custody, child welfare, inheritance, will, statutory portion, ownership, land register
+  CRITICAL: "Family/child/marriage/inheritance" → 5A_ (+ ZGB for laws)
+  Example Searches: "Kindesunterhalt Berechnung Existenzminimum Leistungsfähigkeit"
+
+=== CRIMINAL LAW DIVISION ===
+Prefixes: 6B_, 6F_
+BGE: BGE [No.] IV [Page]
+
+• 6B_ (72,691 decisions): Substantive criminal law and sentencing
+  Content: Conviction, sentencing, evidence assessment, deportation, measures, victim rights
+  Keywords: conviction, acquittal, sentencing, suspended sentence, evidence assessment, deportation, hardship case, measure, preventive detention
+  CRITICAL: "Criminal judgment" + "sentence" → 6B_ (+ StGB for laws)
+  Example Searches: "Strafzumessung Tatkomponenten Täterkomponenten Vorstrafen"
+
+=== SOCIAL INSURANCE DIVISIONS ===
+Prefixes: 8C_, 8D_, 8F_, 9C_, 9F_
+BGE: BGE [No.] V [Page]
+
+• 8C_ (45,572 decisions): Disability insurance, accident insurance, unemployment insurance
+  Content: Disability pension, degree of disability, work capacity, accident insurance, causality, unemployment benefits
+  Keywords: disability pension, degree of disability, work capacity, income comparison, accident causality, natural causality, adequacy, whiplash
+  Example Searches: "Invaliditätsgrad Einkommensvergleich Tabellenlohn leidensangepasste Tätigkeit"
+
+• 9C_ (37,065 decisions): AHV, IV (contributions), health insurance, supplementary benefits
+  Content: AHV contributions, IV contributions, health insurance, supplementary benefits, occupational pensions
+  Keywords: AHV pension, contribution obligation, health insurance, obligation to provide benefits, supplementary benefits, pension fund
+  Example Searches: "Krankenversicherung Leistungspflicht Wirtschaftlichkeit Behandlung"
+
+--- COMMON MISTAKES (AVOID) ---
+
+1. "Detention/pre-trial detention" → 1B_ (NOT 6B_). 6B_ = criminal judgment, 1B_ = detention questions
+2. "Post-divorce maintenance" → 5A_ (NOT 4A_). 4A_ = contract law
+3. "Employment contract" → 4A_ (NOT 8C_). 8C_ = social insurance, NOT employment law
+4. "Disability pension" → 8C_ or 9C_ (NOT 5A_)
+5. BGE and individual cases ALWAYS search BOTH — BGE for principles, individual cases for application
+
+--- SEARCH STRATEGY FOR COURTS ---
+
+• Search for the LEGAL CONCEPT, not case details
+• Use the same terms as the considerations: "Verhältnismässigkeit", "Willkür", "Ermessen"
+• Combine legal question + legal domain: "Haftgrund Kollusionsgefahr Beweisgefährdung"
+• BGE leading cases use legal terminology — search with technical terms
+• For family/inheritance law: "Kindeswohl", "Leistungsfähigkeit", "Existenzminimum", "gebührende Lebenshaltung"

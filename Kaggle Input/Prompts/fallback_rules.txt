@@ -1,0 +1,114 @@
+=== FALLBACK-REGELN: Keyword-basierte Richtungszerlegung ===
+
+Wenn der LLM-Planner keinen gültigen Plan produziert (JSON-Parse-Fehler,
+leere directions, ungültige filter_codes), verwende diese REGELBASIERTEN
+Zuordnungen als Fallback.
+
+--- KEYWORD-MATCHING (case-insensitive auf englische Query) ---
+
+Priorität: Spezifischere Matches vor allgemeinen.
+Mehrere können gleichzeitig triggern → mehrere Richtungen.
+
+=== STRAFRECHT ===
+Keywords: murder, homicide, manslaughter, assault, theft, robbery, fraud,
+          embezzlement, forgery, criminal, crime, offense, sentence, sentencing,
+          punishment, prison, conviction, acquittal, penalty, probation, arson,
+          trafficking, weapons, drugs
+→ Direction: {corpus: "laws", filter_codes: ["StGB"], rechtsgebiet: "Strafrecht"}
+→ Direction: {corpus: "courts", filter_codes: ["6B_", "BGE_IV"], rechtsgebiet: "Strafrecht BGer"}
+
+=== STRAFPROZESS / HAFT ===
+Keywords: detention, custody, pre-trial, remand, flight risk, collusion,
+          bail, arrest, investigation, prosecution, evidence, seizure,
+          surveillance, procedural rights, criminal procedure
+→ Direction: {corpus: "laws", filter_codes: ["StPO"], rechtsgebiet: "Strafprozessrecht"}
+→ Direction: {corpus: "courts", filter_codes: ["1B_"], rechtsgebiet: "Strafprozess BGer"}
+
+=== VERTRAGSRECHT ===
+Keywords: contract, agreement, breach, performance, damages, warranty,
+          guarantee, sale, purchase, lease, rental, employment, termination,
+          notice period, compensation, liability, obligation, negligence,
+          tort, construction contract, mandate
+→ Direction: {corpus: "laws", filter_codes: ["OR"], rechtsgebiet: "Obligationenrecht"}
+→ Direction: {corpus: "courts", filter_codes: ["4A_", "BGE_III"], rechtsgebiet: "Vertragsrecht BGer"}
+
+=== FAMILIENRECHT ===
+Keywords: marriage, divorce, separation, maintenance, alimony, child support,
+          custody (child), parental authority, visitation, child welfare,
+          adoption, prenuptial, matrimonial property, family
+→ Direction: {corpus: "laws", filter_codes: ["ZGB"], rechtsgebiet: "Familienrecht"}
+→ Direction: {corpus: "courts", filter_codes: ["5A_", "BGE_III"], rechtsgebiet: "Familienrecht BGer"}
+
+=== ERBRECHT ===
+Keywords: will, testament, inheritance, heir, estate, succession, legacy,
+          bequest, probate, disinheritance, forced heirship, holographic,
+          testamentary capacity, inter vivos, gift
+→ Direction: {corpus: "laws", filter_codes: ["ZGB"], rechtsgebiet: "Erbrecht"}
+→ Direction: {corpus: "courts", filter_codes: ["5A_", "BGE_III"], rechtsgebiet: "Erbrecht BGer"}
+
+=== SOZIALVERSICHERUNG / IV ===
+Keywords: disability, invalidity, pension, rehabilitation, work capacity,
+          medical assessment, degree of disability, insurance, IV, accident,
+          unemployment, health insurance, social security, OASI, benefits,
+          vocational, retraining, incapacity
+→ Direction: {corpus: "laws", filter_codes: ["IVG", "ATSG"], rechtsgebiet: "Sozialversicherung"}
+→ Direction: {corpus: "courts", filter_codes: ["8C_", "9C_", "BGE_V"], rechtsgebiet: "Sozialversicherung BGer"}
+
+=== AUSLÄNDERRECHT ===
+Keywords: immigration, residence permit, deportation, expulsion, asylum,
+          refugee, family reunification, integration, foreign national,
+          settlement permit, hardship
+→ Direction: {corpus: "laws", filter_codes: ["AIG"], rechtsgebiet: "Ausländerrecht"}
+→ Direction: {corpus: "courts", filter_codes: ["2C_", "BGE_II"], rechtsgebiet: "Ausländerrecht BGer"}
+
+=== VERWALTUNGSRECHT / BAU ===
+Keywords: planning, construction, building permit, zoning, expropriation,
+          environmental, state liability, administrative, public authority
+→ Direction: {corpus: "laws", filter_codes: ["RPG", "USG"], rechtsgebiet: "Verwaltungsrecht"}
+→ Direction: {corpus: "courts", filter_codes: ["1C_", "BGE_I"], rechtsgebiet: "Verwaltungsrecht BGer"}
+
+=== STEUERRECHT ===
+Keywords: tax, taxation, income tax, corporate tax, deduction, assessment,
+          evasion, avoidance, withholding, VAT
+→ Direction: {corpus: "laws", filter_codes: ["DBG"], rechtsgebiet: "Steuerrecht"}
+→ Direction: {corpus: "courts", filter_codes: ["2C_", "BGE_II"], rechtsgebiet: "Steuerrecht BGer"}
+
+=== SCHULDBETREIBUNG ===
+Keywords: debt, collection, enforcement, bankruptcy, insolvency, seizure,
+          attachment, garnishment, debt restructuring
+→ Direction: {corpus: "laws", filter_codes: ["SchKG"], rechtsgebiet: "Schuldbetreibung"}
+→ Direction: {corpus: "courts", filter_codes: ["5A_", "BGE_III"], rechtsgebiet: "Schuldbetreibung BGer"}
+
+=== SACHENRECHT / EIGENTUM ===
+Keywords: property, ownership, possession, mortgage, easement, land register,
+          real estate, good faith acquisition, pledge
+→ Direction: {corpus: "laws", filter_codes: ["ZGB"], rechtsgebiet: "Sachenrecht"}
+→ Direction: {corpus: "courts", filter_codes: ["5A_", "BGE_III"], rechtsgebiet: "Sachenrecht BGer"}
+
+--- IMMER HINZUFÜGEN (unabhängig von Keywords) ---
+
+→ Direction: {corpus: "laws", filter_codes: ["BGG", "BV"], rechtsgebiet: "Verfahrensrecht",
+              priority: 99, seed_queries: ["Beschwerde Bundesgericht Legitimation Frist"]}
+
+--- DEFAULT (wenn KEIN Keyword matched) ---
+
+→ Direction: {corpus: "laws", filter_codes: [], rechtsgebiet: "Allgemein (ungefiltert)",
+              seed_queries: [translated_query_to_german]}
+→ Direction: {corpus: "courts", filter_codes: [], rechtsgebiet: "Allgemein (ungefiltert)",
+              seed_queries: [translated_query_to_german]}
+→ Direction: {corpus: "laws", filter_codes: ["BGG", "BV"], rechtsgebiet: "Verfahrensrecht"}
+
+--- QUERY-GENERIERUNG FÜR FALLBACK ---
+
+Für jede Direction ohne explizite seed_queries:
+1. Extrahiere Substantive/Konzepte aus der englischen Query
+2. Übersetze mit terminology_bridge.txt
+3. Kombiniere 3-5 deutsche Fachbegriffe zu einer Query
+4. Generiere 2 Varianten (unterschiedliche Aspekte)
+
+Beispiel:
+  English: "What are the requirements for extending pre-trial detention?"
+  Keywords matched: detention, pre-trial → STRAFPROZESS/HAFT
+  Seed queries generated:
+    - "Haftverlängerung Voraussetzungen Verhältnismässigkeit Dauer"
+    - "Untersuchungshaft Verlängerung Haftgründe Zwangsmassnahmengericht"

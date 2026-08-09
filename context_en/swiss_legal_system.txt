@@ -1,0 +1,188 @@
+=== THE SWISS LEGAL SYSTEM (For LLM Agents) ===
+
+This document describes how the Swiss legal system is structured,
+so the agent can navigate like an attorney — not just search semantically.
+
+--- HIERARCHY OF LEGAL SOURCES ---
+
+Switzerland has a STRICT hierarchy of legal sources:
+
+1. Federal Constitution (BV) — Supreme Law
+   → Fundamental rights (Art. 7-36 BV)
+   → State organization (Art. 143-191 BV)
+   → EVERY federal statute must conform to the BV
+   → Art. 190 BV: Federal statutes are binding on the Federal Court (even if unconstitutional!)
+
+2. Federal Statutes (laws in the formal sense)
+   → Enacted by Parliament
+   → Systematic Collection (SR number)
+   → Examples: OR (SR 220), ZGB (SR 210), StGB (SR 311.0), StPO (SR 312.0)
+
+3. Ordinances (Federal Council ordinances)
+   → Concretize statutes
+   → Issued by Federal Council (executive)
+   → e.g.: AVIG → AVIV (Unemployment Insurance Ordinance)
+
+4. Federal Court Practice (BGE + unpublished decisions)
+   → Interprets statutes and BV
+   → BGE = Leading decisions (published, authoritative)
+   → Unpublished decisions = individual case application
+
+--- HOW THE FEDERAL COURT WORKS ---
+
+The Swiss Federal Court (BGer) in Lausanne is the LAST instance.
+
+Path to the Federal Court (chain of instances):
+  First instance (District Court / Bezirksgericht)
+  → Second instance (Cantonal Court / Obergericht)
+  → Federal Court (last instance, legal questions only)
+
+Types of appeals to the Federal Court (Art. 72-89 BGG):
+  • Appeal in civil matters (Art. 72 BGG) — amount in dispute ≥ CHF 30,000
+  • Appeal in criminal matters (Art. 78 BGG) — criminal judgments + detention issues
+  • Appeal in public law matters (Art. 82 BGG) — administrative, tax, immigration law
+  • Subsidiary constitutional complaint (Art. 113 BGG) — when no other appeal is available
+
+CRITICAL: In EVERY Federal Court case, the following provisions are examined:
+  → Standing/legitimation (Art. 76/81/89 BGG)
+  → Appeal deadline (Art. 100 BGG — 30 days)
+  → Grounds for complaint (Art. 95 BGG — violation of law)
+  → Binding factual findings (Art. 105 BGG)
+  → Reasoning requirements (Art. 42 para. 2 BGG)
+
+--- DIVISIONS OF THE FEDERAL COURT ---
+
+5 divisions with clear jurisdictional allocation:
+
+Division I — Public Law (Lausanne)
+   → Criminal procedural coercive measures (detention! → prefix 1B_)
+   → Administrative law, spatial planning (→ prefix 1C_)
+   → BGE publication: BGE [volume] I [page]
+
+Division II — Public Law (Lausanne)
+   → Immigration law, tax law (→ prefix 2C_)
+   → BGE publication: BGE [volume] II [page]
+
+Division I — Civil Law (Lausanne)
+   → Contract law, liability, employment law (→ prefix 4A_)
+   → BGE publication: BGE [volume] III [page]
+
+Division II — Civil Law (Lausanne)
+   → Family law, succession law, property law (→ prefix 5A_)
+   → BGE publication: BGE [volume] III [page]
+
+Criminal Law Division (Lausanne)
+   → Criminal judgments, sentencing (→ prefix 6B_)
+   → BGE publication: BGE [volume] IV [page]
+
+Social Insurance Division (Lucerne)
+   → Sub-division 1: IV, UV, ALV (→ prefix 8C_)
+   → Sub-division 2: AHV, KV, BVG, EL (→ prefix 9C_)
+   → BGE publication: BGE [volume] V [page]
+
+--- CROSS-REFERENCES: HOW STATUTES ARE INTERCONNECTED ---
+
+CRITICAL: Swiss statutes are HEAVILY cross-referenced. A legal question
+ALWAYS involves multiple statutes simultaneously.
+
+Typical linking patterns:
+
+1. CONTRACT: OR (substance) + ZGB Art. 2 (good faith) + BGG (procedure)
+2. DIVORCE: ZGB (substance) + ZPO (procedure) + BGG (appeal) + BV Art. 29
+3. CRIMINAL PROCEEDINGS: StGB (offense) + StPO (procedure) + BGG + BV Art. 29-32
+4. DETENTION: StPO Art. 212-240 (substance) + BV Art. 10/31 (freedom) + BGG (appeal)
+5. SOCIAL INSURANCE: IVG/KVG/BVG (specific) + ATSG (general part) + BGG + BV
+6. IMMIGRATION LAW: AIG (substance) + BV Art. 13 (private life) + ECHR Art. 8 + BGG
+7. TAX: DBG/StHG (substance) + BV Art. 127 (taxation principles) + BGG
+
+Rule: EVERY legal question has at least:
+  (a) Substantive law (substance statute)
+  (b) Procedural law (ZPO/StPO/VwVG)
+  (c) Appellate law (BGG if Federal Court)
+  (d) Constitutional law (BV — fundamental rights affected)
+
+--- ERWÄGUNGEN (E.) — THE HEART OF CASE LAW ---
+
+Every Federal Court decision is structured in numbered considerations (Erwägungen / E.):
+
+Typical structure:
+  E. 1 — Procedural requirements (standing, deadline, amount in dispute)
+  E. 2 — Facts and complaints
+  E. 3 — Legal assessment (CORE consideration)
+  E. 3.1 — Sub-consideration (specific legal question)
+  E. 3.2 — Further sub-consideration
+  E. 4 — Result / cost allocation
+
+EVERY consideration is a SEPARATE document in the corpus!
+  → "BGE 137 IV 122 E. 6.2" = one specific consideration
+  → "1B_210/2023 E. 4.1" = one specific consideration
+
+For search this means:
+  → Search for the CONTENT of the consideration
+  → The same legal question can be discussed in E. 3 OR E. 4 OR E. 2.3
+  → NEVER search by E. number — always by the legal concept
+
+--- BGE NUMBERING ---
+
+Format: BGE [volume] [division-roman] [page] E. [consideration]
+
+Examples:
+  BGE 137 IV 122 E. 6.2
+  │    │   │   │   └── Consideration 6.2
+  │    │   │   └── Page 122
+  │    │   └── Division IV (Criminal Law)
+  │    └── Volume 137
+  └── Federal Court Decision (leading case)
+
+Division mapping:
+  I = Public Law (Division 1)
+  II = Public Law (Division 2) — Immigration, Tax
+  III = Civil Law (both divisions)
+  IV = Criminal Law
+  V = Social Insurance Law
+
+Unpublished decisions:
+  Format: [prefix]_[number]/[year] E. [consideration]
+  Example: 1B_210/2023 E. 4.1
+  Example: 5A_800/2019 E. 2.
+
+--- SUBSUMTION: THE LEGAL REASONING PROCESS ---
+
+Subsumtion = "Does the factual situation fit under the legal provision?"
+
+Major premise: The provision (e.g. Art. 41 OR: "Anyone who unlawfully causes damage to another...")
+Minor premise: The facts (e.g. "Defendant ran a red light and injured plaintiff")
+Conclusion: The legal consequence (e.g. "→ obligation to pay damages")
+
+For SEARCH this means:
+  → Search for the ELEMENTS of the legal provision
+  → Not the facts, but the LEGAL CONCEPT
+  → "Unlawfulness", "damage", "causation", "fault"
+  → NOT: "car accident", "injury", "hospital"
+
+--- GENERAL PARTS (always applicable) ---
+
+Many statutes have a "General Part" that ALWAYS applies:
+
+• OR Art. 1-183: General Part of the Law of Obligations
+  → Applies to EVERY contract (sale, construction, lease, employment...)
+  → Art. 1-10: Formation of contract
+  → Art. 11-16: Form requirements
+  → Art. 17-40: Defects of consent, agency
+  → Art. 41-61: Tort liability (non-contractual)
+  → Art. 62-67: Unjust enrichment
+  → Art. 68-96: Performance
+  → Art. 97-109: Non-performance
+
+• ATSG Art. 1-78: General Part of Social Insurance
+  → Applies equally to IVG, KVG, BVG, AVIG, UVG, AHV
+  → Art. 16-21: Benefits general
+  → Art. 25: Restitution
+  → Art. 43-49: Administrative procedure
+  → Art. 56-62: Legal remedies
+
+• ZGB Art. 1-10: Introductory articles
+  → Apply to ALL private law (ZGB + OR)
+  → Art. 2: Good faith (cited in almost EVERY civil case)
+  → Art. 4: Judicial discretion
+  → Art. 8: Burden of proof (appears in 30%+ of civil cases)
