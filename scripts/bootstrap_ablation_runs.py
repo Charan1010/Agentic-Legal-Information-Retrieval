@@ -18,10 +18,10 @@ def main() -> None:
     batch_dir.mkdir(parents=True, exist_ok=True)
 
     base_config = {
-        "max_iterations": 4,
-        "temperature": 0.0,
-        "top_k_laws": 30,
-        "top_k_courts": 30,
+        "max_iterations": 3,
+        "temperature": 0.1,
+        "top_k_laws": 40,
+        "top_k_courts": 40,
     }
     records = build_run_matrix(dataset_modes=["val", "test"], base_config=base_config)
 

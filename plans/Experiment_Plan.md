@@ -23,10 +23,12 @@ Turn features on/off one at a time. Measure scores. Compare against baseline (ev
 
 ## Fixed settings (do not change between runs)
 
-- top_k_laws: 30
-- top_k_courts: 30
-- max_iterations: 4
-- temperature: 0.0
+- top_k_laws: 40
+- top_k_courts: 40
+- max_iterations: 3
+- temperature: 0.1
+- max_observation_chars: 1200
+- max_conversation_chars: 28000
 
 These stay constant so score differences come only from feature changes.
 
@@ -105,6 +107,7 @@ A feature is considered helpful only if:
 
 ## Final outputs
 
+- `submission_hyde.csv` — predictions from each run (named per mode)
 - `ablation_summary.csv` — one row per mode with all scores
 - Best config identified and promoted to test
-- Submission file generated from best config
+- `test_submission.csv` — final submission from best config on test data
